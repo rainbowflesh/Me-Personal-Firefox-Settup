@@ -33,7 +33,8 @@ tabbar.css:
 还有一个搜索框的高度忘了在哪了, 且用且改
 
 ## 推销插件:
-+ [uBlacklist][1] 屏蔽搜索引擎不想要的结果
+// 顺带推销我自己收集的[屏蔽规则][rule]
++ [uBlacklist][1] 屏蔽搜索引擎不想要的结果 
 + [uBlock][2] 屏蔽网页元素
 + [Dark Reader][3] 网页黑背景
 + [Startup Theme Changer][4] 开机自动切换主题, 用来让我快乐更换9个主题
@@ -48,3 +49,4 @@ tabbar.css:
 [4]: https://addons.mozilla.org/en-US/firefox/addon/startup-theme-changer/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
 [5]: https://addons.mozilla.org/en-US/firefox/addon/nyan-cat-youtube-enhancement/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
 [6]: https://addons.mozilla.org/en-US/firefox/addon/smart-prevent-duplicate-tabs/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
+[rule]: https://github.com/isNijikawa/Universal-Web-Filter-rules
