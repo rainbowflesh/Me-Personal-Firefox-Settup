@@ -1,0 +1,26 @@
+/*AGENT_SHEET*/
+
+/*********************************************************************************************
+  simpleMenuWizard: Firefox 89+ userChrome.css tweaks to remove context menu items.
+  https://github.com/stonecrusher/simpleMenuWizard
+**********************************************************************************************
+
+/*** blank-context.css ***/
+/* Note: Check out blank-context.css, it is very similar and more detailed. */
+
+/* #context-navigation,                    /* Hide whole navigation bar */
+/* #context-sep-navigation,                /********* Separator *********/
+/* #context-viewsource-goToLine,           /* Go to Line…               */
+/* #context-viewsource-wrapLongLines,      /* Wrap Long Lines           */
+/* #context-viewsource-highlightSyntax,    /* Syntax Highlighting       */
+/* #context-sep-viewsource-commands,       /********* Separator *********/
+/* #context-savepage,                      /* Save Page As...           */
+/* #context-selectall,                     /* Select All                */
+/* #context-sep-selectall,                 /********* Separator *********/
+/* #context-take-screenshot,               /* Take Screenshot           */
+/* #context-sep-screenshots,               /********* Separator *********/
+/* #context-viewsource,                    /* View Page Source          */
+/* #context-inspect,                       /* Inspect (Q)               */
+
+#leave_this_dummy_here
+    { display:none !important; }
