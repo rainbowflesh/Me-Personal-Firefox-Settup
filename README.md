@@ -34,6 +34,7 @@ tabbar.css:
 
 ## 可选项
 在about:config中开启layout.css.backdrop-filter.enabled, 体验一部分弹出菜单背景毛玻璃透明效果
+
 // 不开就没有, 透明的
 
 ## 推销插件:
