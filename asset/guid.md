@@ -9,7 +9,7 @@
 1. 进入 *高级设置页*. 
 2. 搜索 "toolkit.legacyUserProfileCustomizations.stylesheets", 并将设置改为true.
 3. 进入你的 *资料目录* 并返回上一级.
-4. 你会发现你的资料目录叫 "巴拉巴拉.default-release", 每个人的巴拉巴拉都不一样, 但是没有关系.
+4. 你会发现你的 *资料目录* 叫 "巴拉巴拉.default-release", 每个人的巴拉巴拉都不一样, 但是没有关系.
 5. 删掉它!
 6. 准备安装客制化👇
 
