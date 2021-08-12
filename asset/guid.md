@@ -13,6 +13,7 @@
 5. 删掉它!
 6. 准备安装客制化👇
 
+## 客制化
 ### 安装 win10 风格的滚动条
 1. [下载仓库][3]
 2. 解压文件, 然后进入 firefox 文件夹.
@@ -32,7 +33,7 @@
 
     userChrome.import("/userChrome/custom_scrollbars.uc.js", "UChrm");
     
-### 安装 Edge 风格化
+### 应用 Edge 风格化
 1. [下载仓库][4].
 2. 解压文件.
 3. 把压缩文件里 chrome 文件夹下的所有内容放到 *资料目录* 的 chrome 文件夹里.
