@@ -53,7 +53,6 @@
 
 [1]: about:config
 [2]: about:profiles
-[3]: about:support
 [3]: https://github.com/spencerwooo/firefox-overlay-scrollbar/archive/refs/heads/master.zip
 [4]: https://github.com/isNijikawa/MaterialFox-in-Microsoft-Edge-Style/archive/refs/heads/master.zip
 [5]: https://github.com/isNijikawa/simpleMenuWizard/archive/refs/heads/master.zip
