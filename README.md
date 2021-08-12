@@ -68,4 +68,4 @@
 [9]: https://github.com/spencerwooo/firefox-overlay-scrollbar
 [10]: https://github.com/muckSponge/MaterialFox
 [11]: https://github.com/stonecrusher/simpleMenuWizard
-[readme]: 
+[readme]: https://github.com/isNijikawa/Me-Personal-Firefox-Settup/blob/main/asset/guid.md
