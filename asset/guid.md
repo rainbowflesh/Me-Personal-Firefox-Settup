@@ -7,7 +7,7 @@
 
 ##### 初始化
 1. 进入 *高级设置页*. 
-2. 搜索 "toolkit.legacyUserProfileCustomizations.stylesheets", 并将设置改为true.
+2. 搜索 "toolkit.legacyUserProfileCustomizations.stylesheets", 并将设置改为 true.
 3. 进入你的 *资料目录* 并返回上一级.
 4. 你会发现你的 *资料目录* 叫 "巴拉巴拉.default-release", 每个人的巴拉巴拉都不一样, 但是没有关系.
 5. 删掉它!
@@ -17,7 +17,7 @@
 1. [下载仓库][3]
 2. 解压文件, 然后进入 firefox 文件夹.
 3. 把里面的 defaults 文件夹和 config.js 文件一并拖到 C:\Program Files\Mozilla Firefox 下 (即存放firefox.exe 的目录).
-4. 进入 *资料目录*, 在里面创建一个文件夹, 起名为 "chrome"
+4. 进入 *资料目录*, 在里面创建一个文件夹, 起名为 "chrome".
 5. 解压后的文件里有个叫 "profile" 的文件夹, 把里面的 "userChrome" 文件夹和 "userChrome.js" 文件一并放到第四步创建的 "chrome" 文件夹里.
 6. 启动火狐, 如果提示你安装火狐便正常安装.
 7. 重启浏览器, 你好了. 如果没好, 重复初始化过程的第一步和第二步.
@@ -33,18 +33,18 @@
     userChrome.import("/userChrome/custom_scrollbars.uc.js", "UChrm");
     
 ### 安装 Edge 风格化
-1. [下载仓库][4]
-2. 解压文件
+1. [下载仓库][4].
+2. 解压文件.
 3. 把压缩文件里 chrome 文件夹下的所有内容放到 *资料目录* 的 chrome 文件夹里.
 4. 重启浏览器, 你好了.
 
 #### 可选项: 启用 win11 风格的高斯模糊效果
 1. 进入 *高级设置页*. 
-2. 把 "layout.css.backdrop-filter.enabled" 设置改为 true
+2. 把 "layout.css.backdrop-filter.enabled" 设置改为 true.
 3. 重启浏览器, 你好了.
 
 ### 安装简化右键菜单
-1. [下载仓库][5]
+1. [下载仓库][5].
 2. 解压文件.
 3. 把解压后文件夹里的 "simpleMenuWizard" 文件夹放入 *资料目录* 的 chrome 文件夹里.
 4. 重启浏览器, 你好了.
