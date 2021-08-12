@@ -119,7 +119,6 @@
 
 .urlbarView .search-one-offs
 {
-	padding: 1px !important;
 	display: flex !important;
 }
 
@@ -147,7 +146,8 @@
 	height: 32px !important;
 	border-radius: 16px !important;
 	padding: 0 1px !important;
-	margin: 1px !important;
+	padding: 0 8px !important;
+	margin: 4px !important;
 	background-image: none !important;
 	color: inherit !important;
 	border: 0 !important;
