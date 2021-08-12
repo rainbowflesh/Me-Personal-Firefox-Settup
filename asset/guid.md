@@ -2,8 +2,8 @@
 
 ## 准备在前
 #### 约定
-+ 你的火狐有一个 *资料目录*, 你可以通过访问 [about:support][3] 网页, 点击 "Profile Folder" 表格 的 "Open Folder" 进入.
-+ 你的火狐拥有一个 *高级设置页*, 你可以通过访问 [about:profiles][2] 页进入, 上面有一个搜索框, 可以帮你快速查找设置选项.
++ 你的火狐有一个 *资料目录*, 你可以通过访问 [about:support] 网页, 点击 "Profile Folder" 表格 的 "Open Folder" 进入.
++ 你的火狐拥有一个 *高级设置页*, 你可以通过访问 [about:profiles] 页进入, 上面有一个搜索框, 可以帮你快速查找设置选项.
 
 ##### 初始化
 1. 进入 *高级设置页*. 
@@ -50,9 +50,6 @@
 3. 把解压后文件夹里的 "simpleMenuWizard" 文件夹放入 *资料目录* 的 chrome 文件夹里.
 4. 重启浏览器, 你好了.
 
-
-[1]: about:config
-[2]: about:profiles
 [3]: https://github.com/spencerwooo/firefox-overlay-scrollbar/archive/refs/heads/master.zip
 [4]: https://github.com/isNijikawa/MaterialFox-in-Microsoft-Edge-Style/archive/refs/heads/master.zip
 [5]: https://github.com/isNijikawa/simpleMenuWizard/archive/refs/heads/master.zip
