@@ -47,6 +47,8 @@ tabbar.css:
 + [Smart Prevent Duplicate tab][6] 自动关闭重复标签
 - 待续
 
+## 推销主题
+[![alt text](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860093.svg?modified=1628748740 "title")](https://addons.mozilla.org/en-US/firefox/addon/prise-the-sun-dark-souls/)
 
 [1]: https://addons.mozilla.org/en-US/firefox/addon/startup-theme-changer/?utm_content=addons-manager-reviews-link&utm_medium=firefox-browser&utm_source=firefox-browser
 [2]: https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
