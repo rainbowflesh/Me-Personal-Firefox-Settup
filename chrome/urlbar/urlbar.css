@@ -1,6 +1,8 @@
 .urlbarView-body-inner
 {
 	border: 0 !important;
+	background: rgba(0,0,0,0.01);
+	backdrop-filter: blur(10px) !important;
 }
 
 .urlbarView-row
@@ -121,6 +123,9 @@
 {
 	padding: 4px !important;
 	display: flex !important;
+	background: rgba(0,0,0,0.01);
+	backdrop-filter: blur(10px) !important;
+	border-radius: 3px;
 }
 
 .urlbarView .search-panel-one-offs-header
@@ -805,6 +810,7 @@
 	#searchbar
 	{
 		--input-offset: -.5px;
+		
 	}
 	
 	#identity-icon-labels

@@ -37,7 +37,7 @@
 
 /* #navigator-toolbox :-moz-any(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton)), */
 /* no ::part workaround - may have side effects */
-#scrollbutton-up[part="scrollbutton-up"]:not(.menupopup-scrollbutton),
+/* #scrollbutton-up[part="scrollbutton-up"]:not(.menupopup-scrollbutton),
 #scrollbutton-down[part="scrollbutton-down"]:not(.menupopup-scrollbutton)
 {
 	border-radius: 99px !important;
@@ -61,7 +61,7 @@
 	background-repeat: no-repeat !important;
 	background-position: center !important;
 	background-color: transparent !important;
-}
+} */
 
 #navigator-toolbox :-moz-any(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton)),
 /* no ::part workaround - may have side effects */
@@ -175,7 +175,7 @@
 .pointerlockfswarning
 {
 	display: flex !important;
-	border-radius: 4px !important;
+	border-radius: 3px !important;
 	padding: 6px !important;
 	background: #333 !important;
 	border: 0 !important;
@@ -259,7 +259,7 @@
 	right: 0 !important;
 	top: 0 !important;
 	bottom: 0 !important;
-	border-radius: 4px !important;
+	border-radius: 3px !important;
 	background: currentColor !important;
 	opacity: 0 !important;
 	transition: opacity .3s var(--ease-basic) !important;
