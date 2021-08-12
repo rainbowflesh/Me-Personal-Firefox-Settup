@@ -16,13 +16,13 @@
 					:root[tabsintitlebar]:not(:-moz-lwtheme):not([privatebrowsingmode=temporary])
 					{
 						background-color: #dee1e6 !important;
-						color: #3c4043 !important;
+						color: #00000000 !important;
         		  	}
 					
 					:root[tabsintitlebar]:not(:-moz-lwtheme):not([privatebrowsingmode=temporary]):-moz-window-inactive
 					{
 						background-color: #e7eaed !important;
-						color: #666a6d !important;
+						color: #00000000 !important;
         		  	}
         		}
       		}
