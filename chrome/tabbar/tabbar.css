@@ -227,7 +227,7 @@
 {
  	background: var(--tab-bgcolor) !important;
 	/* rounded top corners */
-	border-radius: 8px 8px 0 0 !important;
+	border-radius: 4px 4px 0 0 !important;
 	position: relative !important;
 	border: 0 !important;
 	transition:
@@ -254,7 +254,7 @@
 
 .tab-background::before
 {
-	border-bottom-right-radius: 8px !important;
+	border-bottom-right-radius: 4px !important;
 	left: 0 !important;
 	transform: translateX(-8px) !important;
 	box-shadow: 4px 4px 0 4px var(--tab-bgcolor) !important;
@@ -262,7 +262,7 @@
 
 .tab-background::after
 {
-	border-bottom-left-radius: 8px !important;
+	border-bottom-left-radius: 4px !important;
 	right: 0 !important;
 	transform: translateX(8px) !important;
 	box-shadow: -4px 4px 0 4px var(--tab-bgcolor) !important;
@@ -339,7 +339,7 @@
 .tab-icon-overlay:-moz-any([soundplaying], [muted], [activemedia-blocked]),
 .tab-icon-sound
 {
-	border-radius: 99px !important;
+	border-radius: 2px !important;
 	color: inherit !important;
 	-moz-context-properties: fill, fill-opacity !important;
 	transition-property: fill-opacity, background-color !important;
@@ -488,12 +488,13 @@
 
 #tabbrowser-tabs #tabs-newtab-button
 {
+	/* 按钮空间大小 */
 	margin-inline-start: 6px !important;
 }
 
 #tabbrowser-tabs[overflow] .tabbrowser-arrowscrollbox
 {
-	border-radius: 8px 8px 0 0 !important;
+	border-radius: 4px 4px 0 0 !important;
 	background-color: rgba(0, 0, 0, .1) !important;
 	padding-inline-start: 0 !important;
 }

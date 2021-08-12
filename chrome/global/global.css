@@ -175,7 +175,7 @@
 .pointerlockfswarning
 {
 	display: flex !important;
-	border-radius: 3px !important;
+	border-radius: 4px !important;
 	padding: 6px !important;
 	background: #333 !important;
 	border: 0 !important;
@@ -259,7 +259,7 @@
 	right: 0 !important;
 	top: 0 !important;
 	bottom: 0 !important;
-	border-radius: 3px !important;
+	border-radius: 4px !important;
 	background: currentColor !important;
 	opacity: 0 !important;
 	transition: opacity .3s var(--ease-basic) !important;

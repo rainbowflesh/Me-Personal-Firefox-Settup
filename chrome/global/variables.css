@@ -221,7 +221,8 @@
 
 /* blur */
 /* background: rgba(0,0,0,0.01); */
-/* backdrop-filter: blur(10px) !important;  */
+/* backdrop-filter: blur(5px) !important;  */
 
 /* border radius like Edge */
-/* border-radius: 3px; */
+/* border-radius: 4px; *//* bigger bar or some of menu in using 4px*/
+/* border-radius: 2px; *//* for icon use 2px*/

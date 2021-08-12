@@ -32,6 +32,11 @@ tabbar.css:
 
 还有一个搜索框的高度忘了在哪了, 且用且改
 
+## 可选项
+在about:config中开启layout.css.backdrop-filter.enabled, 体验一部分弹出彩蛋的背景毛玻璃透明
+// 不开就没有, 是纯色
+
+
 ## 推销插件:
 // 顺带推销我自己收集的[屏蔽规则][rule]
 + [uBlacklist][1] 屏蔽搜索引擎不想要的结果 
