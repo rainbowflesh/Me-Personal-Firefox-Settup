@@ -4,7 +4,7 @@
 ---
 预览:
 
-![猜猜看哪个是火狐哪个是edge](https://github.com/isNijikawa/Me-Personal-Firefox-Settup/blob/main/asset/preview.png)
+![猜猜看哪个是火狐哪个是edge](https://raw.githubusercontent.com/isNijikawa/Me-Personal-Firefox-Settup/main/asset/preview.png)
 
 ## 实现:
 + 基于 [MaterialFox][10] 制作了 Microsoft Edge 风格的浏览器ui, 以及 Acrylic 效果
@@ -21,6 +21,7 @@
 
 [simpleMenuWizard][8]
 
+详细安装指南: [读我][readme]
 ---
 #### 推销插件:
 ##### 顺带推销我自己收集的[屏蔽规则][rule]
@@ -67,3 +68,4 @@
 [9]: https://github.com/spencerwooo/firefox-overlay-scrollbar
 [10]: https://github.com/muckSponge/MaterialFox
 [11]: https://github.com/stonecrusher/simpleMenuWizard
+[readme]: 
