@@ -177,7 +177,7 @@
 	-moz-box-align: center !important;
 	display: block !important;
 	margin: 0 !important;
-	top: 0 !important;
+	top: 1px !important;
 	color: inherit !important;
 	
 	--urlbar-height: 28px !important;
