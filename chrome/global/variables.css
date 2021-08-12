@@ -31,13 +31,13 @@
 	/* button_background_active */
 	--lwt-toolbarbutton-active-background: rgba(0, 0, 0, .11) !important;
 
-	--lwt-toolbar-field-color: #202124 !important;
+	--lwt-toolbar-field-color: #20212400 !important;
 
 	/* popup_highlight */
 	--autocomplete-popup-highlight-background: #f2f2f2 !important;
 
 	/* popup_highlight_text */
-	--autocomplete-popup-highlight-color: #202124 !important;
+	--autocomplete-popup-highlight-color: #20212400 !important;
 
 	--toolbar-field-fontsize: 14px !important;
 	--search-icon-url: url("../icons/search.svg");
@@ -50,7 +50,7 @@
 :root[privatebrowsingmode=temporary]
 {
 	/* accentcolor */
-	--lwt-accent-color: #202124 !important;
+	--lwt-accent-color: #20212400 !important;
 
 	/* textcolor */
 	--lwt-text-color: #9ba0a5 !important;
@@ -159,9 +159,9 @@
 
 :root:-moz-any(:-moz-lwtheme-brighttext, [privatebrowsingmode=temporary])
 {
-	--toolbar-field-background-color: rgba(0, 0, 0,1) !important;
-	--toolbar-field-hover-background-color: rgba(33, 33, 33,1)!important;
-	--toolbar-field-focus-background-color: rgba(33, 33, 33,0.95)!important;
+	--toolbar-field-background-color: rgba(0, 0, 0, 0。144) !important;
+	--toolbar-field-hover-background-color: rgba(33, 33, 33, 0.144)!important;
+	--toolbar-field-focus-background-color: rgba(33, 33, 33, 0.144)!important;
 }
 
 :root:not(:-moz-lwtheme):not([privatebrowsingmode=temporary])

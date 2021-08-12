@@ -2,7 +2,7 @@
 {
 	border: 0 !important;
 	background: rgba(0,0,0,0.01);
-	backdrop-filter: blur(5px) !important;
+	backdrop-filter: saturate(180%) blur(20px) !important;
 }
 
 .urlbarView-row
@@ -124,7 +124,7 @@
 	padding: 4px !important;
 	display: flex !important;
 	background: rgba(0,0,0,0.01);
-	backdrop-filter: blur(10px) !important;
+	backdrop-filter: saturate(180%) blur(20px) !important;
 	border-radius: 0 0 4px 4px;
 }
 
@@ -779,7 +779,7 @@
 .searchbar-textbox /* < 71 */
 {
 	transform: translateY(var(--input-offset)) !important;
-	line-height: 1.745em !important;
+	line-height: 1.8em !important;
 }
 
 /* 1x */
