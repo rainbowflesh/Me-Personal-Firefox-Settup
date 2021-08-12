@@ -10,7 +10,7 @@
 
 /*** When right-clicking on... ***/
 @import "global/variables.css"; 
-/* @import "global/global.css"; */
+@import "global/global.css"; 
 /* @import "icons/icons.css";   */
 @import "tabbar/tabbar.css"; 
 @import "navbar/navbar.css"; 

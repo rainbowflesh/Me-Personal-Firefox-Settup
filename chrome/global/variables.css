@@ -159,9 +159,9 @@
 
 :root:-moz-any(:-moz-lwtheme-brighttext, [privatebrowsingmode=temporary])
 {
-	--toolbar-field-background-color: #202124 !important;
-	--toolbar-field-hover-background-color: #292a2d !important;
-	--toolbar-field-focus-background-color: #202124 !important;
+	--toolbar-field-background-color: rgba(0, 0, 0,1) !important;
+	--toolbar-field-hover-background-color: rgba(51, 51, 51,0.9)!important;
+	--toolbar-field-focus-background-color: rgba(32, 32, 32,0.9)!important;
 }
 
 :root:not(:-moz-lwtheme):not([privatebrowsingmode=temporary])

@@ -16,13 +16,13 @@
 					:root[tabsintitlebar]:not(:-moz-lwtheme):not([privatebrowsingmode=temporary])
 					{
 						background-color: #dee1e6 !important;
-						color: #00000000 !important;
+						color: #3c4043 !important;
         		  	}
 					
 					:root[tabsintitlebar]:not(:-moz-lwtheme):not([privatebrowsingmode=temporary]):-moz-window-inactive
 					{
 						background-color: #e7eaed !important;
-						color: #00000000 !important;
+						color: #666a6d !important;
         		  	}
         		}
       		}
@@ -35,7 +35,7 @@
 	-moz-box-align: center !important;
 }
 
-#navigator-toolbox :-moz-any(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton)),
+/* #navigator-toolbox :-moz-any(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton)), */
 /* no ::part workaround - may have side effects */
 #scrollbutton-up[part="scrollbutton-up"]:not(.menupopup-scrollbutton),
 #scrollbutton-down[part="scrollbutton-down"]:not(.menupopup-scrollbutton)
