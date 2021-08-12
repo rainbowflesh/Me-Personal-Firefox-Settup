@@ -1,51 +1,35 @@
 # Me Personal Firefox Settup
- 火狐客制化
+ 火狐客制化仓库
 
-## 浏览器本体客制化使用:
+---
+预览:
 
-https://github.com/spencerwooo/firefox-overlay-scrollbar
+![img]()
 
-https://github.com/stonecrusher/simpleMenuWizard
+## 实现:
++ 基于 [MaterialFox][10] 制作了 Microsoft Edge 风格的浏览器ui, 以及 Acrylic 效果
++ 利用 [simpleMenuWizard][11] 精简了右键菜单, 普通人用不上的我肯定也用不上, 遂删之.
++ 利用 [firefox-overlay-scrollbar][9] 实现 win10 滚动条效果.
+- *没有* 实现火狐原生主题适配, 如果你用原生主题可能会感觉到一丝违和, 但不影响使用. 
 
-https://github.com/muckSponge/MaterialFox
+## 依赖:
+↓请按顺序依次安装👇
 
------
+[Firefox Overlay Scrollbars][9]
 
-## 禁用下列内容
+[MaterialFox-in-Microsoft-Edge-Style][7]
 
-+ @import "global/global.css"; //这个不禁用所有图标下面会有个黑圈, 很啥b //todo: 单独解决黑圈问题然后启用这个吸assass
+[simpleMenuWizard][8]
 
-## 修改下列内容
-
-tabbar.css: 
-
-    .tab-close-button
-        {
-            list-style-image: url(close-tab.svg) !important;
-            width: 20px !important;
-            height: 20px !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-
-这个是改标签关闭按钮大小的, 原版我记得是16px, 但是新建按钮是20, 这强迫症能忍?
-
-还有一个搜索框的高度忘了在哪了, 且用且改
-
-## 可选项
-在about:config中开启layout.css.backdrop-filter.enabled, 体验一部分弹出菜单背景毛玻璃透明效果
-
-// 不开就没有, 透明的
-
-## 推销插件:
-// 顺带推销我自己收集的[屏蔽规则][rule]
-+ [uBlacklist][1] 屏蔽搜索引擎不想要的结果 
+---
+#### 推销插件:
+##### 顺带推销我自己收集的[屏蔽规则][rule]
++ [uBlacklist][1] 屏蔽搜索引擎结果 
 + [uBlock][2] 屏蔽网页元素
 + [Dark Reader][3] 网页黑背景
-+ [Startup Theme Changer][4] 开机自动切换主题, 用来让我快乐更换9个主题
++ [Startup Theme Changer][4] 自动切换主题
 + [Nyan Cat ytb][5] ytb进度条换成nyan猫
 + [Smart Prevent Duplicate tab][6] 自动关闭重复标签
-- 待续
 
 ## 推销主题
 [![img](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860093.svg?modified=1628748740 "赞美太阳")](https://addons.mozilla.org/en-US/firefox/addon/prise-the-sun-dark-souls/)
@@ -78,3 +62,8 @@ tabbar.css:
 [5]: https://addons.mozilla.org/en-US/firefox/addon/nyan-cat-youtube-enhancement/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
 [6]: https://addons.mozilla.org/en-US/firefox/addon/smart-prevent-duplicate-tabs/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
 [rule]: https://github.com/isNijikawa/Universal-Web-Filter-rules
+[7]: https://github.com/isNijikawa/MaterialFox-in-Microsoft-Edge-Style
+[8]: https://github.com/isNijikawa/simpleMenuWizard
+[9]: https://github.com/spencerwooo/firefox-overlay-scrollbar
+[10]: https://github.com/muckSponge/MaterialFox
+[11]: https://github.com/stonecrusher/simpleMenuWizard
