@@ -4,7 +4,11 @@
 ---
 预览:
 
-![猜猜看哪个是火狐哪个是edge](https://raw.githubusercontent.com/isNijikawa/Me-Personal-Firefox-Settup/main/asset/preview.png)
+![img](https://raw.githubusercontent.com/isNijikawa/Me-Personal-Firefox-Settup/main/asset/ezgif-2-359c1a2db84d.gif)
+
+对比: 
+(左侧为Firefox)
+![对比](https://raw.githubusercontent.com/isNijikawa/Me-Personal-Firefox-Settup/main/asset/compare.png)
 
 ## 实现:
 + 基于 [MaterialFox][10] 制作了 Microsoft Edge 风格的浏览器ui, 以及 Acrylic 效果
