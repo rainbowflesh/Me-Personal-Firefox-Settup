@@ -13,6 +13,9 @@
 - *没有* 完全实现火狐原生主题适配, 如果你用原生主题可能会感觉到一丝违和, 但不影响使用. 
 
 ## 依赖:
+操作系统: Windows 11
+火狐版本: Firefox Quantum 91.0 (64bit)
+
 ↓请按顺序依次安装👇
 
 [Firefox Overlay Scrollbars][9]
