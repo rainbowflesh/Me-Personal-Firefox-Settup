@@ -4,7 +4,7 @@
 ---
 预览:
 
-![img](https://raw.githubusercontent.com/isNijikawa/Me-Personal-Firefox-Settup/main/asset/ezgif-2-359c1a2db84d.gif)
+![img](https://raw.githubusercontent.com/isNijikawa/Me-Personal-Firefox-Settup/main/asset/preview.gif)
 
 对比: 
 (左侧为Firefox)
