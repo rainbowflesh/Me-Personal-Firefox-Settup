@@ -1,22 +1,28 @@
 # Me Personal Firefox Settup
+
  火狐客制化仓库
+
+### 就在刚刚 (96.0) 版本
+## 火狐把一切 CSS 都给毁了!!!!!111
+# 本仓库可能今后都不会有什么效果了
 
 ---
 预览:
 
 ![img](https://raw.githubusercontent.com/isNijikawa/Me-Personal-Firefox-Settup/main/asset/preview.gif)
 
-对比: 
+对比:
 (左侧为Firefox)
 ![对比](https://raw.githubusercontent.com/isNijikawa/Me-Personal-Firefox-Settup/main/asset/compare.png)
 
-## 实现:
+## 实现
+
 + 基于 [MaterialFox][10] 制作了 Microsoft Edge 风格的浏览器ui, 以及 Acrylic 效果
 + 利用 [simpleMenuWizard][11] 精简了右键菜单, 普通人用不上的我肯定也用不上, 遂删之.
 + 利用 [firefox-overlay-scrollbar][9] 实现 win10 滚动条效果.
-- *没有* 完全实现火狐原生主题适配, 如果你用原生主题可能会感觉到一丝违和, 但不影响使用. 
 
-## 依赖:
+## 依赖
+
 操作系统: Windows 11
 火狐版本: Firefox Quantum 91.0 (64bit)
 
@@ -29,10 +35,14 @@
 [simpleMenuWizard][8]
 
 详细安装指南: [读我][readme]
+
 ---
-#### 推销插件:
+
+#### 推销插件
+
 ##### 顺带推销我自己收集的[屏蔽规则][rule]
-+ [uBlacklist][1] 屏蔽搜索引擎结果 
+
++ [uBlacklist][1] 屏蔽搜索引擎结果
 + [uBlock][2] 屏蔽网页元素
 + [Dark Reader][3] 网页黑背景
 + [Startup Theme Changer][4] 自动切换主题
@@ -40,6 +50,9 @@
 + [Smart Prevent Duplicate tab][6] 自动关闭重复标签
 
 ## 推销主题
+
++ *没有* 完全实现火狐原生主题适配, 如果你用原生主题可能会感觉到一丝违和, 但不影响使用.
+
 [![img](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860093.svg?modified=1628748740 "赞美太阳")](https://addons.mozilla.org/en-US/firefox/addon/prise-the-sun-dark-souls/)
 
 [![img](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860127.svg?modified=1628758537 "猫猫!")](https://addons.mozilla.org/en-US/firefox/addon/lazy-cat-theme/)
