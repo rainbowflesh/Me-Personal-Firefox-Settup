@@ -45,7 +45,7 @@ Me Personal Firefox Setup
 
 [![猫耳初音](https://addons.mozilla.org/user-media/version-previews/full/3860/3860107.svg)](https://addons.mozilla.org/en-US/firefox/addon/neko-miku-theme/)
 
-[![pekora](https://addons.mozilla.org/user-media/version-previews/full/3881/3881033.svg)](https://addons.mozilla.org/en-US/firefox/addon/pekora-theme/)
+[![pekora](https://addons.mozilla.org/user-media/version-previews/full/3908/3908060.png)](https://addons.mozilla.org/en-US/firefox/addon/pekora-theme/)
 
 [![变身初音](https://addons.mozilla.org/user-media/version-previews/full/3860/3860113.svg)](<https://addons.mozilla.org/en-US/firefox/addon/yet-another-mikutheme/>)
 
