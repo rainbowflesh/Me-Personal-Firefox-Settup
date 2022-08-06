@@ -33,6 +33,7 @@ Me Personal Firefox Setup
 [EdgeFox][7]
 
 [simpleMenuWizard][8]
+> 或者, 直接把 `chrome` 下的内容丢尽 `Profile` 就行.
 
 ---
 
@@ -40,27 +41,19 @@ Me Personal Firefox Setup
 
 + *没有* 完全实现火狐原生主题适配, 如果你用原生主题可能会感觉到一丝违和, 但不影响使用.
 
-[![img](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860093.svg?modified=1628748740 "赞美太阳")](https://addons.mozilla.org/en-US/firefox/addon/prise-the-sun-dark-souls/)
+[![赞美太阳](https://addons.mozilla.org/user-media/version-previews/full/3882/3882953.svg)](https://addons.mozilla.org/en-US/firefox/addon/prise-the-sun-dark-souls/)
 
-[![img](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860127.svg?modified=1628758537 "猫猫!")](https://addons.mozilla.org/en-US/firefox/addon/lazy-cat-theme/)
+[![猫耳初音](https://addons.mozilla.org/user-media/version-previews/full/3860/3860107.svg)](https://addons.mozilla.org/en-US/firefox/addon/neko-miku-theme/)
 
-[![img](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860107.svg?modified=1628755709 "猫耳初音")](https://addons.mozilla.org/en-US/firefox/addon/neko-miku-theme/)
+[![pekora](https://addons.mozilla.org/user-media/version-previews/full/3908/3908060.png)](https://addons.mozilla.org/en-US/firefox/addon/pekora-theme/)
 
-[![img](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860115.svg?modified=1628757024 "vtb")](https://addons.mozilla.org/en-US/firefox/addon/pekora-theme/)
+[![变身初音](https://addons.mozilla.org/user-media/version-previews/full/3860/3860113.svg)](<https://addons.mozilla.org/en-US/firefox/addon/yet-another-mikutheme/>)
 
-[![img](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860113.svg?modified=1628756578 "变身初音")](https://addons.mozilla.org/en-US/firefox/addon/yet-another-mikutheme/)
+[![米其林](https://addons.mozilla.org/user-media/version-previews/full/3860/3860121.svg)](https://addons.mozilla.org/en-US/firefox/addon/run-michirun-run-theme/)
 
-[![img](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860109.svg?modified=1628755886 "梓喵")](https://addons.mozilla.org/en-US/firefox/addon/animated-neko-azus-theme/)
+[![圆形 nyan](https://addons.mozilla.org/user-media/version-previews/full/3860/3860590.png)](https://addons.mozilla.org/en-US/developers/addon/fat-nyan-theme/)
 
-[![img](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860121.svg?modified=1628757483 "米其林")](https://addons.mozilla.org/en-US/firefox/addon/run-michirun-run-theme/)
-
-[![img](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860139.svg?modified=1628759616 "跳舞鲨鱼")](https://addons.mozilla.org/en-US/firefox/addon/left-shark-dance-theme/)
-
-[![img](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860132.png?modified=1628759122 "圆形 nyan")](https://addons.mozilla.org/en-US/developers/addon/fat-nyan-theme/edit)
-
-[![img](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860136.png?modified=1628759532 "pop nyan")](https://addons.mozilla.org/en-US/firefox/addon/pop-nyan-theme/)
-
-[![img](https://addons.cdn.mozilla.net/user-media/version-previews/full/3860/3860140.png?modified=1628759675 "sus")](https://addons.mozilla.org/en-US/firefox/addon/amongsus-thutheme/)
+[![pop nyan](https://addons.mozilla.org/user-media/version-previews/full/3860/3860589.svg)](https://addons.mozilla.org/en-US/firefox/addon/pop-nyan-theme/)
 
 ### 推销插件
 
