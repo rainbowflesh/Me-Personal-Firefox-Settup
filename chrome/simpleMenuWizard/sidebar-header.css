@@ -1,11 +1,12 @@
 /*AGENT_SHEET*/
 
 /*********************************************************************************************
-  simpleMenuWizard: Firefox 89+ userChrome.css tweaks to remove context menu items.
+  simpleMenuWizard: userChrome.css tweaks to remove context menu items in Firefox.
   https://github.com/stonecrusher/simpleMenuWizard
 **********************************************************************************************
 
 /*** sidebar-header.css ***/
+/*** When left-clicking on the sidebar header ***/
 
 /* #sidebar-header,                                     /* Hide sidebar header completely (use shortcuts only) */
 /* #sidebar-close,                                      /* Hide close button (X)                               */
