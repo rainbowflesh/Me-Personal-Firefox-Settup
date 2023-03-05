@@ -14,8 +14,8 @@
 /* #placesContext_open\:newtab,                   /* Open in a New Tab                */
 /* #placesContext_openContainer\:tabs,            /* Open All in Tabs (folder)        */
 /* #placesContext_openLinks\:tabs,                /* Open All in Tabs (selected tabs) */
-/* #placesContext_open\:newwindow,                /* Open in a New Window             */
-/* #placesContext_open\:newprivatewindow,         /* Open in a New Private Window     */
+#placesContext_open\:newwindow,                /* Open in a New Window
+#placesContext_open\:newprivatewindow,         /* Open in a New Private Window
 /* #placesContext_openSeparator,                  /************ Separator *************/
 /* #placesContext_show_bookmark\:info,            /* Edit Bookmark…                   */
 /* #placesContext_show\:info,                     /* Edit…                            */
@@ -45,5 +45,6 @@
 /* #show-other-bookmarks_PersonalToolbar,         /* Show Other Bookmarks             */
 /* #placesContext_showAllBookmarks,               /* Manage Bookmarks                 */
 
-#leave_this_dummy_here
-    { display:none !important; }
+#leave_this_dummy_here {
+  display: none !important;
+}
