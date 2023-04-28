@@ -1,55 +1,133 @@
 /* EdgeFox - content/newtab.css */
 
 /* colours */
-@-moz-document url-prefix("about:newtab"), url-prefix("about:home") {
-  body:not([lwt-newtab], [lwt-newtab-brighttext]),
-  body[style*="--newtab-background-color: rgb(249, 249, 251)"] {
-    --newtab-background-color: #F7F7F7 !important;
+@-moz-document url-prefix("about:newtab"),
+url-prefix("about:home"),
+url-prefix("about:firefoxview") {
+  :root:not([lwt-newtab]) > body:not([lwt-newtab]),
+  :is(:root, body)[style*="--newtab-background-color: rgb(249, 249, 251)"] {
+    --newtab-background-color: #f7f7f7 !important;
     --newtab-background-color-secondary: #fff !important;
     --newtab-text-primary-color: #252525 !important;
-    --newtab-primary-action-background: #0078D4 !important;
-    --newtab-text-secondary-color: color-mix(in srgb, var(--newtab-text-primary-color) 80%, transparent) !important;
-    --newtab-element-hover-color: color-mix(in srgb, var(--newtab-background-color) 95%, #000) !important;
-    --newtab-element-active-color: color-mix(in srgb, var(--newtab-background-color) 90%, #000) !important;
-    --newtab-element-secondary-color: color-mix(in srgb, currentColor 5%, transparent) !important;
-    --newtab-element-secondary-hover-color: color-mix(in srgb, currentColor 12%, transparent) !important;
-    --newtab-element-secondary-active-color: color-mix(in srgb, currentColor 25%, transparent) !important;
-    --newtab-primary-element-hover-color: color-mix(in srgb, var(--newtab-primary-action-background) 90%, #000) !important;
-    --newtab-primary-element-active-color: color-mix(in srgb, var(--newtab-primary-action-background) 80%, #000) !important;
+    --newtab-primary-action-background: #0078d4 !important;
+    --newtab-text-secondary-color: color-mix(
+      in srgb,
+      var(--newtab-text-primary-color) 80%,
+      transparent
+    ) !important;
+    --newtab-element-hover-color: color-mix(
+      in srgb,
+      var(--newtab-background-color) 95%,
+      #000
+    ) !important;
+    --newtab-element-active-color: color-mix(
+      in srgb,
+      var(--newtab-background-color) 90%,
+      #000
+    ) !important;
+    --newtab-element-secondary-color: color-mix(
+      in srgb,
+      currentColor 5%,
+      transparent
+    ) !important;
+    --newtab-element-secondary-hover-color: color-mix(
+      in srgb,
+      currentColor 12%,
+      transparent
+    ) !important;
+    --newtab-element-secondary-active-color: color-mix(
+      in srgb,
+      currentColor 25%,
+      transparent
+    ) !important;
+    --newtab-primary-element-hover-color: color-mix(
+      in srgb,
+      var(--newtab-primary-action-background) 90%,
+      #000
+    ) !important;
+    --newtab-primary-element-active-color: color-mix(
+      in srgb,
+      var(--newtab-primary-action-background) 80%,
+      #000
+    ) !important;
     --newtab-primary-element-text-color: #fff !important;
-    --newtab-primary-action-background-dimmed: color-mix(in srgb, var(--newtab-primary-action-background) 25%, transparent) !important;
-    --newtab-border-color: color-mix(in srgb, var(--newtab-background-color) 75%, #000) !important;
+    --newtab-primary-action-background-dimmed: color-mix(
+      in srgb,
+      var(--newtab-primary-action-background) 25%,
+      transparent
+    ) !important;
+    --newtab-border-color: color-mix(
+      in srgb,
+      var(--newtab-background-color) 75%,
+      #000
+    ) !important;
     --newtab-wordmark-color: #737373 !important;
-    --newtab-status-success: #50B080 !important;
-    --newtab-status-error: #FF848A !important;
+    --newtab-status-success: #50b080 !important;
+    --newtab-status-error: #ff848a !important;
     --newtab-inner-box-shadow-color: rgba(0, 0, 0, 0.1) !important;
-    --newtab-overlay-color: color-mix(in srgb, var(--newtab-background-color) 85%, transparent) !important;
-    --newtab-text-emphasis-background: #FFED32 !important;
+    --newtab-overlay-color: color-mix(
+      in srgb,
+      var(--newtab-background-color) 85%,
+      transparent
+    ) !important;
+    --newtab-text-emphasis-background: #ffed32 !important;
     --newtab-text-emphasis-text-color: #000 !important;
-    --newtab-textbox-focus-color: var(--newtab-primary-action-background) !important;
-    --newtab-textbox-focus-boxshadow: 0 0 0 1px var(--newtab-primary-action-background), 0 0 0 4px rgba(var(--newtab-primary-action-background), 0.3) !important;
+    --newtab-textbox-focus-color: var(
+      --newtab-primary-action-background
+    ) !important;
+    --newtab-textbox-focus-boxshadow: 0 0 0 1px
+        var(--newtab-primary-action-background),
+      0 0 0 4px rgba(var(--newtab-primary-action-background), 0.3) !important;
     --newtab-button-secondary-color: inherit !important;
   }
 
-  body[style*="--newtab-background-color: rgb(43, 42, 51)"][lwt-newtab-brighttext],
-  body:not([style*="color"])[lwt-newtab-brighttext] {
+  :is(
+      :root,
+      body
+    )[style*="--newtab-background-color: rgb(43, 42, 51)"][lwt-newtab-brighttext],
+  :is(:root, body):not([style*="color"])[lwt-newtab-brighttext] {
     --newtab-background-color: #252525 !important;
-    --newtab-background-color-secondary: #4A4A4A !important;
+    --newtab-background-color-secondary: #4a4a4a !important;
     --newtab-text-primary-color: #fff !important;
-    --newtab-primary-action-background: #75B6E8 !important;
-    --newtab-element-hover-color: color-mix(in srgb, var(--newtab-background-color) 95%, #FFF) !important;
-    --newtab-element-active-color: color-mix(in srgb, var(--newtab-background-color) 90%, #FFF) !important;
-    --newtab-element-secondary-color: color-mix(in srgb, currentColor 10%, transparent) !important;
-    --newtab-element-secondary-hover-color: color-mix(in srgb, currentColor 17%, transparent) !important;
-    --newtab-element-secondary-active-color: color-mix(in srgb, currentColor 30%, transparent) !important;
-    --newtab-border-color: color-mix(in srgb, var(--newtab-background-color) 75%, #FFF) !important;
+    --newtab-primary-action-background: #75b6e8 !important;
+    --newtab-element-hover-color: color-mix(
+      in srgb,
+      var(--newtab-background-color) 95%,
+      #fff
+    ) !important;
+    --newtab-element-active-color: color-mix(
+      in srgb,
+      var(--newtab-background-color) 90%,
+      #fff
+    ) !important;
+    --newtab-element-secondary-color: color-mix(
+      in srgb,
+      currentColor 10%,
+      transparent
+    ) !important;
+    --newtab-element-secondary-hover-color: color-mix(
+      in srgb,
+      currentColor 17%,
+      transparent
+    ) !important;
+    --newtab-element-secondary-active-color: color-mix(
+      in srgb,
+      currentColor 30%,
+      transparent
+    ) !important;
+    --newtab-border-color: color-mix(
+      in srgb,
+      var(--newtab-background-color) 75%,
+      #fff
+    ) !important;
     --newtab-primary-element-text-color: #252525 !important;
     --newtab-wordmark-color: #fff !important;
-    --newtab-status-success: #50B080 !important;
+    --newtab-status-success: #50b080 !important;
   }
 }
 
-@-moz-document url-prefix("about:newtab"), url-prefix("about:home") {
+@-moz-document url-prefix("about:newtab"),
+url-prefix("about:home") {
   /* hide pin */
   .icon.icon-pin-small {
     display: none !important;
@@ -72,7 +150,9 @@
     white-space: nowrap !important;
     text-overflow: ellipsis !important;
     --elevation: 4;
-    box-shadow: 0 0 calc((var(--elevation) * 0.225px) + 2px) rgba(0, 0, 0, 0.11), 0 calc(var(--elevation) * 0.4px) calc((var(--elevation) * 0.9px)) rgba(0, 0, 0, 0.13) !important;
+    box-shadow: 0 0 calc((var(--elevation) * 0.225px) + 2px) rgba(0, 0, 0, 0.11),
+      0 calc(var(--elevation) * 0.4px) calc((var(--elevation) * 0.9px))
+        rgba(0, 0, 0, 0.13) !important;
   }
 
   .search-handoff-button:hover {
@@ -132,8 +212,12 @@
   }
 
   .card-outer .card-preview-image-outer,
-  .ds-card-grid.ds-card-grid-border .ds-card:not(.placeholder) .img-wrapper .img img {
-    border-radius: 6px 6px 0 0 !important
+  .ds-card-grid.ds-card-grid-border
+    .ds-card:not(.placeholder)
+    .img-wrapper
+    .img
+    img {
+    border-radius: 6px 6px 0 0 !important;
   }
 
   .fake-textbox {
@@ -160,14 +244,24 @@
 /* private browsing newtab */
 @-moz-document url-prefix(about:privatebrowsing) {
   :root {
-    --uc-wordmark-color: #737373 !important;
-    --uc-background-color-secondary: #fff !important;
+    --uc-wordmark-color: #737373;
+    --uc-background-color-secondary: #fff;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --uc-wordmark-color: #fff !important;
+      --uc-wordmark-color: #fff;
+      --uc-background-color-secondary: #4a4a4a;
+    }
+  }
+
+  @supports -moz-bool-pref("browser.theme.dark-private-windows") {
+    html.private {
+      --in-content-page-color: white !important;
+      --in-content-page-background: #252525 !important;
+      --in-content-focus-outline-color: #63ade5 !important;
       --uc-background-color-secondary: #4a4a4a !important;
+      --uc-wordmark-color: #fff !important;
     }
   }
 
@@ -184,7 +278,9 @@
     border-radius: 99px !important;
     padding-inline-start: 48px !important;
     --elevation: 4;
-    box-shadow: 0 0 calc((var(--elevation) * 0.225px) + 2px) rgba(0, 0, 0, 0.11), 0 calc(var(--elevation) * 0.4px) calc((var(--elevation) * 0.9px)) rgba(0, 0, 0, 0.13) !important;
+    box-shadow: 0 0 calc((var(--elevation) * 0.225px) + 2px) rgba(0, 0, 0, 0.11),
+      0 calc(var(--elevation) * 0.4px) calc((var(--elevation) * 0.9px))
+        rgba(0, 0, 0, 0.13) !important;
   }
 
   .search-handoff-button:hover {
@@ -211,64 +307,110 @@
 
   .info {
     background-color: var(--uc-background-color-secondary) !important;
+    background-image: none !important;
+    position: relative !important;
+  }
+
+  .info::before {
+    content: "";
+    position: absolute;
+    left: 32px;
+    top: 20px;
+    height: 32px;
+    aspect-ratio: 1 / 1;
+    background: center / contain url("../icons/account-private.svg");
+    border-radius: 99px;
   }
 }
 
 @supports -moz-bool-pref("uc.tweak.newtab-background") {
-  @-moz-document url(about:newtab), url(about:home), url(about:privatebrowsing) {
-    body:not([lwt-newtab]),
-    body[lwt-newtab],
-    body[lwt-newtab][lwt-newtab-brighttext] {
+  @-moz-document url(about:newtab),
+  url(about:home),
+  url(about:privatebrowsing),
+  url-prefix("about:firefoxview") {
+    :root body {
       /* specify both jpg and png file extensions, but jpg images will always
       have a higher priority */
       --bg-0: url(../background-0.jpg), url(../background-0.png);
       --bg-1: url(../background-1.jpg), url(../background-1.png);
       --newtab-element-hover-color: rgba(239, 239, 239, 0.3) !important;
       --newtab-element-active-color: rgba(239, 239, 239, 0.45) !important;
+      --text-shadow: 0 1px 2px #000;
+      --icon-shadow: drop-shadow(0 0.3px 0.6px #000);
       background-color: #252525 !important;
       background-image: var(--bg-0) !important;
       background-position: center !important;
       background-size: cover !important;
       background-attachment: fixed !important;
-      transition: background 0.25s ease !important;
     }
 
-    body[lwt-newtab][lwt-newtab-brighttext] {
+    body[lwt-newtab][lwt-newtab-brighttext],
+    :root[lwt-newtab][lwt-newtab-brighttext] body,
+    :root.private body {
       background-image: var(--bg-1), var(--bg-0) !important;
       --newtab-element-hover-color: rgba(66, 66, 66, 0.4) !important;
       --newtab-element-active-color: rgba(66, 66, 66, 0.55) !important;
     }
 
-    .wordmark,
-    .icon-settings,
-    .top-site-outer .context-menu-button {
-      color: #fff !important;
-      fill: currentColor !important;
-      filter: drop-shadow(0 0.3px 0.6px #000) !important;
+    @supports not -moz-bool-pref("browser.theme.dark-private-windows") {
+      :root.private body {
+        background-image: var(--bg-0) !important;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root.private body {
+          background-image: var(--bg-1), var(--bg-0) !important;
+        }
+      }
     }
 
     .top-site-outer .title,
-    .ds-header, .ds-layout .section-title span,
-    .ds-navigation {
+    .ds-header,
+    .ds-layout .section-title span,
+    .ds-navigation,
+    .page-section-header > h1,
+    .page-section-header > .section-description,
+    .closed-tab-li-main:not(:hover, :active),
+    .closed-tab-li-dismiss,
+    .brand-logo > .brand-feature-name,
+    #colorways-collection-title,
+    #colorways-collection-description,
+    .synced-tabs-container > .loading-content {
+      text-shadow: var(--text-shadow) !important;
       color: #fff !important;
-      text-shadow: 0 1px 2px #000 !important;
       -moz-osx-font-smoothing: auto !important;
+    }
+
+    .wordmark,
+    .icon-settings,
+    .top-site-outer .context-menu-button,
+    .closed-tab-li-main:not(:hover, :active) .favicon,
+    .page-section-header:not(:hover) > .twisty,
+    .synced-tab-li-favicon,
+    .page-section-header:not(:hover) > .twisty,
+    .closed-tab-li-dismiss:not(:hover),
+    .synced-tabs-container > .loading-content .sync {
+      filter: var(--icon-shadow) !important;
+      color: #fff !important;
+      fill: currentColor !important;
     }
 
     .section-top-bar .learn-more-link a,
     .ds-navigation a {
       color: #b3d4ff !important;
-      text-shadow: 0 1px 2px #000 !important;
+      text-shadow: var(--text-shadow) !important;
       -moz-osx-font-smoothing: auto !important;
     }
 
-    .top-site-outer .title .sponsored-label {
-      color: #fffc !important;
+    .top-site-outer .title .sponsored-label,
+    .closed-tab-li-main:not(:hover, :active)
+      :is(.closed-tab-li-url, .closed-tab-li-time) {
+      color: #eee !important;
     }
 
-    body:not(.inline-onboarding) .fixed-search .search-wrapper {
+    .fixed-search .search-wrapper {
       border-bottom: 0 !important;
-      background: transparent linear-gradient(#0004 , transparent) !important;
+      background: transparent linear-gradient(#0004, transparent) !important;
     }
   }
 }
