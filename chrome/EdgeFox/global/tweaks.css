@@ -1,4 +1,4 @@
-/* EdgeFox - tweaks.css */
+/* EdgeFr-Fox by bmFtZQ - tweaks.css */
 
 /* disable drag space above tabs */
 @supports -moz-bool-pref("uc.tweak.disable-drag-space") {
@@ -15,33 +15,20 @@ bugs with certain themes eg. dark text on dark background.) */
   }
 }
 
-/* hide firefox account button when not in private mode (useful as a private
-browsing indicator) */
-@supports -moz-bool-pref("uc.tweak.fxa-button-as-private-indicator") {
-  :root:not([privatebrowsingmode]) #nav-bar:not([customizing]) #fxa-toolbar-menu-button {
-    display: none !important;
-  }
-}
-
 /* remove tab separators */
 @supports -moz-bool-pref("uc.tweak.remove-tab-separators") {
-  .tabbrowser-tab:not([selected="true"], :hover, [beforeselected-visible], [beforehovered]) .tab-stack::after {
+  .tabbrowser-tab:not(
+      [selected="true"],
+      :hover,
+      [beforeselected-visible],
+      [beforehovered]
+    )
+    .tab-stack::after {
     display: none !important;
   }
 
   .tabbrowser-tab:not([last-visible-tab="true"]) {
     margin-inline-end: 0px !important;
-  }
-}
-
-@supports -moz-bool-pref("uc.tweak.less-permissions-button-padding") {
-  #identity-icon-box {
-    padding-inline: var(--uc-toolbarbutton-inner-inline-padding) !important;
-  }
-
-  #identity-permission-box {
-    padding-inline: 2px var(--uc-urlbar-icon-inline-padding) !important;
-    margin-inline-start: -8px !important;
   }
 }
 
@@ -58,7 +45,7 @@ browsing indicator) */
   :root[lwt-default-theme-in-dark-mode="true"],
   :root[style*="--lwt-accent-color: rgb(28, 27, 34)"] {
     --lwt-accent-color: #202020 !important;
-    --toolbar-bgcolor: #4D4D4D !important;
+    --toolbar-bgcolor: #4d4d4d !important;
     --lwt-accent-color-inactive: unset !important;
     --chrome-content-separator-color: #535353 !important;
     --uc-tab-border-color: #ffffff0f !important;
@@ -71,6 +58,20 @@ browsing indicator) */
       --lwt-tab-text: -moz-dialogtext !important;
       --uc-tab-border-color: #ffffff0f !important;
     }
+  }
+
+  .tabbrowser-tab,
+  #tabbrowser-arrowscrollbox-periphery #tabs-newtab-button,
+  #TabsToolbar #TabsToolbar-customization-target > :not(#tabbrowser-tabs) {
+    padding-top: 4px !important;
+  }
+
+  #tabbrowser-tabs {
+    margin-top: calc(var(--tab-block-margin) - 4px) !important;
+  }
+
+  #TabsToolbar #TabsToolbar-customization-target > :not(#tabbrowser-tabs) {
+    margin-top: calc(var(--tab-block-margin) - 2px) !important;
   }
 
   /* remove toolbar bg */
@@ -90,7 +91,11 @@ browsing indicator) */
   }
 
   .tab-background[selected] {
-    outline: 1px solid var(--uc-tab-border-color, var(--lwt-tab-line-color, var(--lwt-tabs-border-color, transparent))) !important;
+    outline: 1px solid
+      var(
+        --uc-tab-border-color,
+        var(--lwt-tab-line-color, var(--lwt-tabs-border-color, transparent))
+      ) !important;
     outline-offset: -1px !important;
   }
 
@@ -121,12 +126,6 @@ browsing indicator) */
     }
   }
 
-  /* remove navbar shadow */
-  #titlebar,
-  :root[lwtheme-brighttext="true"] #titlebar {
-    box-shadow: none !important;
-  }
-
   /* move tab shadow behind urlbar */
   .tabbrowser-tab[visuallyselected="true"],
   #nav-bar {
@@ -150,12 +149,15 @@ browsing indicator) */
     margin-bottom: -8px !important;
   }
 
-  .tabbrowser-tab:is([visuallyselected="true"], [multiselected])>.tab-stack>.tab-background {
-    box-shadow: 0 3.3px 3px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.11) !important;
+  :root {
+    --uc-titlebar-shadow: none;
+    --uc-tab-shadow: 0 3.3px 3px rgba(0, 0, 0, 0.06),
+      0 0 0 1px rgba(0, 0, 0, 0.11);
   }
 
-  :root[lwtheme-brighttext="true"] .tabbrowser-tab:is([visuallyselected="true"], [multiselected])>.tab-stack>.tab-background {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08) !important;
+  :root[lwtheme-brighttext="true"] {
+    --uc-titlebar-shadow: none;
+    --uc-tab-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
   }
 }
 
@@ -168,7 +170,8 @@ browsing indicator) */
       background: transparent !important;
     }
 
-    #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"] #navigator-toolbox:not(:-moz-window-inactive) {
+    #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"]
+      #navigator-toolbox:not(:-moz-window-inactive) {
       background: transparent !important;
     }
 
@@ -188,49 +191,46 @@ browsing indicator) */
         --lwt-accent-color: #0000 !important;
       }
 
-      :root:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"]:not(:-moz-window-inactive) {
+      :root:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"]:not(
+          :-moz-window-inactive
+        ) {
         --toolbar-bgcolor: #ffffff25 !important;
         --lwt-accent-color: #0000 !important;
       }
     }
 
     /* line up buttons with duplicate icons from -moz-win-glass */
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode="true"]) .titlebar-buttonbox-container {
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode="true"])
+      .titlebar-buttonbox-container {
       --uc-titlebar-button-size: 30px;
       --uc-titlebar-size: calc(var(--tab-min-height) + var(--tab-block-margin));
-      margin-bottom: calc(var(--uc-titlebar-size) - var(--uc-titlebar-button-size)) !important;
+      margin-bottom: calc(
+        var(--uc-titlebar-size) - var(--uc-titlebar-button-size)
+      ) !important;
     }
 
-    :root:not([inFullscreen]):is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode="true"]) .titlebar-button:not(.titlebar-close:hover, :-moz-window-inactive) {
+    :root:not([inFullscreen]):is(
+        :not(:-moz-lwtheme),
+        [lwt-default-theme-in-dark-mode="true"]
+      )
+      .titlebar-button:not(.titlebar-close:hover, :-moz-window-inactive) {
       list-style-image: none !important;
     }
 
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen], [sizemode="maximized"]) .titlebar-button {
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode="true"]):is(
+        [inFullscreen],
+        [sizemode="maximized"]
+      )
+      .titlebar-button {
       padding-block: 7px 9px !important;
     }
 
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen], [sizemode="maximized"]) .titlebar-close {
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode="true"]):is(
+        [inFullscreen],
+        [sizemode="maximized"]
+      )
+      .titlebar-close {
       padding-right: 19px !important;
-    }
-
-    @supports -moz-bool-pref("uc.tweak.win11-mica-toolbar") {
-      :root:not(:-moz-lwtheme):not(:-moz-window-inactive) {
-        --lwt-accent-color: #00000015 !important;
-        --toolbar-bgcolor: #ffffffbf !important;
-        --uc-urlbar-shadow: 0 0 4px rgba(0, 0, 0, 0.03) !important;
-      }
-
-      :root[lwt-default-theme-in-dark-mode="true"]:not(:-moz-window-inactive) {
-        --toolbar-bgcolor: #4a4a4a70 !important;
-        --toolbar-field-background-color: #0004 !important;
-        --toolbar-field-focus-background-color: #2B2B2B !important;
-        --chrome-content-separator-color: #fff3 !important;
-      }
-
-      #navigator-toolbox #titlebar,
-      #navigator-toolbox .tab-background {
-        box-shadow: none !important;
-      }
     }
   }
 }
@@ -243,36 +243,49 @@ browsing indicator) */
         -moz-box-orient: vertical !important;
       }
 
-      #context-navigation>.menuitem-iconic {
+      #context-navigation > .menuitem-iconic {
+        justify-content: start !important;
         -moz-box-pack: start !important;
       }
 
       #context-navigation .menu-iconic-text {
-        display: -moz-box !important;
+        display: flex !important;
       }
 
-      #context-navigation>#context-back .menu-iconic-text::before {
-        content: "Back" !important;
+      :root,
+      :root[lang^="en"] {
+        --uc-string-back: "Back";
+        --uc-string-forward: "Forward";
+        --uc-string-reload: "Reload";
+        --uc-string-stop: "Stop";
+        --uc-string-bookmark-page: "Bookmark Page";
+        --uc-string-edit-bookmark: "Edit Bookmark";
       }
 
-      #context-navigation>#context-forward .menu-iconic-text::before {
-        content: "Forward" !important;
+      #context-navigation > #context-back .menu-iconic-text::before {
+        content: var(--uc-string-back) !important;
       }
 
-      #context-navigation>#context-reload .menu-iconic-text::before {
-        content: "Reload" !important;
+      #context-navigation > #context-forward .menu-iconic-text::before {
+        content: var(--uc-string-forward) !important;
       }
 
-      #context-navigation>#context-stop .menu-iconic-text::before {
-        content: "Stop" !important;
+      #context-navigation > #context-reload .menu-iconic-text::before {
+        content: var(--uc-string-reload) !important;
       }
 
-      #context-navigation>#context-bookmarkpage .menu-iconic-text::before {
-        content: "Bookmark Page" !important;
+      #context-navigation > #context-stop .menu-iconic-text::before {
+        content: var(--uc-string-stop) !important;
       }
 
-      #context-navigation>#context-bookmarkpage[starred] .menu-iconic-text::before {
-        content: "Edit Bookmark" !important;
+      #context-navigation > #context-bookmarkpage .menu-iconic-text::before {
+        content: var(--uc-string-bookmark-page) !important;
+      }
+
+      #context-navigation
+        > #context-bookmarkpage[starred]
+        .menu-iconic-text::before {
+        content: var(--uc-string-edit-bookmark) !important;
       }
     }
   }
@@ -285,7 +298,9 @@ browsing indicator) */
       --panel-border-radius: 4px !important;
       --panel-border-color: var(--arrowpanel-border-color) !important;
       --panel-background: var(--arrowpanel-background) !important;
-      --menuitem-hover-background-color: var(--panel-item-hover-bgcolor) !important;
+      --menuitem-hover-background-color: var(
+        --panel-item-hover-bgcolor
+      ) !important;
       --menu-background-color: var(--arrowpanel-background) !important;
       --menu-color: var(--arrowpanel-color) !important;
       --menuitem-disabled-hover-background-color: #0000 !important;
@@ -296,7 +311,9 @@ browsing indicator) */
 }
 
 @supports -moz-bool-pref("uc.tweak.show-tab-close-button-on-hover") {
-  #tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([pinned], [selected]):hover .tab-close-button {
-    display: -moz-box !important;
+  #tabbrowser-tabs[closebuttons="activetab"]
+    .tabbrowser-tab:not([pinned], [selected]):hover
+    .tab-close-button {
+    display: flex !important;
   }
 }

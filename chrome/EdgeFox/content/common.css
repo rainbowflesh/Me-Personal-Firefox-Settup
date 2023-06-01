@@ -1,4 +1,4 @@
-/* EdgeFox - content/common.css */
+/* EdgeFr-Fox by bmFtZQ - content/common.css */
 
 /* colours */
 @-moz-document url-prefix(about:) {
@@ -105,8 +105,9 @@ url-prefix(about:addons) {
     background-color: var(--in-content-accent-color);
     border-radius: 3px;
     position: absolute;
-    left: 0;
-    top: 12px;
+    left: 2px;
+    top: 50%;
+    translate: 0 -50%;
   }
 
   button.tab-button:hover {
