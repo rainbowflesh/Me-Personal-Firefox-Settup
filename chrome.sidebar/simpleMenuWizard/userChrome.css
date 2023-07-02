@@ -1,14 +1,3 @@
-/* EdgeFox */
-@import url("./EdgeFox/icons/icons.css");
-@import url("./EdgeFox/toolbar/tabbar.css");
-@import url("./EdgeFox/toolbar/navbar.css");
-@import url("./EdgeFox/toolbar/personalbar.css");
-@import url("./EdgeFox/toolbar/findbar.css");
-@import url("./EdgeFox/toolbar/urlbar.css");
-@import url("./EdgeFox/global/colors.css");
-@import url("./EdgeFox/global/popup.css");
-@import url("./EdgeFox/global/tweaks.css");
-@import url("./EdgeFox/global/blur.css");
 /*AGENT_SHEET*/
 
 /************************************/
@@ -45,10 +34,12 @@
    **********************************************************/
 
 /*** Hide all "Send <item> to Device" entries ***/
-/* /* @import url("./simpleMenuWizard/opt_noSendToDevice.css"); */
+@import url("./simpleMenuWizard/opt_noSendToDevice.css");
 
 /*** Hide all inactive menu items ***/
-/* /* #mainPopupSet menuitem[disabled="true"] { display: none !important; } */
+#mainPopupSet menuitem[disabled="true"] {
+  display: none !important;
+}
 
 /****** simpleMenuWizard END ******/
 /**********************************/
