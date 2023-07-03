@@ -196,7 +196,7 @@ body {
 }
 
 #pinnedtablist.compact {
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
   overflow-x: auto;
   gap: 2px;
 }
@@ -207,6 +207,7 @@ body {
 
 #pinnedtablist.compact .tab {
   min-width: 36px;
+  background-color: #ffffff88;
 }
 
 @media (max-width: 48px) {
