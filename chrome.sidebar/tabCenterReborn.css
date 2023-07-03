@@ -289,7 +289,7 @@ body {
 }
 
 body .tab .tab-icon {
-  filter: url('data:image/svg+xml;,<svg xmlns="http://www.w3.org/2000/svg"><filter id="s"><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -0.2125 -1.5 -0.0721 1 0" /><feMorphology operator="dilate" radius="1"/><feComponentTransfer><feFuncA type="gamma" offset="0" amplitude="1" exponent="2"/></feComponentTransfer><feGaussianBlur stdDeviation="0.5"/><feComposite in="SourceGraphic" operator="over"/></filter></svg>#s');
+  filter: url('data:image/svg+xml;,<svg xmlns="http://www.w3.org/2000/svg"><filter id="s"><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -0.2125 -5 -0.0721 1 0" /><feMorphology operator="dilate" radius="1"/><feComponentTransfer><feFuncA type="gamma" offset="0" amplitude="1" exponent="2"/></feComponentTransfer><feGaussianBlur stdDeviation="0.5"/><feComposite in="SourceGraphic" operator="over"/></filter></svg>#s');
 }
 
 #sidebar-header {
