@@ -17,7 +17,7 @@
 
 :root {
   /* delay before expanding tabs, set to '0' for no delay */
-  --delay: 1.4s;
+  --delay: 2.2s;
   --transition-time: 0.2s;
   --positionX1: 48px; /* '48px' for left, '0px' for right sidebar */
   --positionX2: absolute; /* 'absolute' for left, 'none' for right sidebar */
@@ -262,7 +262,7 @@
 #nav-bar,
 #urlbar {
   z-index: 100;
-  margin-top: 2.5px;
+  margin-top: 2.85px;
 }
 
 #sidebar-box:not([lwt-sidebar]) {
