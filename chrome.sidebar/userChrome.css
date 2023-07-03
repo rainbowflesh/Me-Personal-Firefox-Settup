@@ -262,7 +262,6 @@
 #nav-bar,
 #urlbar {
   z-index: 100;
-  margin-top: 2.85px;
 }
 
 #sidebar-box:not([lwt-sidebar]) {
