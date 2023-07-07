@@ -11,10 +11,13 @@ Compare with real edge:
 
 Sidebar belike:
 <img src="./asset/sidebar_screenshot.png" width="720px"/>
+<img src="./asset/dynamic_side.gif" height="450px"/>
+<img src="./asset/manual_side.gif" height="450px"/>
 
 ## Dependencies
 
 - Minimal Firefox version: 91.0
+- GTK and QT based DE also supported 😸 -- But you need some tweaks 😾
 
 - [Tree Style Tab](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/?utm_content=addons-manager-reviews-link&utm_medium=firefox-browser&utm_source=firefox-browser)
 
@@ -24,12 +27,19 @@ Sidebar belike:
 
 ### about:config
 
-> gfx.webrender.all = true
-> layout.css.backdrop-filter.enabled = true
-> layout.css.backdrop-filter.enabled-force = true
-> toolkit.legacyUserProfileCustomizations.stylesheets = true
-> svg.context-properties.content.enabled = true
-> layout.css.color-mix.enabled = true
+```cfg
+gfx.webrender.all = true
+
+layout.css.backdrop-filter.enabled = true
+
+layout.css.backdrop-filter.enabled-force = true
+
+toolkit.legacyUserProfileCustomizations.stylesheets = true
+
+svg.context-properties.content.enabled = true
+
+layout.css.color-mix.enabled = true
+```
 
 ### Install Themes
 
@@ -37,7 +47,7 @@ Sidebar belike:
 git clone https://github.com/rainbowflesh/Me-Personal-Firefox-Settup.git
 cd Me-Personal-Firefox-Settup
 
-# Make com-for-table in choose,
+# Make com-for-table in use,
 # and get your profile path by visit
 # about:profiles, which `Local Directory` is.
 cp -r ./chrome $THEPROFILEPATH/chrome
@@ -48,19 +58,53 @@ ln -S ./chrome $THEPROFILEPATH/chrome
 
 ### Config sidebar CSS
 
-- On [Tab Center Reforn](https://addons.mozilla.org/en-US/firefox/addon/tabcenter-reborn/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search), Import [this](https://raw.githubusercontent.com/rainbowflesh/Me-Personal-Firefox-Settup/main/chrome.sidebar/tabCenterReborn.css) CSS.
-- On [Tree Style Tab](moz-extension://f3da60fb-dc11-43f1-a71e-c233dce7aecb/options/options.html#!), locate `Advanced`, Import [this](https://raw.githubusercontent.com/rainbowflesh/Me-Personal-Firefox-Settup/main/chrome.sidebar/treestyletab.css).
+- On [Tree Style Tab](moz-extension://f3da60fb-dc11-43f1-a71e-c233dce7aecb/options/options.html#!), locate `Advanced`, Import [this](./chrome/treestyletab.css).
 
-> If you hate sidebar, just comment out
+- On [Tab Center Reforn](https://addons.mozilla.org/en-US/firefox/addon/tabcenter-reborn/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search), Import [this](./chrome/tabCenterReborn.css) CSS.
+
+### Tweaking
+
+> Im lossing button in right click context menu, WTF?!
+
+oops, comment out l:1,16 in `userChrome.css`
+
+> If you hate sidebar, just comment out:
 
 ```css
-/* l:32  */
+/* l:31  */
 @import url("./SideBarFox/sidebar.css");
 ```
 
-> in `userChrome.css`
+> If you hate auto hide side bar, comment out:
 
----
+```css
+/* l:32  */
+@import url("./SideBarFox/autohide.css");
+```
+
+> I wanna use icon only side bar:
+
+<del>ＮＯ U ＣＡＮＴ</del> Use [Tab Center Reforn](https://addons.mozilla.org/en-US/firefox/addon/tabcenter-reborn/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)
+
+> Some of the thing's height, width, or even color not match what I want:
+
+Its hard to say but you need tweak the variables in `*.css` under `EdgeFox` & `SideBarFox`,
+
+e.g. tweak _sidebar size (width)_, you can change
+
+```css
+:root {
+  ...
+  /* easily change side bar size */
+  --sidebar-max-width: 15rem;
+  --sidebar-min-width: 5rem;
+  ...
+}
+```
+
+in `chrome\SideBarFox\sidebar.css`, l:10, 11
+
+> If ya dono which should change, issues me and I wll help :)
 
 ## 推销主题
 
@@ -91,9 +135,8 @@ ln -S ./chrome $THEPROFILEPATH/chrome
 
 ## References
 
-- 基于 [MaterialFox][10] 制作了 Microsoft Edge 风格的浏览器 ui, 以及 Acrylic 效果.
-- 利用 [simpleMenuWizard][11] 精简了右键菜单, 普通人用不上的我肯定也用不上, 遂删之.
-- 利用 [firefox-overlay-scrollbar][9] 实现 win10 滚动条效果.
+- 基于 [Edge-FrFx][10] 的 Microsoft Edge 风格 ui.
+- 利用 [simpleMenuWizard][11] 精简了右键菜单.
 
 [1]: https://addons.mozilla.org/en-US/firefox/addon/startup-theme-changer/?utm_content=addons-manager-reviews-link&utm_medium=firefox-browser&utm_source=firefox-browser
 [2]: https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
@@ -105,6 +148,5 @@ ln -S ./chrome $THEPROFILEPATH/chrome
 [7]: ./chrome/EdgeFox/
 [8]: ./chrome/simpleMenuWizard/
 [9]: https://github.com/spencerwooo/firefox-overlay-scrollbar
-[10]: https://github.com/muckSponge/MaterialFox
+[10]: https://github.com/bmFtZQ/edge-frfox
 [11]: https://github.com/stonecrusher/simpleMenuWizard
-[readme]: https://github.com/isNijikawa/EdgeFox/blob/main/asset/guid.md

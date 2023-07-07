@@ -6,7 +6,8 @@
   --positionX2: absolute; /* 'absolute' for left, 'none' for right sidebar */
   /* width of the collapsed sidebar in fullscreen mode ('1px' or '48px') */
   --fullscreen-sidebar-width: 48px;
-  --sidebar-max-width: 10rem;
+  /* easily change side bar size */
+  --sidebar-max-width: 15rem;
   --sidebar-min-width: 5rem;
 }
 
