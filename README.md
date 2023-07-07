@@ -104,7 +104,7 @@ e.g. tweak _sidebar size (width)_, you can change
 
 in `chrome\SideBarFox\sidebar.css`, l:10, 11
 
-#### If ya dono which should change, issues me and I wll help :)
+#### If ya dono which should change, issues me and I wll help ;-)
 
 ## 推销主题
 
