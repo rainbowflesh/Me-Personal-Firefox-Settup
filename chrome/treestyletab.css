@@ -57,3 +57,7 @@ tab-item {
   border-radius: 4px;
   background-size: 80%;
 }
+tab-item.pinned {
+  backdrop-filter: saturate(180%) blur(100px);
+  border-radius: 4px;
+}
