@@ -64,29 +64,29 @@ ln -S ./chrome $THEPROFILEPATH/chrome
 
 ### Tweaking
 
-> Im lossing button in right click context menu, WTF?!
+#### Im lossing button in right click context menu, WTF?!
 
 oops, comment out l:1,16 in `userChrome.css`
 
-> If you hate sidebar, just comment out:
+#### If you hate sidebar, just comment out:
 
 ```css
 /* l:31  */
 @import url("./SideBarFox/sidebar.css");
 ```
 
-> If you hate auto hide side bar, comment out:
+#### If you hate auto hide side bar, comment out:
 
 ```css
 /* l:32  */
 @import url("./SideBarFox/autohide.css");
 ```
 
-> I wanna use icon only side bar:
+#### I wanna use icon only side bar:
 
 <del>ＮＯ U ＣＡＮＴ</del> Use [Tab Center Reforn](https://addons.mozilla.org/en-US/firefox/addon/tabcenter-reborn/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)
 
-> Some of the thing's height, width, or even color not match what I want:
+#### Some of the thing's height, width, or even color not match what I want:
 
 Its hard to say but you need tweak the variables in `*.css` under `EdgeFox` & `SideBarFox`,
 
@@ -104,7 +104,7 @@ e.g. tweak _sidebar size (width)_, you can change
 
 in `chrome\SideBarFox\sidebar.css`, l:10, 11
 
-> If ya dono which should change, issues me and I wll help :)
+#### If ya dono which should change, issues me and I wll help :)
 
 ## 推销主题
 
