@@ -1,0 +1,55 @@
+{
+  "__ConfigsMigration__userValeusSameToDefaultAreCleared": true,
+  "autoCollapseExpandSubtreeOnAttach": false,
+  "autoCollapseExpandSubtreeOnSelect": false,
+  "avoidDiscardedTabToBeActivatedIfPossible": true,
+  "cachedExternalAddons": [
+    "tst-wheel_and_double@dontpokebadgers.com",
+    "tst-middleclick@alexendris.com"
+  ],
+  "chunkedUserStyleRules0": "OnJvb3Quc2lkZWJhciAjYmFja2dyb3VuZCB7CiAgYmFja2dyb3VuZDogdmFsKC0tYnJvd3Nlci1iZy1pbWFnZXMpOwogIGJhY2tncm91bmQtc2l6ZTogMjAwcHg7Cn0KCjpyb290LnNpbXVsYXRlLXN2Zy1jb250ZXh0LWZpbGwgLm5ld3RhYi1idXR0b246OmFmdGVyIHsKICBjb250ZW50OiB2YXIoLS10YWItY291bnQtdGV4dCk7CiAgcG9pbnRlci1ldmVudHM6IG5vbmU7CgogIHdpZHRoOiAxMDAlOwoKICAvKiBUU1QgMi40LjAgLSBGaXggZm9yIElzc3VlICMxNjY0ICovCiAgYmFja2dyb3VuZDogdHJhbnNwYXJlbnQgIWltcG9ydGFudDsKICBtYXNrOiBub25lICFpbXBvcnRhbnQ7Cn0KCnRhYi1pdGVtIHsKICAtLXRhYi1zaXplOiAycmVtICFpbXBvcnRhbnQ7Cn0KCnRhYi1pdGVtIHRhYi1pdGVtLXN1YnN0YW5jZSB7CiAgaGVpZ2h0OiB2YXIoLS10YWItc2l6ZSk7Cn0KCnRhYi1pdGVtLmFjdGl2ZSAuYmFja2dyb3VuZCB7CiAgYmFja2Ryb3AtZmlsdGVyOiBzYXR1cmF0ZSgxODAlKSBibHVyKDEwMHB4KTsKfQoKI3NpZGViYXItYm94IHsKICB3aWR0aDogMTAwcHggIWltcG9ydGFudDsKfQoKI3RhYmJhciB7CiAgY291bnRlci1yZXNldDogdnRhYnMgYXRhYnMgdGFiczsKfQp0YWItaXRlbTpub3QoLmNvbGxhcHNlZCk6bm90KC5kaXNjYXJkZWQpIHsKICBjb3VudGVyLWluY3JlbWVudDogdnRhYnMgYXRhYnMgdGFiczsKfQp0YWItaXRlbTpub3QoLmNvbGxhcHNlZCkgewogIGNvdW50ZXItaW5jcmVtZW50OiB2dGFicyB0YWJzOwp9CnRhYi1pdGVtOm5vdCguZGlzY2FyZGVkKSB7CiAgY291bnRlci1pbmNyZW1lbnQ6IGF0YWJzIHRhYnM7Cn0KdGFiLWl0ZW0gewogIGNvdW50ZXItaW5jcmVtZW50OiB0YWJzOwp9CiN0YWJiYXIgdGFiLWl0ZW0gdGFiLWl0ZW0tc3Vic3RhbmNlOm5vdCg6aG92ZXIpIHRhYi1jbG9zZWJveCB7CiAgZGlzcGxheTogbm9uZTsKfQoKLm5ld3RhYi1idXR0b24gewogIC0tdGFiLWNvdW50LXRleHQ6IGNvdW50ZXIoYXRhYnMpICIgLyAiIGNvdW50ZXIodGFicykgIiDwn5KkIjsKfQoKLm5ld3RhYi1idXR0b24tYm94OmhvdmVyIHsKICBiYWNrZHJvcC1maWx0ZXI6IHNhdHVyYXRlKDE4MCUpIGJsdXIoMTAwcHgpOwogIGJvcmRlci1yYWRpdXM6IDEwcHg7CiAgYmFja2dyb3VuZC1zaXplOiA4MCU7Cn0K",
+  "configsVersion": 27,
+  "context_bookmarkTree": false,
+  "context_closeTree": false,
+  "context_collapseAll": false,
+  "context_collapseTreeRecursively": false,
+  "context_expandAll": false,
+  "context_expandTreeRecursively": false,
+  "context_openAllBookmarksWithStructure": false,
+  "context_reloadTree": false,
+  "context_topLevel_sendTreeToDevice": false,
+  "delayForDuplicatedTabDetection": 80,
+  "enableLinuxBehaviors": true,
+  "faviconizePinnedTabs": false,
+  "maxTreeLevel": 3,
+  "notifiedFeaturesVersion": 9,
+  "openAllBookmarksWithStructureDiscarded": false,
+  "optionsExpandedSections": [
+    "section-appearance",
+    "section-drag",
+    "section-newTab",
+    "section-newTabWithOwner",
+    "section-advanced",
+    "section-contextMenu",
+    "section-treeBehavior",
+    "section-addons",
+    "section-debug"
+  ],
+  "shiftTabsForScrollbarDistance": "0.5rem",
+  "shiftTabsForScrollbarOnlyOnHover": true,
+  "showCollapsedDescendantsByTooltip": false,
+  "showContextualIdentitiesSelector": true,
+  "showDialogInSidebar": true,
+  "showExpertOptions": true,
+  "suppressGapFromShownOrHiddenToolbarOnFullScreen": true,
+  "syncDevices": {
+    "device-1688699154945-31643": {
+      "id": "device-1688699154945-31643",
+      "name": "Firefox on Linux",
+      "icon": "developer",
+      "timestamp": 1688709602730
+    }
+  },
+  "userStyleRules": "",
+  "userStyleRulesFieldHeight": "200px"
+}

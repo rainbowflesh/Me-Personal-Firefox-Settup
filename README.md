@@ -1,45 +1,52 @@
-# EdgeFox
+# My Mega FireFox tWeak
 
-Me Personal Firefox Setup
+Edge style be like:
 
-火狐客制化仓库
+![edgelike](./asset/preview.gif)
+
+Compare with real edge:
+![compare](./asset/compare.png)
 
 ---
-预览:
 
-![img](./asset/preview.gif)
+Sidebar belike:
+<img src="./asset/sidebar_screenshot.png" width="720px"/>
 
-对比:
-(左侧为Firefox)
-![对比](./asset/compare.png)
+## Dependencies
 
-## 实现
+- Minimal Firefox version: 91.0
 
-+ 基于 [MaterialFox][10] 制作了 Microsoft Edge 风格的浏览器ui, 以及 Acrylic 效果
-+ 利用 [simpleMenuWizard][11] 精简了右键菜单, 普通人用不上的我肯定也用不上, 遂删之.
-+ 利用 [firefox-overlay-scrollbar][9] 实现 win10 滚动条效果.
+- [Tree Style Tab](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/?utm_content=addons-manager-reviews-link&utm_medium=firefox-browser&utm_source=firefox-browser)
 
-> *没有* 完全实现火狐原生主题适配, 如果你用原生主题可能会感觉到一丝违和, 但不影响使用.
+- [Tab Center Reforn](https://addons.mozilla.org/en-US/firefox/addon/tabcenter-reborn/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search) (\*Optional)
 
-## 依赖
+## Usage
 
-操作系统: Windows 11
-火狐版本: Firefox Quantum 91.0 (64bit)
+### about:config
 
-↓请按顺序依次安装👇
+> gfx.webrender.all = true
+> layout.css.backdrop-filter.enabled = true
+> layout.css.backdrop-filter.enabled-force = true
+> toolkit.legacyUserProfileCustomizations.stylesheets = true
 
-[Firefox Overlay Scrollbars][9]
+### Install Themes
 
-[EdgeFox][7]
+```bash
+git clone https://github.com/rainbowflesh/Me-Personal-Firefox-Settup.git
+cd Me-Personal-Firefox-Settup
 
-[simpleMenuWizard][8]
-> 或者, 直接把 `chrome` 下的内容丢尽 `Profile` 就行.
+# Make com-for-table in choose,
+# and get your profile path by visit
+# about:profiles, which `Local Directory` is.
+cp -r chrome.$THETHEMEUWANNAUSE $THEPROFILEPATH/chrome
+
+# or use symbol link make upgrade easily
+ln -S chrome.$THETHEMEUWANNAUSE $THEPROFILEPATH/chrome
+```
 
 ---
 
 ## 推销主题
-
-+ *没有* 完全实现火狐原生主题适配, 如果你用原生主题可能会感觉到一丝违和, 但不影响使用.
 
 [![赞美太阳](https://addons.mozilla.org/user-media/version-previews/full/3882/3882953.svg)](https://addons.mozilla.org/en-US/firefox/addon/prise-the-sun-dark-souls/)
 
@@ -47,7 +54,7 @@ Me Personal Firefox Setup
 
 [![pekora](https://addons.mozilla.org/user-media/version-previews/full/3908/3908060.png)](https://addons.mozilla.org/en-US/firefox/addon/pekora-theme/)
 
-[![变身初音](https://addons.mozilla.org/user-media/version-previews/full/3860/3860113.svg)](<https://addons.mozilla.org/en-US/firefox/addon/yet-another-mikutheme/>)
+[![变身初音](https://addons.mozilla.org/user-media/version-previews/full/3860/3860113.svg)](https://addons.mozilla.org/en-US/firefox/addon/yet-another-mikutheme/)
 
 [![米其林](https://addons.mozilla.org/user-media/version-previews/full/3860/3860121.svg)](https://addons.mozilla.org/en-US/firefox/addon/run-michirun-run-theme/)
 
@@ -57,18 +64,24 @@ Me Personal Firefox Setup
 
 ### 推销插件
 
-+ [uBlacklist][1] 屏蔽搜索引擎结果
-+ [uBlock][2] 屏蔽网页元素
-+ [Dark Reader][3] 网页黑背景
-+ [Startup Theme Changer][4] 自动切换主题
-+ [Nyan Cat ytb][5] ytb进度条换成nyan猫
-+ [Smart Prevent Duplicate tab][6] 自动关闭重复标签
+- [uBlacklist][1] 屏蔽搜索引擎结果
+- [uBlock][2] 屏蔽网页元素
+- [reload tab by mid click][3] 中键刷新页面
+- [Startup Theme Changer][4] 自动切换主题
+- [Nyan Cat ytb][5] ytb 进度条换成 nyan 猫
+- [Smart Prevent Duplicate tab][6] 自动关闭重复标签
 
 顺带推销我自己收集的[屏蔽规则][rule]
 
+## References
+
+- 基于 [MaterialFox][10] 制作了 Microsoft Edge 风格的浏览器 ui, 以及 Acrylic 效果.
+- 利用 [simpleMenuWizard][11] 精简了右键菜单, 普通人用不上的我肯定也用不上, 遂删之.
+- 利用 [firefox-overlay-scrollbar][9] 实现 win10 滚动条效果.
+
 [1]: https://addons.mozilla.org/en-US/firefox/addon/startup-theme-changer/?utm_content=addons-manager-reviews-link&utm_medium=firefox-browser&utm_source=firefox-browser
 [2]: https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
-[3]: https://addons.mozilla.org/en-US/firefox/addon/darkreader/
+[3]: https://addons.mozilla.org/en-US/firefox/addon/reloadtabbymidclick/
 [4]: https://addons.mozilla.org/en-US/firefox/addon/startup-theme-changer/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
 [5]: https://addons.mozilla.org/en-US/firefox/addon/nyan-cat-youtube-enhancement/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
 [6]: https://addons.mozilla.org/en-US/firefox/addon/smart-prevent-duplicate-tabs/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search

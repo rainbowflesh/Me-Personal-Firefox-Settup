@@ -1,0 +1,59 @@
+:root.sidebar #background {
+  background: var(--browser-bg-images);
+  background-size: min(10rem, 100%) auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+:root.simulate-svg-context-fill .newtab-button::after {
+  content: var(--tab-count-text);
+  pointer-events: none;
+  width: 100%;
+  background: transparent !important;
+  mask: none !important;
+}
+
+tab-item {
+  --tab-size: 2rem !important;
+}
+
+tab-item tab-item-substance {
+  height: var(--tab-size);
+}
+
+tab-item.active .background {
+  backdrop-filter: saturate(180%) blur(100px);
+}
+
+#sidebar-box {
+  width: 100px !important;
+}
+
+#tabbar {
+  counter-reset: vtabs atabs tabs;
+}
+tab-item:not(.collapsed):not(.discarded) {
+  counter-increment: vtabs atabs tabs;
+}
+tab-item:not(.collapsed) {
+  counter-increment: vtabs tabs;
+}
+tab-item:not(.discarded) {
+  counter-increment: atabs tabs;
+}
+tab-item {
+  counter-increment: tabs;
+}
+#tabbar tab-item tab-item-substance:not(:hover) tab-closebox {
+  display: none;
+}
+
+.newtab-button {
+  --tab-count-text: counter(atabs) " / " counter(tabs) " 💤";
+}
+
+.newtab-button-box:hover {
+  backdrop-filter: saturate(180%) blur(100px);
+  border-radius: 10px;
+  background-size: 80%;
+}
