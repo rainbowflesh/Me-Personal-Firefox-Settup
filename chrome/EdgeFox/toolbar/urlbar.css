@@ -9,13 +9,15 @@
   --identity-box-margin-inline: 2px !important;
 }
 
-:root[style*="--lwt-accent-color: rgb(240, 240, 244)"] #urlbar[focused="true"]:not([suppress-focus-border])>#urlbar-background,
+:root[style*="--lwt-accent-color: rgb(240, 240, 244)"]
+  #urlbar[focused="true"]:not([suppress-focus-border])
+  > #urlbar-background,
 :root[style*="--lwt-accent-color: rgb(240, 240, 244)"] #searchbar:focus-within {
   outline-color: color-mix(in srgb, var(--toolbar-field-focus-border-color) 50%, transparent) !important;
 }
 
 @media not (-moz-gtk-csd-available) {
-  #urlbar[focused="true"]:not([suppress-focus-border])>#urlbar-background:not(:-moz-lwtheme),
+  #urlbar[focused="true"]:not([suppress-focus-border]) > #urlbar-background:not(:-moz-lwtheme),
   #searchbar:not(:-moz-lwtheme):focus-within {
     outline-color: color-mix(in srgb, var(--toolbar-field-focus-border-color) 50%, transparent) !important;
   }
@@ -25,7 +27,7 @@
   box-shadow: var(--uc-urlbar-shadow, none);
 }
 
-#urlbar[open]>#urlbar-background {
+#urlbar[open] > #urlbar-background {
   border-color: transparent !important;
   box-shadow: 0 10px 16px #0005, 0 0 1px #0006 !important;
 }
@@ -45,7 +47,7 @@
   padding-block: 8px !important;
 }
 
-.urlbarView-row:not([type="tip"], [type="dynamic"])[selected]>.urlbarView-row-inner,
+.urlbarView-row:not([type="tip"], [type="dynamic"])[selected] > .urlbarView-row-inner,
 .urlbarView-row-inner[selected] {
   box-shadow: 3px 0 var(--toolbar-field-focus-border-color) inset !important;
 }
@@ -64,7 +66,7 @@
   width: 100% !important;
 }
 
-#urlbar[breakout][breakout-extend]>#urlbar-input-container {
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
   padding-inline: var(--urlbar-container-padding) !important;
 }
 
@@ -72,8 +74,8 @@
   padding-block: 0 !important;
 }
 
-#urlbar[open]>.urlbarView>.urlbarView-body-outer>.urlbarView-body-inner,
-.urlbarView:not([noresults])>.search-one-offs:not([hidden]) {
+#urlbar[open] > .urlbarView > .urlbarView-body-outer > .urlbarView-body-inner,
+.urlbarView:not([noresults]) > .search-one-offs:not([hidden]) {
   border-top: 0 !important;
 }
 
@@ -101,9 +103,9 @@
   width: calc(var(--uc-urlbar-icon-inline-padding) * 2 + 16px) !important;
 }
 
-#identity-box[pageproxystate="valid"].notSecureText>.identity-box-button,
-#identity-box[pageproxystate="valid"].chromeUI>.identity-box-button,
-#identity-box[pageproxystate="valid"].extensionPage>.identity-box-button,
+#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button,
+#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button,
+#identity-box[pageproxystate="valid"].extensionPage > .identity-box-button,
 #urlbar-label-box {
   width: unset !important;
 }
@@ -146,7 +148,7 @@
   }
 }
 
-#urlbar[focused="true"]:not([suppress-focus-border])>#urlbar-background,
+#urlbar[focused="true"]:not([suppress-focus-border]) > #urlbar-background,
 #searchbar:focus-within {
   outline-offset: calc(var(--focus-outline-width) * -1 + 1px) !important;
 }
@@ -155,7 +157,7 @@
   padding-block-end: 8px !important;
 }
 
-.urlbarView-row[pinned]>.urlbarView-row-inner>.urlbarView-no-wrap>.urlbarView-type-icon {
+.urlbarView-row[pinned] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-type-icon {
   fill: var(--toolbar-field-color) !important;
 }
 
@@ -186,16 +188,19 @@
 }
 
 /* remove background from urlbar box */
-#identity-box[pageproxystate="valid"].notSecureText>.identity-box-button:not(:hover, [open]),
-#identity-box[pageproxystate="valid"].chromeUI>.identity-box-button:not(:hover, [open]),
-#identity-box[pageproxystate="valid"].extensionPage>.identity-box-button:not(:hover, [open]) {
+#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button:not(:hover, [open]),
+#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button:not(:hover, [open]),
+#identity-box[pageproxystate="valid"].extensionPage > .identity-box-button:not(:hover, [open]) {
   background-color: transparent !important;
 }
 
-:is(:root:not(:-moz-lwtheme),
-  :root[style*="--lwt-accent-color: rgb(240, 240, 244)"] #urlbar[focused="true"],
-  :root[lwt-default-theme-in-dark-mode="true"],
-  :root[style*="--lwt-accent-color: rgb(28, 27, 34)"]) #urlbar-search-mode-indicator {
+:is(
+    :root:not(:-moz-lwtheme),
+    :root[style*="--lwt-accent-color: rgb(240, 240, 244)"] #urlbar[focused="true"],
+    :root[lwt-default-theme-in-dark-mode="true"],
+    :root[style*="--lwt-accent-color: rgb(28, 27, 34)"]
+  )
+  #urlbar-search-mode-indicator {
   background-color: var(--urlbar-box-hover-bgcolor) !important;
 }
 
@@ -209,9 +214,11 @@
   position: relative;
 }
 
-:is(#identity-box[pageproxystate="valid"].notSecureText>.identity-box-button,
-  #identity-box[pageproxystate="valid"].chromeUI>.identity-box-button,
-  #identity-box[pageproxystate="valid"].extensionPage>.identity-box-button)::after {
+:is(
+    #identity-box[pageproxystate="valid"].notSecureText > .identity-box-button,
+    #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button,
+    #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button
+  )::after {
   content: "";
   position: absolute;
   display: block;
@@ -223,15 +230,19 @@
 }
 
 @media not (prefers-reduced-motion) {
-  :is(#identity-box[pageproxystate="valid"].notSecureText>.identity-box-button,
-    #identity-box[pageproxystate="valid"].chromeUI>.identity-box-button,
-    #identity-box[pageproxystate="valid"].extensionPage>.identity-box-button)::after {
+  :is(
+      #identity-box[pageproxystate="valid"].notSecureText > .identity-box-button,
+      #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button,
+      #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button
+    )::after {
     transition: opacity 0.2s ease;
   }
 }
 
-:is(#identity-box[pageproxystate="valid"].notSecureText>.identity-box-button:not(:hover, [open]),
-  #identity-box[pageproxystate="valid"].chromeUI>.identity-box-button:not(:hover, [open]),
-  #identity-box[pageproxystate="valid"].extensionPage>.identity-box-button:not(:hover, [open]))::after {
+:is(
+    #identity-box[pageproxystate="valid"].notSecureText > .identity-box-button:not(:hover, [open]),
+    #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button:not(:hover, [open]),
+    #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button:not(:hover, [open])
+  )::after {
   opacity: 0.375;
 }

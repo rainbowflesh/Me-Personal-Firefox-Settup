@@ -1,6 +1,4 @@
-#browser
-  .browserStack:has(.dialogStack.tab-dialog-box:not([hidden="true"]))
-  > browser {
+#browser .browserStack:has(.dialogStack.tab-dialog-box:not([hidden="true"])) > browser {
   backdrop-filter: blur(100px);
 }
 

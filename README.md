@@ -28,6 +28,8 @@ Sidebar belike:
 > layout.css.backdrop-filter.enabled = true
 > layout.css.backdrop-filter.enabled-force = true
 > toolkit.legacyUserProfileCustomizations.stylesheets = true
+> svg.context-properties.content.enabled = true
+> layout.css.color-mix.enabled = true
 
 ### Install Themes
 
@@ -38,10 +40,10 @@ cd Me-Personal-Firefox-Settup
 # Make com-for-table in choose,
 # and get your profile path by visit
 # about:profiles, which `Local Directory` is.
-cp -r chrome.$THETHEMEUWANNAUSE $THEPROFILEPATH/chrome
+cp -r ./chrome $THEPROFILEPATH/chrome
 
 # or use symbol link make upgrade easily
-ln -S chrome.$THETHEMEUWANNAUSE $THEPROFILEPATH/chrome
+ln -S ./chrome $THEPROFILEPATH/chrome
 ```
 
 ### Config sidebar CSS

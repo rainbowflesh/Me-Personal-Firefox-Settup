@@ -54,6 +54,6 @@ tab-item {
 
 .newtab-button-box:hover {
   backdrop-filter: saturate(180%) blur(100px);
-  border-radius: 10px;
+  border-radius: 4px;
   background-size: 80%;
 }

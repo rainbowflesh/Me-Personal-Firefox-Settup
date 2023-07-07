@@ -39,7 +39,7 @@ bugs with certain themes eg. dark text on dark background.) */
   :root[lwt-default-theme-in-dark-mode="true"],
   :root[style*="--lwt-accent-color: rgb(28, 27, 34)"] {
     --lwt-accent-color: #202020 !important;
-    --toolbar-bgcolor: #4D4D4D !important;
+    --toolbar-bgcolor: #4d4d4d !important;
     --lwt-accent-color-inactive: unset !important;
     --chrome-content-separator-color: #535353 !important;
     --uc-tab-border-color: #ffffff0f !important;
@@ -56,7 +56,7 @@ bugs with certain themes eg. dark text on dark background.) */
 
   .tabbrowser-tab,
   #tabbrowser-arrowscrollbox-periphery #tabs-newtab-button,
-  #TabsToolbar #TabsToolbar-customization-target> :not(#tabbrowser-tabs) {
+  #TabsToolbar #TabsToolbar-customization-target > :not(#tabbrowser-tabs) {
     padding-top: 4px !important;
   }
 
@@ -64,7 +64,7 @@ bugs with certain themes eg. dark text on dark background.) */
     margin-top: calc(var(--tab-block-margin) - 4px) !important;
   }
 
-  #TabsToolbar #TabsToolbar-customization-target> :not(#tabbrowser-tabs) {
+  #TabsToolbar #TabsToolbar-customization-target > :not(#tabbrowser-tabs) {
     margin-top: calc(var(--tab-block-margin) - 2px) !important;
   }
 
@@ -141,9 +141,7 @@ bugs with certain themes eg. dark text on dark background.) */
 
   :root {
     --uc-titlebar-shadow: none;
-    --uc-tab-shadow:
-      0 3.3px 3px rgba(0, 0, 0, 0.06),
-      0 0 0 1px rgba(0, 0, 0, 0.11);
+    --uc-tab-shadow: 0 3.3px 3px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.11);
   }
 
   :root[lwtheme-brighttext="true"] {
@@ -161,7 +159,8 @@ bugs with certain themes eg. dark text on dark background.) */
       background: transparent !important;
     }
 
-    #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"] #navigator-toolbox:not(:-moz-window-inactive) {
+    #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"]
+      #navigator-toolbox:not(:-moz-window-inactive) {
       background: transparent !important;
     }
 
@@ -194,15 +193,18 @@ bugs with certain themes eg. dark text on dark background.) */
       margin-bottom: calc(var(--uc-titlebar-size) - var(--uc-titlebar-button-size)) !important;
     }
 
-    :root:not([inFullscreen]):is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode="true"]) .titlebar-button:not(.titlebar-close:hover, :-moz-window-inactive) {
+    :root:not([inFullscreen]):is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode="true"])
+      .titlebar-button:not(.titlebar-close:hover, :-moz-window-inactive) {
       list-style-image: none !important;
     }
 
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen], [sizemode="maximized"]) .titlebar-button {
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen], [sizemode="maximized"])
+      .titlebar-button {
       padding-block: 7px 9px !important;
     }
 
-    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen], [sizemode="maximized"]) .titlebar-close {
+    :root:is(:not(:-moz-lwtheme), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen], [sizemode="maximized"])
+      .titlebar-close {
       padding-right: 19px !important;
     }
   }
@@ -216,7 +218,7 @@ bugs with certain themes eg. dark text on dark background.) */
         -moz-box-orient: vertical !important;
       }
 
-      #context-navigation>.menuitem-iconic {
+      #context-navigation > .menuitem-iconic {
         justify-content: start !important;
         -moz-box-pack: start !important;
       }
@@ -235,27 +237,27 @@ bugs with certain themes eg. dark text on dark background.) */
         --uc-string-edit-bookmark: "Edit Bookmark";
       }
 
-      #context-navigation>#context-back .menu-iconic-text::before {
+      #context-navigation > #context-back .menu-iconic-text::before {
         content: var(--uc-string-back) !important;
       }
 
-      #context-navigation>#context-forward .menu-iconic-text::before {
+      #context-navigation > #context-forward .menu-iconic-text::before {
         content: var(--uc-string-forward) !important;
       }
 
-      #context-navigation>#context-reload .menu-iconic-text::before {
+      #context-navigation > #context-reload .menu-iconic-text::before {
         content: var(--uc-string-reload) !important;
       }
 
-      #context-navigation>#context-stop .menu-iconic-text::before {
+      #context-navigation > #context-stop .menu-iconic-text::before {
         content: var(--uc-string-stop) !important;
       }
 
-      #context-navigation>#context-bookmarkpage .menu-iconic-text::before {
+      #context-navigation > #context-bookmarkpage .menu-iconic-text::before {
         content: var(--uc-string-bookmark-page) !important;
       }
 
-      #context-navigation>#context-bookmarkpage[starred] .menu-iconic-text::before {
+      #context-navigation > #context-bookmarkpage[starred] .menu-iconic-text::before {
         content: var(--uc-string-edit-bookmark) !important;
       }
     }
