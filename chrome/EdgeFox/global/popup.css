@@ -141,7 +141,7 @@
   height: calc(16px + var(--uc-panel-zoom-button-padding) * 2) !important;
   min-height: calc(16px + var(--uc-panel-zoom-button-padding) * 2) !important;
 }
-
+/*
 #appMenu-zoomReduce-button2:not([disabled], [open], :active):is(:hover),
 #appMenu-zoomEnlarge-button2:not([disabled], [open], :active):is(:hover),
 #appMenu-fullscreen-button2:not([disabled], [open], :active):is(:hover),
@@ -154,7 +154,7 @@
 #appMenu-fullscreen-button2:not([disabled]):is([open], :hover:active),
 #appMenu-zoomReset-button2:not([disabled]):is([open], :hover:active) {
   background-color: var(--panel-item-active-bgcolor) !important;
-}
+} */
 
 #appMenu-zoomReduce-button2 > .toolbarbutton-icon,
 #appMenu-zoomEnlarge-button2 > .toolbarbutton-icon {
@@ -343,9 +343,9 @@
   left: calc(var(--uc-contextmenu-menuitem-margin-inline) * -1);
 }
 
-#PopupAutoComplete .autocomplete-richlistitem:hover {
+/* #PopupAutoComplete .autocomplete-richlistitem:hover {
   background-color: var(--panel-item-hover-bgcolor) !important;
-}
+} */
 
 #PopupAutoComplete .autocomplete-richlistitem[selected] {
   background-color: var(--panel-item-active-bgcolor) !important;
@@ -479,19 +479,19 @@ panelview .toolbarbutton-1,
     background: none !important;
   }
 
-  menupopup menu:hover:not([disabled="true"]),
+  /* menupopup menu:hover:not([disabled="true"]),
   menupopup menuitem:hover:not([disabled="true"]),
   menupopup menu[_moz-menuactive]:not([disabled="true"]),
   menupopup menuitem[_moz-menuactive]:not([disabled="true"]) {
     background-color: var(--panel-item-hover-bgcolor) !important;
     color: inherit !important;
-  }
+  } */
 
-  menupopup menuitem:hover:active:not([disabled="true"]),
+  /* menupopup menuitem:hover:active:not([disabled="true"]),
   menupopup menu:hover:active:not([disabled="true"]) {
     background-color: var(--panel-item-active-bgcolor) !important;
     color: inherit !important;
-  }
+  } */
 
   menupopup menuseparator {
     margin: var(--uc-contextmenu-separator-vertical) 0 !important;

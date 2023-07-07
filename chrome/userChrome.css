@@ -20,7 +20,7 @@
 @import url("./EdgeFox/content/newtab.css");
 @import url("./EdgeFox/icons/icons.css");
 @import url("./EdgeFox/global/color.css");
-/* @import url("./EdgeFox/global/popup.css"); */
+@import url("./EdgeFox/global/popup.css");
 @import url("./EdgeFox/global/tweaks.css");
 @import url("./EdgeFox/toolbar/findbar.css");
 @import url("./EdgeFox/toolbar/navbar.css");

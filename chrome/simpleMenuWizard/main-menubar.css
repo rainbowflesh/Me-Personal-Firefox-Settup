@@ -59,7 +59,7 @@
 /* #toggle_PersonalToolbar + menuseparator,         /************ Separator *************/
 /* #menu_customizeToolbars,                         /* Customize Toolbar…               */
 /* #viewSidebarMenuMenu,                            /* Sidebar                          */
-/* #menu_bookmarksSidebar,                              /* Bookmarks                        */
+#menu_bookmarksSidebar,                              /* Bookmarks
 /* #menu_historySidebar,                                /* History                          */
 /* #menu_tabsSidebar,                                   /* Synced Tabs                      */
 /* #viewSidebarMenuMenu + menuseparator,        /************ Separator *************/

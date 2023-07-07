@@ -51,6 +51,15 @@ ln -S ./chrome $THEPROFILEPATH/chrome
 - On [Tab Center Reforn](https://addons.mozilla.org/en-US/firefox/addon/tabcenter-reborn/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search), Import [this](https://raw.githubusercontent.com/rainbowflesh/Me-Personal-Firefox-Settup/main/chrome.sidebar/tabCenterReborn.css) CSS.
 - On [Tree Style Tab](moz-extension://f3da60fb-dc11-43f1-a71e-c233dce7aecb/options/options.html#!), locate `Advanced`, Import [this](https://raw.githubusercontent.com/rainbowflesh/Me-Personal-Firefox-Settup/main/chrome.sidebar/treestyletab.css).
 
+> If you hate sidebar, just comment out
+
+```css
+/* l:32  */
+@import url("./SideBarFox/sidebar.css");
+```
+
+> in `userChrome.css`
+
 ---
 
 ## 推销主题
