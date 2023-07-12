@@ -9,8 +9,8 @@
 /*** When right-clicking on items in bookmarks- or history sidebar ***/
 
 /* #placesContext_open,                           /* Open                              */
-/* #placesContext_openBookmarkContainer\:tabs,    /* Open All Bookmarks (folder)       */
-/* #placesContext_openBookmarkLinks\:tabs,        /* Open All Bookmarks (selected tabs)*/
+#placesContext_openBookmarkContainer\:tabs,    /* Open All Bookmarks (folder)       */
+#placesContext_openBookmarkLinks\:tabs,        /* Open All Bookmarks (selected tabs)*/
 /* #placesContext_open\:newtab,                   /* Open in New Tab                   */
 /* #placesContext_open\:newcontainertab,          /* Open in New Container Tab         */
 /* #placesContext_openContainer\:tabs,            /* Open All in Tabs (folder)         */
@@ -42,6 +42,17 @@
 /* #placesContext_pasteSeparator,                 /************* Separator *************/
 /* #placesContext_createBookmark,                 /* Bookmark Page…                    */
 /* #placesContext_showAllBookmarks,               /* Manage Bookmarks                  */
+
+*[id^="treestyletab_piro_sakura_ne_jp-menuitem-_context_bookmarkTab"],
+*[id^="treestyletab_piro_sakura_ne_jp-menuitem-_context_bookmarkSelected"],
+*[id^="treestyletab_piro_sakura_ne_jp-menuitem-_context_duplicateTab"],
+*[id^="treestyletab_piro_sakura_ne_jp-menuitem-_context_sendTabToDevice"],
+*[id^="treestyletab_piro_sakura_ne_jp-menuitem-_context_sendTabToDevices"],
+*[id^="treestyletab_piro_sakura_ne_jp-menuitem-_context_bookmarkAllTabs"],
+*[id^="treestyletab_piro_sakura_ne_jp-menuitem-_context_topLevel_bookmarkTree"],
+*[id^="treestyletab_piro_sakura_ne_jp-menuitem-_context_reopenInContainer"] {
+  display: none;
+}
 
 #leave_this_dummy_here
     { display:none !important; }

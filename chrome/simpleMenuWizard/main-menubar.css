@@ -19,12 +19,12 @@
 /* #menu_closeWindow,                           /* Close Window                     */
 /* #menu_closeWindow + menuseparator,           /************ Separator *************/
 /* #menu_savePage,                              /* Save Page As…                    */
-/* #menu_sendLink,                              /* Email Link…                      */
-/* #menu_sendLink + menuseparator,              /************ Separator *************/
+#menu_sendLink,                              /* Email Link…                      */
+#menu_sendLink + menuseparator,              /************ Separator *************/
 /* #menu_printSetup,                            /* Page Setup…                      */
-/* #menu_printPreview,                          /* Print Preview                    */
-/* #menu_print,                                 /* Print…                           */
-/* #menu_print + menuseparator,                 /************ Separator *************/
+#menu_printPreview,                          /* Print Preview                    */
+#menu_print,                                 /* Print…                           */
+#menu_print + menuseparator,                 /************ Separator *************/
 /* #menu_importFromAnotherBrowser,              /* Import from Another Browser…     */
 /* #menu_importFromAnotherBrowser
         + menuseparator,                        /************ Separator *************/

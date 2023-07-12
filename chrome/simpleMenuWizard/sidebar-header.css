@@ -13,7 +13,7 @@
 /* #sidebar-switcher-target,                            /* Hide sidebar switcher                               */
 
 /* TODO: Where is the following? Cannot reproduce */
-/* #sidebar-switcher-bookmarks,                         /* Bookmarks                             */
+#sidebar-switcher-bookmarks,                         /* Bookmarks                             */
 /* #sidebar-switcher-history,                           /* History                               */
 /* #sidebar-switcher-tabs,                              /* Synced Tabs                           */
 /* #sidebar-switcher-tabs + toolbarseparator,           /*************** Separator ***************/
