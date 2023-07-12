@@ -13,18 +13,17 @@
 /* #context-openlink,                      /* Open Link in New Window          */
 /* #context-openlinkprivate,               /* Open Link in New Private Window  */
 /* #context-sep-open,                      /************ Separator *************/
-#context-bookmarklink,                  /* Bookmark Link
+/* #context-bookmarklink,                  /* Bookmark Link                    */
 /* #context-savelink,                      /* Save Link As…                    */
-#context-savelinktopocket,              /* Save Link to Pocket
+/* #context-savelinktopocket,              /* Save Link to Pocket              */
 /* #context-copyemail,                     /* Copy Email Address               */
 /* #context-copylink,                      /* Copy Link                        */
-#context-sendlinktodevice,              /* Send Link to Device */
-#context-sep-sendlinktodevice,          /************ Separator ************
+/* #context-sendlinktodevice,              /* Send Link to Device              */
+/* #context-sep-sendlinktodevice,          /************ Separator *************/
 /* #context-sep-copylink,                  /************ Separator *************/
 /* #context-searchselect,                  /* Search [Google] for "[selected]" */
 /* #frame-sep,                             /************ Separator *************/
 /* #context-inspect,                       /* Inspect (Q)                      */
 
-#leave_this_dummy_here {
-  display: none !important;
-}
+#leave_this_dummy_here
+    { display:none !important; }

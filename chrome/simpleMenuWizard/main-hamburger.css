@@ -8,9 +8,9 @@
 /*** main-hamburger.css ***/
 /*** When left-clicking on the hamburger menu on top right ***/
 
-/* #appMenu-proton-update-banner,                     /* Downloading Firefox update /
-                                                         Update available — download now /
-                                                         Unable to update — system incompatible /
+/* #appMenu-proton-update-banner,                     /* Downloading Firefox update / 
+                                                         Update available — download now / 
+                                                         Unable to update — system incompatible / 
                                                          Update available — restart now */
 /* #appMenu-fxa-status2,                              /* Sync and save data / Sign In  */
 /* #appMenu-fxa-separator,                            /*********** Separator ***********/
@@ -44,7 +44,7 @@
 /* #appMenu-extensions-themes-button,                 /* Add-ons and Themes            */
 /* #appMenu-extensions-themes-button
        + toolbarseparator,                            /*********** Separator ***********/
-#appMenu-print-button2,                            /* Print…                        */
+/* #appMenu-print-button2,                            /* Print…                        */
 /* #appMenu-save-file-button2,                        /* Save Page As…                 */
 /* #appMenu-find-button2,                             /* Find In Page…                 */
 /* #appMenu-zoom-controls,                            /* Zoom                          */
@@ -59,19 +59,19 @@
 /* #appmenu-developer-tools-view
        > toolbarbutton[oncommand="switchToTabHavingURI('about:performance', true)"],
                                                           /* Task Manager                  */
-/* #appmenu-developer-tools-view
+/* #appmenu-developer-tools-view 
        > toolbarbutton[oncommand="switchToTabHavingURI('about:performance', true)"]
        + toolbarbutton[label*="Debug"],                   /* Remote Debugging              */
-/* #appmenu-developer-tools-view
+/* #appmenu-developer-tools-view 
        > toolbarbutton[key="key_browserToolbox"],         /* Browser Toolbox               */
-/* #appmenu-developer-tools-view
+/* #appmenu-developer-tools-view 
        > toolbarbutton[key="key_browserToolbox"]
        + toolbarbutton[label*="Browser"],                 /* Browser Content Toolbox       */
-/* #appmenu-developer-tools-view
+/* #appmenu-developer-tools-view 
        > toolbarbutton[key="key_browserConsole"],         /* Browser Console               */
-/* #appmenu-developer-tools-view
+/* #appmenu-developer-tools-view 
        > toolbarbutton[key="key_responsiveDesignMode"],   /* Responsive Design Mode        */
-/* #appmenu-developer-tools-view
+/* #appmenu-developer-tools-view 
        > toolbarbutton[key="key_responsiveDesignMode"]
        + toolbarbutton,                                   /* Eyedropper                    */
 /* #appmenu-developer-tools-view
@@ -91,6 +91,5 @@
 /* #appMenu-help-button2 + toolbarseparator,          /*********** Separator ***********/
 /* #appMenu-quit-button2,                             /* Exit                          */
 
-#leave_this_dummy_here {
-  display: none !important;
-}
+#leave_this_dummy_here
+    { display:none !important; }

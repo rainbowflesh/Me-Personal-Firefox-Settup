@@ -17,17 +17,17 @@
 /* #spell-add-to-dictionary,               /* Add To Dictionary                */
 /* #spell-undo-add-to-dictionary,          /* Undo Add To Dictionary           */
 /* #spell-suggestions-separator,           /************ Separator *************/
-/* #context-undo,                          /* Undo */
-/* #context-redo,                          /* Redo */
-/* #context-sep-redo,                      /************ Separator ************ */
+/* #context-undo,                          /* Undo                             */
+/* #context-redo,                          /* Redo                             */
+/* #context-sep-redo,                      /************ Separator *************/
 /* #context-cut,                           /* Cut                              */
 /* #context-copy,                          /* Copy                             */
 /* #context-paste,                         /* Paste                            */
 /* #context-delete,                        /* Delete                           */
 /* #context-selectall,                     /* Select All                       */
-#context-sep-selectall,                 /************ Separator *************/
-#context-keywordfield,                  /* Add a Keyword for this Search…*/
-/* #spell-separator,                       /************ Separator ************ */
+/* #context-sep-selectall,                 /************ Separator *************/
+/* #context-keywordfield,                  /* Add a Keyword for this Search…   */
+/* #spell-separator,                       /************ Separator *************/
 /* #spell-check-enabled,                   /* Check Spelling                   */
 /* #spell-dictionaries,                    /* Languages                        */
 /* #spell-check-dictionary-en-US,              /* English (United States)          */
@@ -41,6 +41,5 @@
 /* #inspect-separator,                     /************ Separator *************/
 /* #context-inspect,                       /* Inspect (Q)                      */
 
-#leave_this_dummy_here {
-  display: none !important;
-}
+#leave_this_dummy_here
+    { display:none !important; }

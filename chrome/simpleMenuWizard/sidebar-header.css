@@ -22,6 +22,5 @@
 /* #sidebar-reverse-position + toolbarseparator,        /************** Separator ****************/
 /* toolbarbutton[oncommand="SidebarUI.hide()"],         /* Close Sidebar                         */
 
-#leave_this_dummy_here {
-  display: none !important;
-}
+#leave_this_dummy_here
+    { display:none !important; }

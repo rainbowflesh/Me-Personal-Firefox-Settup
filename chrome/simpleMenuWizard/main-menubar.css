@@ -21,10 +21,10 @@
 /* #menu_savePage,                              /* Save Page As…                    */
 /* #menu_sendLink,                              /* Email Link…                      */
 /* #menu_sendLink + menuseparator,              /************ Separator *************/
-#menu_printSetup,                            /* Page Setup…                      */
-#menu_printPreview,                          /* Print Preview                    */
-#menu_print,                                 /* Print…                           */
-#menu_print + menuseparator,                 /************ Separator *************/
+/* #menu_printSetup,                            /* Page Setup…                      */
+/* #menu_printPreview,                          /* Print Preview                    */
+/* #menu_print,                                 /* Print…                           */
+/* #menu_print + menuseparator,                 /************ Separator *************/
 /* #menu_importFromAnotherBrowser,              /* Import from Another Browser…     */
 /* #menu_importFromAnotherBrowser
         + menuseparator,                        /************ Separator *************/
@@ -59,7 +59,7 @@
 /* #toggle_PersonalToolbar + menuseparator,         /************ Separator *************/
 /* #menu_customizeToolbars,                         /* Customize Toolbar…               */
 /* #viewSidebarMenuMenu,                            /* Sidebar                          */
-#menu_bookmarksSidebar,                              /* Bookmarks
+/* #menu_bookmarksSidebar,                              /* Bookmarks                        */
 /* #menu_historySidebar,                                /* History                          */
 /* #menu_tabsSidebar,                                   /* Synced Tabs                      */
 /* #viewSidebarMenuMenu + menuseparator,        /************ Separator *************/
@@ -189,6 +189,5 @@
 /* #helpPolicySeparator,                        /************ Separator *************/
 /* #helpPolicySupport,                          /* ? */
 
-#leave_this_dummy_here {
-  display: none !important;
-}
+#leave_this_dummy_here
+    { display:none !important; }

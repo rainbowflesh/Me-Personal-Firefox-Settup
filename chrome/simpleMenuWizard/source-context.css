@@ -23,6 +23,5 @@
 /* #context-viewsource,                    /* View Page Source          */
 /* #context-inspect,                       /* Inspect (Q)               */
 
-#leave_this_dummy_here {
-  display: none !important;
-}
+#leave_this_dummy_here
+    { display:none !important; }

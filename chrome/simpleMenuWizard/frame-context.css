@@ -16,18 +16,17 @@
 /* #open-frame-sep,                         /******** Separator *********/
 /* #context-reloadframe,                    /* Reload Frame             */
 /* #context-reloadframe + menuseparator,    /******** Separator *********/
-#context-bookmarkframe,                  /* Bookmark This Frame
+/* #context-bookmarkframe,                  /* Bookmark This Frame      */
 /* #context-saveframe,                      /* Save Frame As…           */
 /* #context-saveframe + menuseparator,      /******** Separator *********/
-#context-printframe,                     /* Print Frame…
-#context-printframe + menuseparator,     /******** Separator ******** */
-#context-take-frame-screenshot,          /* Take Screenshot          */
-#context-take-frame-screenshot
+/* #context-printframe,                     /* Print Frame…             */
+/* #context-printframe + menuseparator,     /******** Separator *********/
+/* #context-take-frame-screenshot,          /* Take Screenshot          */
+/* #context-take-frame-screenshot
                        + menuseparator,     /******** Separator *********/
 /* #context-viewframesource,                /* View Frame Source        */
 /* #context-viewframeinfo,                  /* View Frame Info          */
 /* #spell-separator,                    /*** Separator ***/
 
-#leave_this_dummy_here {
-  display: none !important;
-}
+#leave_this_dummy_here
+    { display:none !important; }
