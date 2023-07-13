@@ -25,7 +25,7 @@
 #context-take-frame-screenshot
                        + menuseparator,     /******** Separator *********/
 /* #context-viewframesource,                /* View Frame Source        */
-/* #context-viewframeinfo,                  /* View Frame Info          */
+#context-viewframeinfo,                  /* View Frame Info          */
 /* #spell-separator,                    /*** Separator ***/
 
 #leave_this_dummy_here
