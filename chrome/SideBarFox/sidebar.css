@@ -168,7 +168,7 @@
 }
 
 /* Windows specific styles */
-@media (-moz-platform: windows) {
+@media (-moz-platform: windows), (-moz-platform: windows-win10) {
   /* Hide main tabs toolbar */
   :root[tabsintitlebar] {
     --uc-window-control-width: 137px; /* Space at the right of nav-bar for window controls */
