@@ -168,7 +168,7 @@
 }
 
 /* Windows specific styles */
-@media (-moz-platform: windows-win10) {
+@media (-moz-platform: windows) {
   /* Hide main tabs toolbar */
   :root[tabsintitlebar] {
     --uc-window-control-width: 137px; /* Space at the right of nav-bar for window controls */
@@ -244,9 +244,8 @@
   }
 
   .titlebar-buttonbox * {
-    border-radius: 5px;
-    width: 35px;
-    height: 38px;
+    border-radius: 2px;
+    height: 100%;
   }
 
   #main-menubar {
