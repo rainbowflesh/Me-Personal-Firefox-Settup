@@ -12,7 +12,7 @@
   --sidebar-max-width: 13rem;
   --sidebar-min-width: 5rem;
   --sidebar-extend-delay: 2s;
-  --sidebar-hide-delay: 1s;
+  --sidebar-hide-delay: 0.7s;
   --sidebar-extend-duration: 300ms;
 }
 
