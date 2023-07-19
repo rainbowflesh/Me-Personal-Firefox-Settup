@@ -19,11 +19,12 @@
   min-width: var(--sidebar-max-width) !important;
   max-width: var(--sidebar-max-width) !important;
   margin-right: calc((var(--sidebar-max-width) - var(--sidebar-min-width)) * -1) !important;
-  z-index: 1;
+  z-index: 2;
 }
 
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not(:hover) {
   transition-delay: var(--sidebar-hide-delay) !important;
   margin-right: 0 !important;
   transition-property: margin-right;
+  z-index: 0;
 }
