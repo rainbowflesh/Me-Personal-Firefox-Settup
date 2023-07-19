@@ -1,0 +1,35 @@
+:root[tabsintitlebar] {
+  --uc-window-control-width: 137px;
+}
+#nav-bar {
+  border-inline: var(--uc-window-drag-space-width, 80px) solid var(--toolbar-bgcolor);
+  border-inline-style: solid !important;
+  border-right-width: calc(var(--uc-window-control-width, 0px) + var(--uc-window-drag-space-width, 0px));
+  margin-left: -80px;
+}
+#TabsToolbar {
+  visibility: collapse !important;
+}
+:root {
+  --uc-toolbar-height: 38px;
+}
+:root:not([inFullscreen]) #nav-bar {
+  margin-top: calc(0px - var(--uc-toolbar-height));
+  z-index: 2;
+}
+#toolbar-menubar {
+  min-height: unset !important;
+  height: var(--uc-toolbar-height) !important;
+  position: relative;
+}
+.titlebar-buttonbox {
+  z-index: 3 !important;
+  padding-right: 3px;
+}
+.titlebar-buttonbox * {
+  border-radius: 4px;
+  height: 100%;
+}
+#menubar-items {
+  display: none;
+}

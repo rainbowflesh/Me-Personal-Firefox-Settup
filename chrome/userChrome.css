@@ -1,3 +1,6 @@
+/* import this if FF break tab hidden in some updates */
+/* @import url("./SideBarFox/lifesaver.css"); */
+
 @import url("./simpleMenuWizard/blank-context.css"); /* ...a blank area on a webpage                    */
 @import url("./simpleMenuWizard/frame-context.css"); /* ...an iframe                                    */
 @import url("./simpleMenuWizard/image-context.css"); /* ...an image                                     */
