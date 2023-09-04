@@ -1,9 +1,9 @@
 #browser .browserStack:has(.dialogStack.tab-dialog-box:not([hidden="true"])) > browser {
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(20px);
 }
 
 #nav-bar[urlbar-exceeds-toolbar-bounds="true"]::before {
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(20px);
   position: fixed;
   content: "";
   top: 0;
@@ -21,11 +21,11 @@
   .search-handoff-button,
   .tile {
     background-color: transparent !important;
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(20px);
   }
 }
 menupopup {
-  backdrop-filter: saturate(180%) blur(35px);
+  backdrop-filter: saturate(180%) blur(20px);
 }
 .urlbarView-body-inner {
   color: white;
@@ -39,8 +39,8 @@ menupopup {
 
 .urlbarView-body-inner::before {
   content: "";
-  -webkit-backdrop-filter: saturate(180%) blur(35px);
-  backdrop-filter: saturate(180%) blur(35px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
   background-color: rgba(24, 24, 24, 0.24);
   top: 0;
   left: 0;

@@ -19,7 +19,7 @@ tab-item tab-item-substance {
 }
 
 tab-item.active .background {
-  backdrop-filter: saturate(180%) blur(100px);
+  backdrop-filter: saturate(180%) blur(20px);
 }
 
 #sidebar-box {
@@ -50,12 +50,12 @@ tab-item {
 }
 
 .newtab-button-box:hover {
-  backdrop-filter: saturate(180%) blur(100px);
+  backdrop-filter: saturate(180%) blur(20px);
   border-radius: 4px;
   background-size: 80%;
 }
 tab-item.pinned {
-  backdrop-filter: saturate(180%) blur(100px);
+  backdrop-filter: saturate(180%) blur(20px);
   border-radius: 4px;
 }
 
@@ -81,9 +81,4 @@ tab-item:hover .closebox {
 /* Center the new tab sign in collapsed state. */
 .newtab-button {
   padding-left: 0.48em !important;
-}
-
-/* Better alignment of tabs when collapsed */
-:root:not(:hover) tab-item tab-item-substance {
-  margin-left: 0px !important;
 }
