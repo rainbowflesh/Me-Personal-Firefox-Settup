@@ -27,7 +27,6 @@
     --overflow-indicator-border: #cccccc;
   }
 }
-
 :root,
 body {
   overflow: hidden;
@@ -39,14 +38,6 @@ body {
   border: none;
 }
 
-#newtab {
-  margin-left: 6px;
-}
-
-#settings {
-  margin-right: 2px;
-}
-
 #filterbox-icon,
 #filterbox-input,
 #settings {
@@ -56,7 +47,7 @@ body {
 #tablist-wrapper {
   height: auto;
   margin-inline: 6px;
-  margin-top: 5px;
+  margin-top: 6px;
 }
 
 #pinnedtablist:not(.compact) {
@@ -72,11 +63,23 @@ body {
 
 #newtab {
   flex-grow: 1;
-  margin-right: 2px;
-  margin-left: 2px;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
   padding-left: 9px;
   min-width: 36px;
   width: 100%;
+}
+
+#newtab::after {
+  content: "New tab";
+  margin-left: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#newtab-icon {
+  min-width: 1.5rem;
+  margin-left: 0.1rem;
 }
 
 .tab,
@@ -94,17 +97,6 @@ body {
 #pinnedtablist:not(.compact) .tab,
 #tablist .tab {
   padding: 0;
-}
-
-#newtab::after {
-  content: "New tab";
-  margin-left: 10px;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-#newtab-icon {
-  min-width: 16px;
 }
 
 @media (min-width: 49px) {

@@ -1,3 +1,8 @@
+:root {
+  /* batter same with var(--sidebar-min-width) */
+  --tab-size: 4.4rem;
+}
+
 :root.sidebar #background {
   background: var(--browser-bg-images);
   background-size: min(10rem, 100%) auto;
@@ -13,15 +18,6 @@
   mask: none !important;
 }
 
-tab-item tab-item-substance {
-  /* height: 2rem !important; */
-  height: unset !important;
-}
-
-tab-item.active .background {
-  backdrop-filter: saturate(180%) blur(20px);
-}
-
 #sidebar-box {
   width: 100px !important;
 }
@@ -29,39 +25,30 @@ tab-item.active .background {
 #tabbar {
   counter-reset: vtabs atabs tabs;
 }
-tab-item:not(.collapsed):not(.discarded) {
-  counter-increment: vtabs atabs tabs;
-}
-tab-item:not(.collapsed) {
-  counter-increment: vtabs tabs;
-}
-tab-item:not(.discarded) {
-  counter-increment: atabs tabs;
-}
-tab-item {
-  counter-increment: tabs;
-}
-#tabbar tab-item tab-item-substance:not(:hover) tab-closebox {
-  display: none;
+
+tab-item tab-item-substance,
+tab-item.pinned {
+  height: var(--tab-size) !important;
+  border-right-width: 1px;
 }
 
-.newtab-button {
-  --tab-count-text: counter(atabs) " / " counter(tabs) " 💤";
-}
-
-.newtab-button-box:hover {
+tab-item.active .background {
   backdrop-filter: saturate(180%) blur(20px);
-  border-radius: 4px;
-  background-size: 80%;
 }
+
 tab-item.pinned {
   backdrop-filter: saturate(180%) blur(20px);
-  border-radius: 4px;
 }
 
-/* Push tab labels slightly to the right so they're completely hidden in collapsed state. */
+tab-item:not(.faviconized):not(.loading) tab-favicon {
+  display: flex;
+  justify-content: center;
+  filter: url('data:image/svg+xml;,<svg xmlns="http://www.w3.org/2000/svg"><filter id="s"><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 -32 0 1 0" /><feMorphology operator="dilate" radius="1"/><feComponentTransfer><feFuncA type="gamma" offset="0" amplitude="1" exponent="2"/></feComponentTransfer><feGaussianBlur stdDeviation="0.5"/><feComposite in="SourceGraphic" operator="over"/></filter></svg>#s');
+}
+
+/* Hide tab label when collapsed. */
 tab-item .label {
-  margin-left: 7px;
+  margin-left: 1.1rem;
 }
 
 /* Hide close buttons on tabs. */
@@ -73,12 +60,41 @@ tab-item:hover .closebox {
   visibility: initial;
 }
 
-/* Hide sound playing/muted button. */
-.sound-button::before {
-  display: none !important;
+tab-item:not(.collapsed):not(.discarded) {
+  counter-increment: vtabs atabs tabs;
+}
+
+tab-item:not(.collapsed) {
+  counter-increment: vtabs tabs;
+}
+
+tab-item:not(.discarded) {
+  counter-increment: atabs tabs;
+}
+
+tab-item {
+  counter-increment: tabs;
+}
+
+#tabbar tab-item tab-item-substance:not(:hover) tab-closebox {
+  display: none;
+}
+
+.newtab-button-box:hover {
+  backdrop-filter: saturate(180%) blur(20px);
+  border-radius: 4px;
+  background-size: 80%;
 }
 
 /* Center the new tab sign in collapsed state. */
 .newtab-button {
-  padding-left: 0.48em !important;
+  --tab-count-text: counter(atabs) " / " counter(tabs) " 💤";
+  padding-left: 0.5em !important;
+  height: var(--tab-size);
+  display: flex;
+  align-items: center;
+}
+/* Hide sound playing/muted button. */
+.sound-button::before {
+  display: none !important;
 }
