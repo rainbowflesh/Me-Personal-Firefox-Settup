@@ -76,6 +76,10 @@ tab-item {
   counter-increment: tabs;
 }
 
+tab-item tab-counter {
+	margin-left:1rem;
+}
+
 #tabbar tab-item tab-item-substance:not(:hover) tab-closebox {
   display: none;
 }
@@ -94,7 +98,9 @@ tab-item {
   display: flex;
   align-items: center;
 }
-/* Hide sound playing/muted button. */
-.sound-button::before {
-  display: none !important;
+
+.sound-button{
+  position: fixed;
+  left:2.5rem;
+  margin-top:2rem;
 }
