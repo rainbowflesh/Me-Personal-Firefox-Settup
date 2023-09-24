@@ -10,9 +10,7 @@ Compare with real edge:
 ---
 
 Sidebar belike:
-<img src="./asset/sidebar_screenshot.png" width="720px"/>
-<img src="./asset/dynamic_side.gif" height="450px"/>
-<img src="./asset/manual_side.gif" height="450px"/>
+<img src="./asset/sidebar.gif" width="720px"/>
 
 ## Dependencies
 
