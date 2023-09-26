@@ -100,7 +100,7 @@ tab-item tab-counter {
 }
 
 .sound-button{
-  position: fixed;
+  position: absolute;
   left:2.5rem;
   margin-top:2rem;
 }
