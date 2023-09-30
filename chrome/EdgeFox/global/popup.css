@@ -415,7 +415,7 @@ panelview .toolbarbutton-1,
   .popup-internal-box,
   panel[type="autocomplete-richlistbox"] > .autocomplete-richlistbox,
   .menupopup-arrowscrollbox {
-    background: var(--arrowpanel-background) !important;
+    /* background: var(--arrowpanel-background) !important; */
     border: 0 !important;
   }
 
