@@ -415,9 +415,14 @@ panelview .toolbarbutton-1,
   .popup-internal-box,
   panel[type="autocomplete-richlistbox"] > .autocomplete-richlistbox,
   .menupopup-arrowscrollbox {
-    /* background: var(--arrowpanel-background) !important; */
+    background: var(--arrowpanel-background) !important;
     border: 0 !important;
   }
+
+#sidebar #webxtpanels-window #mainPopupSet .menupopup {
+  background: red !important;
+}
+
 
   /* make room for menu shadow */
   menupopup:not(.PanelUI-subView) {
@@ -487,11 +492,11 @@ panelview .toolbarbutton-1,
     color: inherit !important;
   } */
 
-  /* menupopup menuitem:hover:active:not([disabled="true"]),
+  menupopup menuitem:hover:active:not([disabled="true"]),
   menupopup menu:hover:active:not([disabled="true"]) {
     background-color: var(--panel-item-active-bgcolor) !important;
     color: inherit !important;
-  } */
+  }
 
   menupopup menuseparator {
     margin: var(--uc-contextmenu-separator-vertical) 0 !important;
