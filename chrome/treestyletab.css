@@ -1,6 +1,6 @@
 :root {
   /* batter same with var(--sidebar-min-width) */
-  --tab-size: 4.4rem;
+  --tab-size: 4rem;
 }
 
 :root.sidebar #background {
@@ -26,10 +26,13 @@
   counter-reset: vtabs atabs tabs;
 }
 
+tab-item {
+  counter-increment: tabs;
+}
+
 tab-item tab-item-substance,
 tab-item.pinned {
-  height: var(--tab-size) !important;
-  border-right-width: 1px;
+  height: calc(var(--tab-size) + 0.1rem) !important;
 }
 
 tab-item.active .background {
@@ -72,12 +75,14 @@ tab-item:not(.discarded) {
   counter-increment: atabs tabs;
 }
 
-tab-item {
-  counter-increment: tabs;
+tab-item tab-counter {
+  margin-left: 1rem;
 }
 
-tab-item tab-counter {
-	margin-left:1rem;
+tab-item tab-twisty {
+  margin-right: -0.2rem;
+  position: relative;
+  z-index: 10000;
 }
 
 #tabbar tab-item tab-item-substance:not(:hover) tab-closebox {
@@ -99,8 +104,8 @@ tab-item tab-counter {
   align-items: center;
 }
 
-.sound-button{
+.sound-button {
   position: absolute;
-  left:2.5rem;
-  margin-top:2rem;
+  left: 2.5rem;
+  margin-top: 2rem;
 }
