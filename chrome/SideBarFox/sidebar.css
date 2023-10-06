@@ -16,10 +16,21 @@
   --sidebar-extend-duration: 300ms;
 }
 
+/* Suppress "white flash" on showing sidebar in Dark color mode #2903 */
+@-moz-document regexp("moz-extension://.+/sidebar/sidebar.html.*")
+{
+  :root,
+  #background {
+    background-color: rgb(128, 128, 128);
+  }
+}
+
+/* Remove sidebar-header */
 #sidebar-header {
   display: none;
 }
 
+/* sidebar size */
 #sidebar-box {
   max-width: var(--sidebar-max-width) !important;
   min-width: var(--sidebar-min-width) !important;

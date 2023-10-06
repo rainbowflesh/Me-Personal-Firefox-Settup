@@ -62,6 +62,15 @@ ln -S ./chrome $THEPROFILEPATH/chrome
 
 ### Tweaking
 
+#### Edge like smooth scrolling
+
+Copy paste `user.js` to profile root folder, like
+
+```txt
+| - 01djcrd2.default/user.js
+| - 01djcrd2.default/chrome/userChrome.css
+```
+
 #### Im lossing button in right click context menu, WTF?!
 
 oops, comment out l:1,16 in `userChrome.css`

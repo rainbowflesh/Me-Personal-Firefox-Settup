@@ -16,16 +16,16 @@
 @import url("./simpleMenuWizard/opt_noSendToDevice.css");
 
 /* some edge things */
-@import url("./EdgeFox/content/common.css");
-@import url("./EdgeFox/content/newtab.css");
-@import url("./EdgeFox/icons/icons.css");
-@import url("./EdgeFox/global/color.css");
-@import url("./EdgeFox/global/popup.css");
-@import url("./EdgeFox/global/tweaks.css");
-@import url("./EdgeFox/toolbar/findbar.css");
-@import url("./EdgeFox/toolbar/navbar.css");
-@import url("./EdgeFox/toolbar/tabbar.css");
-@import url("./EdgeFox/toolbar/urlbar.css");
+@import url("./edge-frfox/content/common.css");
+@import url("./edge-frfox/content/newtab.css");
+@import url("./edge-frfox/icons/icons.css");
+@import url("./edge-frfox/global/colors.css");
+@import url("./edge-frfox/global/popup.css");
+@import url("./edge-frfox/global/tweaks.css");
+@import url("./edge-frfox/toolbar/findbar.css");
+@import url("./edge-frfox/toolbar/navbar.css");
+@import url("./edge-frfox/toolbar/tabbar.css");
+@import url("./edge-frfox/toolbar/urlbar.css");
 
 /* sidebar if you want to use */
 @import url("./SideBarFox/sidebar.css");
