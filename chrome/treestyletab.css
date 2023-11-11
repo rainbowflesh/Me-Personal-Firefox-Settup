@@ -85,6 +85,10 @@ tab-item tab-twisty {
   z-index: 10000;
 }
 
+tab-twisty {
+  left:-0.1rem;
+}
+
 #tabbar tab-item tab-item-substance:not(:hover) tab-closebox {
   display: none;
 }
