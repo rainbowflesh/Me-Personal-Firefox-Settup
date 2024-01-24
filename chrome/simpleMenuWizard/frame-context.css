@@ -28,5 +28,6 @@
 #context-viewframeinfo,                  /* View Frame Info          */
 /* #spell-separator,                    /*** Separator ***/
 
-#leave_this_dummy_here
-    { display:none !important; }
+#leave_this_dummy_here {
+  display: none !important;
+}

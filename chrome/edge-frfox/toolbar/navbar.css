@@ -1,10 +1,12 @@
-/* Edge-Frfox - navbar.css */
+/* Edge-Frfox - navbar.css
+ * https://github.com/bmFtZQ/edge-frfox */
 
 :root {
   --toolbarbutton-border-radius: 4px !important;
   --toolbarbutton-inner-padding: 7px !important;
   --uc-toolbarbutton-inner-inline-padding: 12px !important;
-  --tabs-navbar-shadow-size: 0 !important;
+  --toolbarbutton-outer-padding: 2px !important;
+  --tabs-navbar-shadow-size: 0px !important;
 }
 
 #nav-bar .toolbarbutton-1>.toolbarbutton-icon {
@@ -27,34 +29,31 @@
   padding: var(--toolbarbutton-inner-padding) var(--uc-toolbarbutton-inner-inline-padding) !important;
 }
 
-@supports (-moz-bool-pref("uc.tweak.rounded-corners")) {
-  #navigator-toolbox {
-    border-bottom: none !important;
-  }
+toolbar .toolbaritem-combined-buttons {
+  margin-inline: var(--toolbarbutton-outer-padding) !important;
 }
 
 /* account button */
-#navigator-toolbox>toolbar #fxa-toolbar-menu-button,
-#navigator-toolbox>toolbar #fxa-toolbar-menu-button>.toolbarbutton-badge-stack,
+.browser-toolbar #fxa-toolbar-menu-button,
+.browser-toolbar #fxa-toolbar-menu-button>.toolbarbutton-badge-stack,
 #fxa-avatar-image {
   border-radius: 99px !important;
 }
 
-#nav-bar #fxa-toolbar-menu-button>.toolbarbutton-badge-stack {
+.browser-toolbar #fxa-toolbar-menu-button>.toolbarbutton-badge-stack {
   padding: var(--toolbarbutton-inner-padding) !important;
   margin-inline: calc(var(--uc-toolbarbutton-inner-inline-padding) - var(--toolbarbutton-inner-padding)) !important;
 }
 
 #fxa-toolbar-menu-button {
   display: flex !important;
-  display: -moz-box !important;
 }
 
 #widget-overflow-list>#fxa-toolbar-menu-button #fxa-avatar-image {
   scale: 1.25 !important;
 }
 
-#nav-bar-customization-target>#fxa-toolbar-menu-button #fxa-avatar-image {
+.customization-target>#fxa-toolbar-menu-button #fxa-avatar-image {
   scale: 1.5 !important;
 }
 

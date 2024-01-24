@@ -184,10 +184,12 @@
 /* #help_reportSiteIssue,                       /* Report Site Issue…               */
 /* #menu_HelpPopup_reportPhishingtoolmenu,      /* Report Deceptive Site…           */
 /* #menu_HelpPopup_reportPhishingErrortoolmenu, /* This Isn’t a Deceptive Site…     */
+#helpSwitchDevice,                           /* Switching to a New Device
 /* #aboutSeparator,                             /************ Separator *************/
 /* #aboutName,                                  /* About Firefox                    */
 /* #helpPolicySeparator,                        /************ Separator *************/
 /* #helpPolicySupport,                          /* ? */
 
-#leave_this_dummy_here
-    { display:none !important; }
+#leave_this_dummy_here {
+  display: none !important;
+}

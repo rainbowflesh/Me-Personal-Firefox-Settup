@@ -1,32 +1,9 @@
-@import url("./simpleMenuWizard/blank-context.css"); /* ...a blank area on a webpage                    */
-@import url("./simpleMenuWizard/frame-context.css"); /* ...an iframe                                    */
-@import url("./simpleMenuWizard/image-context.css"); /* ...an image                                     */
-@import url("./simpleMenuWizard/input-context.css"); /* ...an input-field                               */
-@import url("./simpleMenuWizard/link-context.css"); /* ...a link                                       */
-@import url("./simpleMenuWizard/main-hamburger.css"); /* Leftclick the hamburger menu on top right       */
-@import url("./simpleMenuWizard/main-menubar.css"); /* Leftclick on main menubar (open with ALT key)   */
-@import url("./simpleMenuWizard/media-context.css"); /* ...media like audio or html5 video              */
-@import url("./simpleMenuWizard/select-context.css"); /* ...selected text or selected object             */
-@import url("./simpleMenuWizard/sidebar-context.css"); /* ...items in bookmarks- or history sidebar       */
-@import url("./simpleMenuWizard/sidebar-header.css"); /* Leftclick on sidebar header                     */
-@import url("./simpleMenuWizard/source-context.css"); /* ...a blank area when viewing source code        */
-@import url("./simpleMenuWizard/tab-context.css"); /* ...a tab                                        */
-@import url("./simpleMenuWizard/toolbar-context.css"); /* ...the toolbar or tabbar                        */
-@import url("./simpleMenuWizard/urlbar-context.css"); /* ...the addressbar                               */
-@import url("./simpleMenuWizard/opt_noSendToDevice.css");
+@import url("./simpleMenuWizard/userChrome.css");
 
-/* some edge things */
-@import url("./edge-frfox/content/common.css");
-@import url("./edge-frfox/content/newtab.css");
-@import url("./edge-frfox/icons/icons.css");
-@import url("./edge-frfox/global/colors.css");
-@import url("./edge-frfox/global/popup.css");
-@import url("./edge-frfox/global/tweaks.css");
-@import url("./edge-frfox/toolbar/findbar.css");
-@import url("./edge-frfox/toolbar/navbar.css");
-@import url("./edge-frfox/toolbar/tabbar.css");
-@import url("./edge-frfox/toolbar/urlbar.css");
+@import url("./edge-frfox/userChrome.css");
+@import url("./edge-frfox/userContent.css");
 
-/* sidebar if you want to use */
 @import url("./SideBarFox/sidebar.css");
-/* @import url("./SideBarFox/autohide.css"); */
+@import url("./SideBarFox/blur_sidebar.css");
+@import url("./SideBarFox/dynamic_hide_native_tabs.css");
+/* @import url("./SideBarFox/autohide_sidebar.css"); */

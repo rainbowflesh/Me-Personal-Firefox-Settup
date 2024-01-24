@@ -40,5 +40,6 @@
 /* #tabContextMenu #context_closeOtherTabs,                       /* Close Other Tabs        */
 /* #tabContextMenu #context_undoCloseTab,                     /* Undo Close Tab          */
 
-#leave_this_dummy_here
-    { display:none !important; }
+#leave_this_dummy_here {
+  display: none !important;
+}

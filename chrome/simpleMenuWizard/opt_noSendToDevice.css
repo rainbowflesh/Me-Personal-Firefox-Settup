@@ -20,5 +20,6 @@
 #pageAction-panel-sendToDevice,
 /* #pageAction-panel-emailLink,    /* Email Link */
 
-#leave_this_dummy_here
-    { display: none !important; }
+#leave_this_dummy_here {
+  display: none !important;
+}

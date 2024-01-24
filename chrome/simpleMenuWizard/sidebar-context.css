@@ -54,5 +54,6 @@
   display: none;
 }
 
-#leave_this_dummy_here
-    { display:none !important; }
+#leave_this_dummy_here {
+  display: none !important;
+}

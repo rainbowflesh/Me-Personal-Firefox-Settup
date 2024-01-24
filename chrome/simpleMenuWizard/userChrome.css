@@ -1,0 +1,16 @@
+@import url("./blank-context.css"); /* ...a blank area on a webpage                    */
+@import url("./frame-context.css"); /* ...an iframe                                    */
+@import url("./image-context.css"); /* ...an image                                     */
+@import url("./input-context.css"); /* ...an input-field                               */
+@import url("./link-context.css"); /* ...a link                                       */
+@import url("./main-hamburger.css"); /* Leftclick the hamburger menu on top right       */
+@import url("./main-menubar.css"); /* Leftclick on main menubar (open with ALT key)   */
+@import url("./media-context.css"); /* ...media like audio or html5 video              */
+@import url("./select-context.css"); /* ...selected text or selected object             */
+@import url("./sidebar-context.css"); /* ...items in bookmarks- or history sidebar       */
+@import url("./sidebar-header.css"); /* Leftclick on sidebar header                     */
+@import url("./source-context.css"); /* ...a blank area when viewing source code        */
+@import url("./tab-context.css"); /* ...a tab                                        */
+@import url("./toolbar-context.css"); /* ...the toolbar or tabbar                        */
+@import url("./urlbar-context.css"); /* ...the addressbar                               */
+@import url("./opt_noSendToDevice.css");
