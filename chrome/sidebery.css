@@ -1,0 +1,20 @@
+/* noformat */
+#root.root {--tabs-height: 40px;}
+#root.root {--tabs-indent: 0px;}
+#root.root {--tabs-inner-gap: 10px;}
+#root.root {--tabs-close-btn-margin: 10px;}
+#root.root {--tabs-audio-btn-width: 1rem;}
+#root.root {--ntb-padding: 0px;}
+#root.root {--ntb-border-radius: 4px;}
+#root.root {--tabs-border-radius: 4px;}
+#root.root {--ctx-menu-font: 1rem sans-serif;}
+#root.root {--btn-border-radius: 4px;}
+#root.root {--search-border-radius: 4;}
+#root.root {--ctx-menu-max-width: 7rem;}
+#root.root {--ctx-menu-min-width: 2rem;}
+#root.root {--ctx-menu-border-radius: 4px;}
+#root.root {--ctx-menu-opt-border-radius: 4px;}
+#root.root {--ctx-menu-text-opt-height: 36px;}
+#root.root {--ctx-menu-icon-opt-height: 36px;}
+#root.root {--general-border-radius: 4px;}
+#root.root {--general-margin: 4px;}
