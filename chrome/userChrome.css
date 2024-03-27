@@ -5,7 +5,6 @@
 
 @import url("./SideBarFox/sidebar.css");
 @import url("./SideBarFox/blur_sidebar.css");
-@import url("./SideBarFox/dynamic_native_tabs.css") (-moz-bool-pref: "uc.tweak.hide-tabs-bar");
 /* @import url("./SideBarFox/autohide_sidebar.css"); */
 
 /* tabcenter optional  */

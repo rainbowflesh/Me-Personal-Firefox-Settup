@@ -41,11 +41,6 @@
   position: relative;
 }
 
-#nav-bar,
-#urlbar {
-  z-index: 100;
-}
-
 #sidebar-box:not([lwt-sidebar]) {
   appearance: unset !important;
 }
