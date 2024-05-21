@@ -1,10 +1,14 @@
-user_pref("general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS", 250);
-user_pref("general.smoothScroll.msdPhysics.enabled", true);
-user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant", 450);
-user_pref("general.smoothScroll.msdPhysics.regularSpringConstant", 450);
-user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS", 50);
-user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio;0", 4);
-user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 5000);
-user_pref("mousewheel.min_line_scroll_amount", 22);
-user_pref("toolkit.scrollbox.horizontalScrollDistance", 4);
-user_pref("toolkit.scrollbox.verticalScrollDistance", 5);
+// Edge-Frfox - user.js
+// https://github.com/bmFtZQ/edge-frfox
+// This file contains the settings required for the theme to function correctly.
+
+// Enables the userChrome.css and userContent.css files.
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+// Allows the theme's SVG icons to be coloured properly.
+user_pref("svg.context-properties.content.enabled", true);
+// Allows colours used in the theme to be mixed with others.
+user_pref("layout.css.color-mix.enabled", true);
+// Allows theme to use different colours for light/dark mode.
+user_pref("layout.css.light-dark.enabled", true);
+// Enables the CSS :has() selector, required for hide tabs toolbar tweak.
+user_pref("layout.css.has-selector.enabled", true);
