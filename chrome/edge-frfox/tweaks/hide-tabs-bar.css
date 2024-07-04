@@ -43,10 +43,12 @@
     visibility: collapse !important;
   }
 
-  /* macOS specific positioning */
+  /*
+    MARK: macOS styles
+  */
   @media (-moz-platform: macos) {
     /* Offset navbar contents to make space for the window controls */
-    &[tabsintitlebar] #nav-bar:not([inFullscreen]) {
+    &[tabsintitlebar]:not([inFullscreen]) #nav-bar {
       padding-left: calc(70px + var(--uc-titlebar-drag-space)) !important;
 
       /* Remove the padding from the side of the navbar */
@@ -70,7 +72,9 @@
     }
   }
 
-  /* Windows specific positioning */
+  /*
+    MARK: Windows styles
+  */
   @media (-moz-platform: windows) {
     /* Offset navbar contents to make space for the window controls */
     &:where([inFullscreen], [tabsintitlebar]) #nav-bar {
@@ -92,11 +96,15 @@
       z-index: 100 !important;
       color: var(--toolbar-color) !important;
     }
+
   }
 
-  /* Linux/GTK specific positioning, only needed if there is at least one window
-   * control button. */
-  @media (-moz-gtk-csd-minimize-button), (-moz-gtk-csd-maximize-button), (-moz-gtk-csd-close-button) {
+  /*
+    MARK: Linux/GTK styles
+  */
+  @media (-moz-gtk-csd-minimize-button),
+  (-moz-gtk-csd-maximize-button),
+  (-moz-gtk-csd-close-button) {
     /* Width of single window control button. */
     --uc-window-control-btn: 34px;
 
@@ -105,8 +113,8 @@
 
     /* Navbar space reserved for two buttons. */
     @media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button),
-      (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button),
-      (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
+    (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button),
+    (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
       --uc-window-controls-width: calc(var(--uc-window-control-btn) * 2);
     }
 
@@ -153,7 +161,9 @@
     }
   }
 
-  /* Sidebar tweaks */
+  /*
+    MARK: Sidebar styles
+  */
   --sidebar-background-color: var(--toolbar-bgcolor) !important;
   --sidebar-text-color: var(--toolbar-color) !important;
   --sidebar-border-color: var(--chrome-content-separator-color) !important;
@@ -193,6 +203,20 @@
       & #sidebar-spacer {
         min-width: 8px !important;
       }
+    }
+
+    /* Sidebar positioned on the left. */
+    &:not([positionend]) {
+      border-inline-end: 1px solid var(--sidebar-border-color);
+      /* Use less padding on the side with the border. */
+      padding-inline: 4px 3px;
+    }
+
+    /* Sidebar positioned on the right. */
+    &[positionend] {
+      border-inline-start: 1px solid var(--sidebar-border-color);
+      /* Use less padding on the side with the border. */
+      padding-inline: 3px 4px;
     }
 
     /* Rounded corners tweak optimisations. */

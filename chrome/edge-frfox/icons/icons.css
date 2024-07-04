@@ -1,6 +1,8 @@
 /* Edge-Frfox - icons.css */
 
-/* Windows 11 style window control icons. */
+/*
+  MARK: Win 11 window controls
+*/
 @media (-moz-platform: windows) {
   .titlebar-min {
     list-style-image: url("win11-minimize.svg") !important;
@@ -302,11 +304,11 @@
   list-style-image: url("page-portrait.svg") !important;
 }
 
-#urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
+#urlbar:not(.searchButton) > :is(#urlbar-input-container, .urlbar-input-container) > #identity-box[pageproxystate="invalid"] #identity-icon {
   list-style-image: url("search-glass.svg") !important;
 }
 
-#urlbar[actiontype="extension"] > #urlbar-input-container > #identity-box #identity-icon,
+#urlbar[actiontype="extension"] > :is(#urlbar-input-container, .urlbar-input-container) > #identity-box #identity-icon,
 #identity-box[pageproxystate="valid"].extensionPage #identity-icon {
   list-style-image: url("extension.svg") !important;
 }
@@ -316,7 +318,7 @@
   list-style-image: url("security.svg") !important;
 }
 
-#urlbar-input-container[pageproxystate="valid"] > #tracking-protection-icon-container > #tracking-protection-icon-box > #tracking-protection-icon {
+:is(#urlbar-input-container, .urlbar-input-container)[pageproxystate="valid"] > #tracking-protection-icon-container > #tracking-protection-icon-box > #tracking-protection-icon {
   list-style-image: url("tracking-protection.svg") !important;
 }
 
@@ -570,6 +572,10 @@
 #appMenu-report-broken-site-button {
   list-style-image: url("report.svg") !important;
 }
+
+/*
+  MARK: Context menu
+*/
 
 /* disable context menu icons when this tweak is applied */
 @media not (-moz-bool-pref: "uc.tweak.revert-context-menu") {
@@ -932,6 +938,10 @@
   }
 }
 
+/*
+  MARK: App menu header
+*/
+
 /* Header icons for the app menu sub menus (eg. fx account, history...) */
 .panel-header > h1 > span {
   &::before {
@@ -983,6 +993,10 @@
     --uc-enabled: 1;
   }
 }
+
+/*
+  MARK: Tree items
+*/
 
 /* Tree items used for side bar and library windows */
 treechildren::-moz-tree-image {
