@@ -9,6 +9,7 @@
  * this can cause conflicts with other extensions that use the same file
  * structure, but is unlikely to cause any major issues. */
 @-moz-document regexp("^moz-extension://.*?/sidebar/sidebar.html") {
+
   /* Fix issues with rounded corners rendering. */
   :root {
     color-scheme: light dark !important;
@@ -109,6 +110,7 @@
     MARK: Floating tabs vars
   */
   @media (-moz-bool-pref: "uc.tweak.floating-tabs") {
+
     body[style*="--s-frame-fg: rgba(0, 0, 0, 0.847)"],
     body[style*="--s-frame-fg: rgba(255, 255, 255, 0.847)"],
     body[style*="--s-frame-bg: rgb(240, 240, 240)"],
@@ -139,6 +141,7 @@
     MARK: Tabs appearance
   */
   .Tab {
+
     /* Active tab border. */
     &[data-active="true"] .body {
       outline: 1px solid var(--s-act-el-border, transparent) !important;
@@ -179,6 +182,7 @@
     }
 
     &[data-pin="false"] {
+
       /* Inner spacing for tabs. */
       & .fav {
         margin: 0 calc(var(--tabs-inner-gap) + 2px) 0 var(--tabs-inner-gap) !important;
@@ -195,6 +199,7 @@
     }
 
     #root[data-pinned-tabs-position="panel"] &[data-pin="true"] {
+
       /* Tab container indicator. */
       & .ctx {
         inset-inline: 0 !important;
@@ -206,7 +211,7 @@
     }
   }
 
-  .Notifications + .main-box .central-box {
+  .Notifications+.main-box .central-box {
     height: 100% !important;
     margin-top: 0 !important;
   }
@@ -229,6 +234,7 @@
 
   /* Pinned tabs separator. */
   .PinnedTabsBar {
+
     /* Pinned tab grid. */
     #root[data-pinned-tabs-position="panel"] & {
       padding-bottom: calc(var(--tabs-margin) + 1px) !important;
@@ -288,8 +294,8 @@
       border-radius: var(--tabs-border-radius) !important;
 
       /* Make sure images do not shrink when collapsed. */
-      & > svg,
-      & > img {
+      &>svg,
+      &>img {
         position: static !important;
         margin: 0 calc(var(--tabs-inner-gap) + 2px) 0 var(--tabs-inner-gap) !important;
         flex-shrink: 0 !important;
@@ -305,8 +311,8 @@
   }
 
   /* Hide shadows at the top and bottom when scrolling. */
-  .ScrollBox > .top-shadow[data-show="true"],
-  .ScrollBox > .bottom-shadow[data-show="true"] {
+  .ScrollBox>.top-shadow[data-show="true"],
+  .ScrollBox>.bottom-shadow[data-show="true"] {
     display: none !important;
   }
 

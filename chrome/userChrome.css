@@ -4,8 +4,7 @@
 @import url("./edge-frfox/userContent.css");
 
 @import url("./SideBarFox/sidebar.css");
-@import url("./SideBarFox/blur_sidebar.css");
-/* @import url("./SideBarFox/autohide_sidebar.css"); */
+@import url("edge-frfox/tweaks/sidebery.css");
 
 /* tabcenter optional  */
 @import url("./SideBarFox/tabcenter.css");
