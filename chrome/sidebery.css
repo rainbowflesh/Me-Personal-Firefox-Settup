@@ -1,9 +1,13 @@
 #root.root {
-    --tabs-inner-gap: 0.59rem;
+    --tabs-inner-gap: 11.5px;
 }
 
 #root.root {
-    --tabs-height: 41px;
+    --ntb-padding: 4px;
+}
+
+#root.root {
+    --tabs-height: 43px;
 }
 
 #root.root {

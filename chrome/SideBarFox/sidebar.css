@@ -2,23 +2,25 @@
   /* delay before expanding tabs, set to '0' for no delay */
   --delay: 2.2s;
   --transition-time: 0.2s;
-  --positionX1: 4rem; /* '48px' for left, '0px' for right sidebar */
-  --positionX2: absolute; /* 'absolute' for left, 'none' for right sidebar */
+  --positionX1: 4rem;
+  /* '48px' for left, '0px' for right sidebar */
+  --positionX2: absolute;
+  /* 'absolute' for left, 'none' for right sidebar */
 
   /* width of the collapsed sidebar in fullscreen mode ('1px' or '48px') */
   --fullscreen-sidebar-width: 4rem;
 
   /* side bar config */
   --sidebar-max-width: 13rem;
-  --sidebar-min-width: 4rem;
+  --sidebar-min-width: 50px;
   --sidebar-extend-delay: 2s;
   --sidebar-hide-delay: 0.7s;
   --sidebar-extend-duration: 300ms;
 }
 
 /* Suppress "white flash" on showing sidebar in Dark color mode #2903 */
-@-moz-document regexp("moz-extension://.+/sidebar/sidebar.html.*")
-{
+@-moz-document regexp("moz-extension://.+/sidebar/sidebar.html.*") {
+
   :root,
   #background {
     background-color: rgb(128, 128, 128);
