@@ -19,8 +19,6 @@ Edge style be like (FF v96):
 Compare with real edge:
 ![compare](./asset/compare.png)
 
-## Dependencies
-
 - Minimal Firefox version: 91.0
 - GTK and QT based DE also supported 😸 -- But you need some tweaks 😾
 
@@ -121,4 +119,4 @@ oops, comment out first line in `userChrome.css`
 ## References
 
 - [Edge-FrFx](https://github.com/bmFtZQ/edge-frfox), Microsoft Edge style ui.
-- [simpleMenuWizard](https://github.com/stonecrusher/simpleMenuWizard).
+- [simpleMenuWizard](https://github.com/stonecrusher/simpleMenuWizard), this is why you right click context menu losing things.
