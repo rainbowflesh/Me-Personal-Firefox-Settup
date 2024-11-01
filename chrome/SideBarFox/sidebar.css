@@ -11,7 +11,7 @@
   --fullscreen-sidebar-width: 4rem;
 
   /* side bar config */
-  --sidebar-max-width: 13rem;
+  --sidebar-max-width: 20rem;
   --sidebar-min-width: 50px;
   --sidebar-extend-delay: 2s;
   --sidebar-hide-delay: 0.7s;
@@ -19,8 +19,8 @@
 }
 
 /* Suppress "white flash" on showing sidebar in Dark color mode #2903 */
-@-moz-document regexp("moz-extension://.+/sidebar/sidebar.html.*") {
-
+@-moz-document regexp("moz-extension://.+/sidebar/sidebar.html.*")
+{
   :root,
   #background {
     background-color: rgb(128, 128, 128);

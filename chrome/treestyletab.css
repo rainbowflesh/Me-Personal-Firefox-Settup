@@ -86,7 +86,7 @@ tab-item tab-twisty {
 }
 
 tab-twisty {
-  left:-0.1rem;
+  left: -0.1rem;
 }
 
 #tabbar tab-item tab-item-substance:not(:hover) tab-closebox {
