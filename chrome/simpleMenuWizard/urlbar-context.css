@@ -13,7 +13,7 @@
 /* #urlbar menuitem[cmd="cmd_redo"] + menuseparator,    /* Separator     */
 /* #urlbar menuitem[cmd="cmd_cut"],                     /* Cut           */
 /* #urlbar menuitem[cmd="cmd_copy"],                    /* Copy          */
-/* #urlbar menuitem[id="strip-on-share"],               /* Copy Without Site Tracking */
+#urlbar menuitem[id="strip-on-share"],               /* Copy Without Site Tracking
 /* #urlbar menuitem[cmd="cmd_paste"],                   /* Paste         */
 /* #urlbar menuitem[anonid="paste-and-go"],             /* Paste and Go  */
 /* #urlbar menuitem[cmd="cmd_delete"],                  /* Delete        */
