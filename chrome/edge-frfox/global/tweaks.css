@@ -54,7 +54,7 @@ bugs with certain themes eg. dark text on dark background.) */
   :root[privatebrowsingmode="temporary"]:where([style*="--lwt-accent-color: rgb(28, 27, 34)"]:not([style*="--newtab-background-color-secondary: rgb(66, 65, 77)"])) {
     --lwt-accent-color: light-dark(#f3f3f3, #202020) !important;
     --lwt-accent-color-inactive: unset !important;
-    --toolbar-bgcolor: light-dark(#fff, #3F3F3F) !important;
+    --toolbar-bgcolor: light-dark(#fff, #3f3f3f) !important;
     --lwt-tab-text: light-dark(#262626, #fff) !important;
     --chrome-content-separator-color: light-dark(#bfbfbf, #535353) !important;
     --lwt-tab-line-color: light-dark(transparent, rgb(255 255 255 / 0.06)) !important;
@@ -69,7 +69,7 @@ bugs with certain themes eg. dark text on dark background.) */
 
     &:-moz-window-inactive {
       --toolbar-color: var(--lwt-text-color-inactive, var(--lwt-text-color)) !important;
-      --toolbarbutton-icon-fill:  var(--lwt-text-color-inactive, var(--lwt-text-color)) !important;
+      --toolbarbutton-icon-fill: var(--lwt-text-color-inactive, var(--lwt-text-color)) !important;
     }
   }
 
@@ -91,14 +91,14 @@ bugs with certain themes eg. dark text on dark background.) */
   :root,
   :root .tabbrowser-tab {
     --uc-titlebar-shadow: none;
-    --uc-tab-shadow-outline: rgb(0 0 0 / .11);
-    --uc-tab-shadow: 0 2.5px 3px 1px rgb(0 0 0 / .08);
+    --uc-tab-shadow-outline: rgb(0 0 0 / 0.11);
+    --uc-tab-shadow: 0 2.5px 3px 1px rgb(0 0 0 / 0.08);
 
     & [brighttext],
     & [brighttext] .tabbrowser-tab {
       --uc-titlebar-shadow: none;
       --uc-tab-shadow-outline: transparent;
-      --uc-tab-shadow: 0 2px 3px rgb(0 0 0 / .12);
+      --uc-tab-shadow: 0 2px 3px rgb(0 0 0 / 0.12);
     }
 
     & #TabsToolbar {
@@ -136,7 +136,7 @@ bugs with certain themes eg. dark text on dark background.) */
   /* adjust spacing of area above tabs */
   @media not (-moz-platform: macos) {
     :root[sizemode="maximized"] {
-      --uc-tab-top-margin: 4px !important;
+      --uc-tab-top-margin: 0px !important;
     }
   }
 

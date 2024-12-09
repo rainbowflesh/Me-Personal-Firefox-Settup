@@ -18,6 +18,12 @@
   --sidebar-extend-duration: 300ms;
 }
 
+@media (-moz-bool-pref: "uc.tweak.theme.sidebery") {
+  &:not([positionend]) {
+    padding-inline-end: 1px;
+  }
+}
+
 /* Suppress "white flash" on showing sidebar in Dark color mode #2903 */
 @-moz-document regexp("moz-extension://.+/sidebar/sidebar.html.*")
 {

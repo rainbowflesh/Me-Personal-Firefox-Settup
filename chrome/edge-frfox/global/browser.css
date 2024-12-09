@@ -12,7 +12,7 @@
 /* Add a shadow when the toolbars move over content, eg. in macOS hovering over
  * the menu bar in fullscreen mode. */
 #navigator-toolbox[style*="transform"] {
-  box-shadow: 0 -3px 5px 3px light-dark(rgb(0 0 0 / .3), rgb(0 0 0 / .6)) !important;
+  box-shadow: 0 -3px 5px 3px light-dark(rgb(0 0 0 / 0.3), rgb(0 0 0 / 0.6)) !important;
 }
 
 /*
@@ -50,17 +50,13 @@
   #main-window:not([chromehidden~="toolbar"]) {
     --uc-tweak-rounded-corners-padding: 4px;
     --uc-tweak-rounded-corners-radius: 8px;
-    --uc-tweak-rounded-corners-shadow:
-      0 -.8px 0 0 rgb(0 0 0 / 0.02),
-      0 0.5px 1px 1px rgb(0 0 0 / 0.06),
+    --uc-tweak-rounded-corners-shadow: 0 -0.8px 0 0 rgb(0 0 0 / 0.02), 0 0.5px 1px 1px rgb(0 0 0 / 0.06),
       0 1px 1px rgb(0 0 0 / 0.1);
     --browser-frame-bgcolor: var(--toolbar-bgcolor, var(--lwt-accent-color));
 
     /* Different shadow for higher resolution displays. */
     @media (resolution > 1.8dppx) {
-      --uc-tweak-rounded-corners-shadow:
-        0 0 0.5px 0.5px rgb(0 0 0 / 0.06),
-        0 0.5px 1.5px rgb(0 0 0 / 0.1);
+      --uc-tweak-rounded-corners-shadow: 0 0 0.5px 0.5px rgb(0 0 0 / 0.06), 0 0.5px 1.5px rgb(0 0 0 / 0.1);
     }
 
     @media (-moz-bool-pref: "uc.tweak.floating-tabs") {
@@ -112,9 +108,7 @@
       border-radius: inherit;
       /* Draw toolbar background on the negative corner space, then draw the
        * same shadow from the browser window on top. */
-      box-shadow:
-        var(--uc-tweak-rounded-corners-shadow, 0 0 transparent),
-        0 0 0 16px var(--browser-frame-bgcolor) !important;
+      box-shadow: var(--uc-tweak-rounded-corners-shadow, 0 0 transparent), 0 0 0 16px var(--browser-frame-bgcolor) !important;
       clip-path: inset(0);
       pointer-events: none;
     }

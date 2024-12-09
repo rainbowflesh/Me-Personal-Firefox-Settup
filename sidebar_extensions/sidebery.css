@@ -1,23 +1,10 @@
-#root.root {
-    --tabs-inner-gap: 11.5px;
-}
-
-#root.root {
-    --ntb-padding: 4px;
-}
-
-#root.root {
-    --tabs-height: 43px;
-}
-
-#root.root {
-    --tabs-close-btn-margin: 10px;
-}
-
-#root.root {
-    --ntb-btn-height: 40px;
-}
-
-#root.root {
-    --tabs-audio-btn-width: 1rem;
-}
+#root.root {--ntb-padding: 4px;}
+#root.root {--ntb-btn-height: 33px;}
+#root.root {--frame-bg: rgba(0,0,0,0);}
+#root.root {--tabs-height: 43px;}
+#root.root {--general-border-radius: 8px;}
+#root.root {--tabs-close-btn-margin: 10px;}
+#root.root {--tabs-audio-btn-width: 1rem;}
+:root {background-color: transparent;}
+.TabsPanel .new-tab-btns {margin-top: 7px !important;}
+.Tab {margin-bottom: 4px!important;}

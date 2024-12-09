@@ -1,0 +1,489 @@
+/* move main page slightly left */
+#tabbrowser-tabbox {
+  margin-left: -4px !important;
+}
+
+#tabbrowser-tabbox .browserStack {
+  margin-inline: 2px !important;
+  margin-block-end: 2px !important;
+}
+
+/* Temporary fix the mute icon until a proper fix is out */
+@media (-moz-bool-pref: "uc.tweak.mute-icon-fix") {
+  .tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked]):not([crashed]) {
+    list-style-image: unset !important;
+    background-color: transparent !important;
+  }
+}
+
+/* Hide the dropdown menu from the old sidebar */
+@media (-moz-bool-pref: "uc.tweak.hide-sidebar-dropdown-menu") {
+  #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar-header {
+    display: none !important;
+  }
+}
+
+/* Hide the separator between the address bar and the webview */
+@media (-moz-bool-pref: "uc.tweak.hide-web-area-separator") {
+  #navigator-toolbox {
+    border-bottom-color: transparent !important;
+  }
+  :not(:root[inFullscreen] #navigator-toolbox[style*="margin-top"]) + #browser #sidebar-splitter {
+    display: none !important;
+    width: 0px !important;
+  }
+
+  :not(:root[inFullscreen] #navigator-toolbox[style*="margin-top"]) + #sidebar-box {
+    border: none !important;
+  }
+}
+
+/* Mitigate bugs when using the theme with the new Sidebar */
+@media (-moz-bool-pref: "uc.tweak.rounded-corners") {
+  @media (-moz-bool-pref: "sidebar.revamp") {
+    #tabbrowser-tabbox {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+  #main-window:not([inFullscreen]):not(:root[lwtheme]),
+  #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"] {
+    browser {
+      border-radius: 8px !important;
+      background: transparent !important;
+    }
+  }
+}
+
+@media (-moz-bool-pref: "uc.tweak.new-horizontaltab") {
+  @media (-moz-bool-pref: "sidebar.revamp") {
+    #sidebar-box {
+      height: 100.4% !important;
+    }
+    :root:not([lwtheme]) {
+      --sidebar-border-color: transparent !important;
+    }
+    :root:not([customizing]):has(
+        #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden])
+      ) {
+      #sidebar-main {
+        display: none;
+      }
+    }
+    @media (-moz-bool-pref: "sidebar.verticalTabs") {
+      .titlebar-spacer {
+        @media (-moz-platform: windows) {
+          :root:is([sizemode="normal"]) &[type="pre-tabs"] {
+            display: none;
+          }
+        }
+      }
+      .tabbrowser-tab {
+        &:not([pinned], [style*="max-width"])[fadein] {
+          max-width: 100% !important;
+        }
+      }
+      .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+        #vertical-pinned-tabs-container &,
+        #tabbrowser-tabs[orient="vertical"] & {
+          width: unset !important;
+        }
+      }
+      .tabbrowser-tab[usercontextid]:not([pinned]) > .tab-stack > .tab-background > .tab-context-line:not([pinned]) {
+        #vertical-pinned-tabs-container &,
+        #tabbrowser-tabs[orient="vertical"] & {
+          margin: 8px 0 0 -1px !important;
+          width: 3px !important;
+          height: 50% !important;
+        }
+      }
+      .tabbrowser-tab .tab-stack {
+        &::before,
+        &::after {
+          border-left: transparent;
+        }
+      }
+      .tab-content {
+        padding-inline: 23px !important;
+      }
+      #tabbrowser-tabs {
+        &:not([overflow]) {
+          margin-inline-start: 0px !important;
+        }
+      }
+      #tabbrowser-tabs {
+        &:not([overflow]) {
+          & :where(#tabbrowser-arrowscrollbox .tabbrowser-tab:nth-child(1 of .tabbrowser-tab:not([hidden]))) {
+            margin-inline-start: 0px !important;
+          }
+        }
+      }
+      .tab-close-button {
+        margin-inline-end: -8px !important;
+      }
+      #tabbrowser-tabs:not([closebuttons="activetab"]) .tab-icon-overlay:not([pinned]) {
+        margin-inline-start: -4px !important;
+      }
+      .tab-throbber:not([pinned]),
+      .tab-icon-pending:not([pinned]),
+      .tab-icon-image:not([pinned]),
+      .tab-sharing-icon-overlay:not([pinned]) {
+        margin-inline-start: -5.2px !important;
+        margin-inline-end: 5.2px !important;
+      }
+      #tabbrowser-arrowscrollbox[orient="vertical"] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button,
+      #vertical-tabs-newtab-button {
+        margin-inline-start: 10px !important;
+      }
+      #vertical-pinned-tabs-container-separator {
+        width: 32px !important;
+      }
+      #tabbrowser-tabs[orient="vertical"] {
+        &[expanded] {
+          --tab-icon-end-margin: 5px !important;
+        }
+      }
+      @media (-moz-bool-pref: "uc.tweak.floating-tabs") {
+        #tabbrowser-tabs {
+          & .tabbrowser-tab,
+          & #tabs-newtab-button {
+            padding-top: 2px !important;
+          }
+        }
+        #tabbrowser-arrowscrollbox > *,
+        #scrollbutton-up:not(.menupopup-scrollbutton),
+        #scrollbutton-up:not(.menupopup-scrollbutton) ~ spacer,
+        #scrollbutton-down:not(.menupopup-scrollbutton) {
+          margin-bottom: 2px !important;
+        }
+      }
+      @media not (-moz-bool-pref: "uc.tweak.floating-tabs") {
+        /* The Entire Floating Tabs Tweak minus the PersonalToolbar changes*/
+        /*
+					:root:not([lwtheme]),
+					/* `--newtab-background-color-secondary used` to differentiate between a dark
+					* private window and private window with the 'Dark' theme enabled.
+					* May not be the most reliable method, but works for now up to FF 123. */
+        :root[privatebrowsingmode="temporary"]:where(
+            [style*="--lwt-accent-color: rgb(28, 27, 34)"]:not(
+                [style*="--newtab-background-color-secondary: rgb(66, 65, 77)"]
+              )
+          ) {
+          --lwt-accent-color: light-dark(#f3f3f3, #202020) !important;
+          --lwt-accent-color-inactive: unset !important;
+          --toolbar-bgcolor: light-dark(#fff, #3f3f3f) !important;
+          --lwt-tab-text: light-dark(#262626, #fff) !important;
+          --chrome-content-separator-color: light-dark(#bfbfbf, #535353) !important;
+          --lwt-tab-line-color: light-dark(transparent, rgb(255 255 255 / 0.06)) !important;
+        }
+
+        /* Uses :root body to avoid affecting other variables by changing
+					* --toolbar-color. */
+        :root body {
+          /* Use tabbar colours for better readability when using custom themes. */
+          --toolbar-color: var(--lwt-text-color) !important;
+          --toolbarbutton-icon-fill: var(--lwt-text-color) !important;
+
+          &:-moz-window-inactive {
+            --toolbar-color: var(--lwt-text-color-inactive, var(--lwt-text-color)) !important;
+            --toolbarbutton-icon-fill: var(--lwt-text-color-inactive, var(--lwt-text-color)) !important;
+          }
+        }
+        @media (-moz-gtk-csd-available) {
+          :root:not([lwtheme]) {
+            --toolbar-bgcolor: color-mix(in srgb, -moz-dialog 80%, #fff) !important;
+            --toolbar-field-background-color: Field !important;
+            --lwt-tab-text: -moz-dialogtext !important;
+            --lwt-tab-line-color: rgb(255 255 255 / 0.06) !important;
+            --lwt-accent-color: var(--toolbox-non-lwt-bgcolor) !important;
+
+            &:-moz-window-inactive {
+              --lwt-accent-color: var(--toolbox-non-lwt-bgcolor-inactive) !important;
+            }
+          }
+        }
+
+        /* Shadow for navbar and tabs */
+        :root,
+        :root .tabbrowser-tab {
+          --uc-titlebar-shadow: none;
+          --uc-tab-shadow-outline: rgb(0 0 0 / 0.11);
+          --uc-tab-shadow: 0 2.5px 3px 1px rgb(0 0 0 / 0.08);
+
+          & [brighttext],
+          & [brighttext] .tabbrowser-tab {
+            --uc-titlebar-shadow: none;
+            --uc-tab-shadow-outline: transparent;
+            --uc-tab-shadow: 0 2px 3px rgb(0 0 0 / 0.12);
+          }
+
+          & #TabsToolbar {
+            --tab-border-radius: 8px !important;
+          }
+        }
+
+        /* remove toolbar bg */
+        /*
+				  #nav-bar,
+				  #PersonalToolbar {
+					background-color: transparent !important;
+				  }
+				  */
+
+        /* invert bottom corner radius for tabs */
+        .tab-background {
+          border-radius: var(--tab-border-radius) !important;
+          outline-offset: 0px !important;
+
+          &::before,
+          &::after {
+            display: none !important;
+          }
+        }
+
+        .tab-background[selected] {
+          border: 1px solid var(--lwt-tab-line-color, var(--lwt-tabs-border-color, transparent)) !important;
+          outline: 1px solid var(--uc-tab-shadow-outline) !important;
+
+          /* Fractional scaling adjustments (150%, 175%, etc.) */
+          @media (1dppx < resolution < 2dppx) {
+            outline-width: 1.5px !important;
+          }
+        }
+
+        .tab-background:is([selected], [multiselected]) {
+          background-color: color-mix(in srgb, currentColor 13.5%, transparent) !important;
+        }
+
+        .tab-background {
+          &:is([pinned]) {
+            &:not([selected], [multiselected]) {
+              background-color: var(--lwt-accent-color) !important;
+            }
+          }
+        }
+
+        /* adjust spacing of area above tabs */
+        @media not (-moz-platform: macos) {
+          :root[sizemode="maximized"] {
+            --uc-tab-top-margin: 4px !important;
+          }
+        }
+
+        :root:is([inFullscreen], :not([tabsintitlebar])) {
+          --uc-tab-top-margin: 4px !important;
+        }
+
+        @media (-moz-bool-pref: "uc.tweak.disable-drag-space") {
+          :root {
+            --uc-tab-top-margin: 4px !important;
+          }
+        }
+
+        /* IMPORTANT: Adds padding and removes margin on top of tabs to allow user to
+				   * select it from the top edge of the window */
+        #tabbrowser-tabs {
+          margin-top: calc(var(--uc-tab-top-margin) - 4px) !important;
+
+          & .tabbrowser-tab,
+          & #tabs-newtab-button {
+            padding-top: 4px !important;
+          }
+        }
+
+        #scrollbutton-up:not(.menupopup-scrollbutton),
+        #scrollbutton-down:not(.menupopup-scrollbutton) {
+          &,
+          & ~ spacer {
+            margin-top: 4px !important;
+          }
+        }
+
+        /* move tab shadow behind urlbar */
+        .tabbrowser-tab[visuallyselected="true"],
+        #nav-bar {
+          z-index: 2 !important;
+        }
+
+        /* tab shadow adjustments */
+        .tabbrowser-tab {
+          overflow-clip-margin: 8px !important;
+        }
+
+        #tabbrowser-arrowscrollbox > *,
+        #scrollbutton-up:not(.menupopup-scrollbutton),
+        #scrollbutton-up:not(.menupopup-scrollbutton) ~ spacer,
+        #scrollbutton-down:not(.menupopup-scrollbutton) {
+          margin-bottom: 8px !important;
+        }
+
+        #tabbrowser-arrowscrollbox {
+          margin-bottom: -8px !important;
+        }
+        #tabbrowser-tabs {
+          & .tabbrowser-tab,
+          & #tabs-newtab-button {
+            padding-top: 2px !important;
+          }
+        }
+        #tabbrowser-arrowscrollbox > *,
+        #scrollbutton-up:not(.menupopup-scrollbutton),
+        #scrollbutton-up:not(.menupopup-scrollbutton) ~ spacer,
+        #scrollbutton-down:not(.menupopup-scrollbutton) {
+          margin-bottom: 2px !important;
+        }
+      }
+    }
+    @media (-moz-bool-pref: "uc.tweak.collapse-sidebery") {
+      @media (-moz-bool-pref: "uc.tweak.rounded-corners") {
+        #sidebar-box {
+          overflow: visible !important;
+        }
+      }
+    }
+  }
+}
+
+/* Mica broken on newer versions of Firefox */
+@media (-moz-platform: windows) {
+  @media (-moz-bool-pref: "uc.tweak.win11-mica") {
+    #main-window:not([inFullscreen]):not(:root[lwtheme]),
+    #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"] {
+      appearance: -moz-win-borderless-glass !important;
+      background: transparent !important;
+    }
+    #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"]
+      #navigator-toolbox:not(:-moz-window-inactive) {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+    #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"]
+      #navigator-toolbox:is(:-moz-window-inactive) {
+      background-color: transparent !important;
+    }
+    @media (-moz-bool-pref: "uc.tweak.floating-tabs") {
+      .tab-background:is([selected], [multiselected]) {
+        background: var(--toolbar-bgcolor);
+      }
+    }
+    :root:not([inFullscreen]):not(:root[lwtheme]):not(:-moz-window-inactive) {
+      --lwt-accent-color: #00000020 !important;
+    }
+    :root:not([inFullscreen]):not(:root[lwtheme]):is(:-moz-window-inactive) {
+      --lwt-accent-color-inactive: transparent !important;
+    }
+  }
+  :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]) .titlebar-buttonbox-container {
+    --uc-titlebar-button-size: 30px;
+    --uc-titlebar-size: calc(var(--tab-min-height) + var(--tab-block-margin));
+    /* margin-bottom: calc(var(--uc-titlebar-size) - var(--uc-titlebar-button-size)) !important; */
+  }
+  :root:not([inFullscreen]):is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"])
+    .titlebar-button:not(.titlebar-close:hover, :-moz-window-inactive) {
+    list-style-image: none !important;
+  }
+  :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen], [sizemode="maximized"])
+    .titlebar-button {
+    padding-block: 7px 9px !important;
+  }
+  :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen], [sizemode="maximized"])
+    .titlebar-close {
+    padding-right: 19px !important;
+  }
+
+  /* Fix Duplicated Window Control when Firefox's window is inactive with Accent Color in Titlebar option on  */
+  @media (-moz-windows-accent-color-in-titlebar) {
+    :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):not([inFullscreen]):is(
+        :-moz-window-inactive
+      )
+      .titlebar-buttonbox {
+      opacity: 0 !important;
+    }
+    :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):not([inFullscreen]) .titlebar-buttonbox {
+      opacity: 0 !important;
+    }
+  }
+
+  /* Restore Firefox's Window Control when Fullscreen */
+  :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen]) .titlebar-buttonbox {
+    opacity: 100 !important;
+  }
+
+  /* Extension Transparency */
+  @media (-moz-bool-pref: "browser.tabs.allow_transparent_browser") {
+    #sidebar {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+    #sidebar-main {
+      background: transparent !important;
+    }
+    window#webextpanels-window {
+      background-color: transparent !important;
+    }
+    #sidebar-box {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+/* unmerged commit */
+@media (-moz-bool-pref: "uc.tweak.collapse-sidebery") and (max-width: 50px) {
+  #root {
+    --tabs-indent: unset !important;
+    --tabs-lvl-opacity: 0 !important;
+  }
+
+  .CtxMenu[data-active="true"] {
+    display: none;
+  }
+
+  .NavigationBar[data-layout="inline"] {
+    & .static-btns {
+      display: none !important;
+    }
+    & .nav-item[data-active="true"] {
+      background-color: unset !important;
+      box-shadow: unset !important;
+      margin: auto;
+      opacity: unset !important;
+      position: relative !important;
+      transform: unset !important;
+    }
+  }
+
+  .SearchBar[data-showed="true"] {
+    & .search-icon > svg {
+      margin: unset !important;
+    }
+    & .placeholder,
+    & .input,
+    & .clear-btn {
+      display: none !important;
+    }
+  }
+
+  .ScrollBox > .scroll-container {
+    scrollbar-width: none !important;
+  }
+
+  .Tab .fav {
+    margin: auto !important;
+  }
+
+  .Tab .audio {
+    top: unset !important;
+    left: unset !important;
+    bottom: 0;
+    right: 0;
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .Tab .t-box,
+  .Tab .close {
+    display: none;
+  }
+}

@@ -6,7 +6,7 @@
 */
 :root {
   /* Extra space at the top of the window. */
-  --uc-tab-top-margin: 8px !important;
+  --uc-tab-top-margin: 6px !important;
 
   /* Remove extra space at the top of the window when in fullscreen or when
    * title bars are enabled. */
