@@ -258,7 +258,7 @@
   &:not([positionend]) {
     border-inline-end: 1px solid var(--sidebar-border-color);
     /* Use less padding on the side with the border. */
-    /* padding-inline: 4px 3px; */
+    padding-inline: 4px 3px;
   }
 
   /* Sidebar positioned on the right. */
