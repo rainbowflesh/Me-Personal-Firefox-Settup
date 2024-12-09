@@ -4,7 +4,7 @@
 @import url("./edge-frfox/userContent.css");
 
 @import url("./SideBarFox/sidebar.css");
-@import url("edge-frfox/tweaks/sidebery.css");
+@import url("./edge-frfox/tweaks/sidebery.css");
 
 /* tabcenter optional  */
 @import url("./SideBarFox/tabcenter.css");
