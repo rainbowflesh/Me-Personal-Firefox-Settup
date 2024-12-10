@@ -2,6 +2,7 @@
   margin-inline: 2px !important;
   margin-block-end: 2px !important;
 }
+
 /* hide annoying empty button */
 toolbar .toolbarbutton-1 {
   display: none;
