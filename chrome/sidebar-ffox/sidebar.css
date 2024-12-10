@@ -18,9 +18,30 @@
   --sidebar-extend-duration: 300ms;
 }
 
-@media (-moz-bool-pref: "uc.tweak.theme.sidebery") {
-  &:not([positionend]) {
-    padding-inline-end: 1px;
+/* override hide-tabs-bar.css */
+@media (-moz-bool-pref: "uc.tweak.rounded-corners") {
+  #sidebar-box {
+    margin-inline-start: 2px !important;
+    margin-block-end: 2px !important;
+    &[positionend] {
+      margin-inline-start: 0 !important;
+      margin-inline-end: 0 !important;
+    }
+  }
+}
+#sidebar-box:where([sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden])),
+#sidebar-box:where([sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not([hidden])),
+#sidebar-box:where([sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"]:not([hidden])) {
+  @media (-moz-bool-pref: "uc.tweak.rounded-corners") {
+    @media (-moz-bool-pref: "uc.tweak.theme.sidebery") {
+      &:not([positionend]) {
+        padding-inline-end: 3px;
+      }
+
+      &[positionend] {
+        padding-inline-start: 3px;
+      }
+    }
   }
 }
 

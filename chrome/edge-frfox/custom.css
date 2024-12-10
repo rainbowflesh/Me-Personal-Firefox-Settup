@@ -1,11 +1,10 @@
-/* move main page slightly left */
-#tabbrowser-tabbox {
-  margin-left: -4px !important;
-}
-
 #tabbrowser-tabbox .browserStack {
   margin-inline: 2px !important;
   margin-block-end: 2px !important;
+}
+/* hide annoying empty button */
+toolbar .toolbarbutton-1 {
+  display: none;
 }
 
 /* Temporary fix the mute icon until a proper fix is out */
@@ -58,7 +57,7 @@
 @media (-moz-bool-pref: "uc.tweak.new-horizontaltab") {
   @media (-moz-bool-pref: "sidebar.revamp") {
     #sidebar-box {
-      height: 100.4% !important;
+      height: 100% !important;
     }
     :root:not([lwtheme]) {
       --sidebar-border-color: transparent !important;

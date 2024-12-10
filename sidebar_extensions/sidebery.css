@@ -1,10 +1,12 @@
 #root.root {--ntb-padding: 4px;}
-#root.root {--ntb-btn-height: 33px;}
+#root.root {--scroll-color: rgba(255,255,255,0.5);}
+#root.root {--ntb-btn-height: 37px;}
+#root.root {--accent: #47cfffff;}
 #root.root {--frame-bg: rgba(0,0,0,0);}
-#root.root {--tabs-height: 43px;}
+#root.root {--tabs-height: 48px;}
 #root.root {--general-border-radius: 8px;}
 #root.root {--tabs-close-btn-margin: 10px;}
 #root.root {--tabs-audio-btn-width: 1rem;}
 :root {background-color: transparent;}
 .TabsPanel .new-tab-btns {margin-top: 7px !important;}
-.Tab {margin-bottom: 4px!important;}
+.Tab {margin-bottom: 4.5px!important;}
