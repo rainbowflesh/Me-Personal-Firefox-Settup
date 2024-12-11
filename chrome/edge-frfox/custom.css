@@ -4,8 +4,29 @@
 }
 
 /* hide annoying empty button */
-toolbar .toolbarbutton-1 {
+#PlacesChevron.toolbarbutton-1 {
   display: none;
+}
+
+.titlebar-button:not(.titlebar-close):hover {
+  background-color: color-mix(in srgb, currentColor 11%, transparent) !important;
+
+  &:active {
+    background-color: color-mix(in srgb, currentColor 20%, transparent) !important;
+  }
+}
+
+.titlebar-button .titlebar-close:hover {
+  stroke: white !important;
+  background-color: #e81123 !important;
+
+  &:active {
+    background-color: #dc5c66 !important;
+  }
+
+  toolbar[brighttext] &:active {
+    background-color: #971821 !important;
+  }
 }
 
 /* Temporary fix the mute icon until a proper fix is out */

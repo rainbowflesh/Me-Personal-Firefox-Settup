@@ -1,4 +1,7 @@
 #root.root {
+  --tabs-inner-gap: 12px;
+}
+#root.root {
   --ntb-padding: 4px;
 }
 #root.root {
@@ -27,6 +30,11 @@
 }
 .Tab {
   margin-bottom: 2px !important;
+}
+.Tab .fav,
+.fav-icon {
+  width: 20px !important;
+  height: 20px !important;
 }
 .audio {
   width: 1rem;

@@ -35,11 +35,11 @@
   @media (-moz-bool-pref: "uc.tweak.rounded-corners") {
     @media (-moz-bool-pref: "uc.tweak.theme.sidebery") {
       &:not([positionend]) {
-        padding-inline-end: 3px;
+        padding-inline-end: 0px;
       }
 
       &[positionend] {
-        padding-inline-start: 3px;
+        padding-inline-start: 0px;
       }
     }
   }
