@@ -1,5 +1,5 @@
 #root.root {
-  --tabs-inner-gap: 12px;
+  --tabs-inner-gap: 11px;
 }
 #root.root {
   --ntb-padding: 4px;
@@ -29,7 +29,10 @@
   margin-top: 7px !important;
 }
 .Tab {
-  margin-bottom: 2px !important;
+  padding-bottom: 3px;
+}
+.Tab[data-active="true"] .body {
+  background-color: light-dark(#f7f7f780, #3b3b3b80);
 }
 .Tab .fav,
 .fav-icon {
@@ -39,5 +42,4 @@
 .audio {
   width: 1rem;
   height: 1rem;
-  margin-left: 5px;
 }

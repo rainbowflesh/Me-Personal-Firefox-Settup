@@ -12,7 +12,7 @@
 
   /* side bar config */
   --sidebar-max-width: 20rem;
-  --sidebar-min-width: 50px;
+  --sidebar-min-width: 48px;
   --sidebar-extend-delay: 2s;
   --sidebar-hide-delay: 0.7s;
   --sidebar-extend-duration: 300ms;

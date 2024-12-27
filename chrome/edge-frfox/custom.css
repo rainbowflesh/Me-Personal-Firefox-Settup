@@ -3,9 +3,30 @@
   margin-block-end: 2px !important;
 }
 
+tab.tabbrowser-tab {
+  margin-right: 2px !important;
+}
+
+#TabsToolbar {
+  /* Padding between the edge of the toolbar and its content. */
+  padding-inline-start: 2px !important;
+  padding-top: 2px !important;
+}
+
 /* hide annoying empty button */
 #PlacesChevron.toolbarbutton-1 {
   display: none;
+}
+
+:root:not([lwtheme]),
+:root[privatebrowsingmode="temporary"]:where(
+    [style*="--lwt-accent-color: rgb(28, 27, 34)"]:not([style*="--newtab-background-color-secondary: rgb(66, 65, 77)"])
+  ) {
+  --toolbar-bgcolor: light-dark(#f7f7f780, #3b3b3b80) !important;
+}
+
+#main-window:not([chromehidden~="toolbar"]) {
+  --uc-tweak-rounded-corners-padding: 2px;
 }
 
 .titlebar-button:not(.titlebar-close):hover {
