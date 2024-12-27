@@ -2,13 +2,10 @@
   --tabs-inner-gap: 11px;
 }
 #root.root {
-  --ntb-padding: 4px;
-}
-#root.root {
   --scroll-color: rgba(255, 255, 255, 0.5);
 }
 #root.root {
-  --ntb-btn-height: 42px;
+  --ntb-btn-height: 46px;
 }
 #root.root {
   --accent: #47cfffff;
@@ -25,14 +22,11 @@
 :root {
   background-color: transparent;
 }
-.TabsPanel .new-tab-btns {
-  margin-top: 7px !important;
-}
 .Tab {
   padding-bottom: 3px;
 }
 .Tab[data-active="true"] .body {
-  background-color: light-dark(#f7f7f780, #3b3b3b80);
+  background-color: light-dark(#f7f7f780, #3b3b3bb2);
 }
 .Tab .fav,
 .fav-icon {

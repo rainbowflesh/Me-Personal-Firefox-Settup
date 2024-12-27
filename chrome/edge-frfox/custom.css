@@ -22,7 +22,7 @@ tab.tabbrowser-tab {
 :root[privatebrowsingmode="temporary"]:where(
     [style*="--lwt-accent-color: rgb(28, 27, 34)"]:not([style*="--newtab-background-color-secondary: rgb(66, 65, 77)"])
   ) {
-  --toolbar-bgcolor: light-dark(#f7f7f780, #3b3b3b80) !important;
+  --toolbar-bgcolor: light-dark(#f7f7f780, #3b3b3bb2) !important;
 }
 
 #main-window:not([chromehidden~="toolbar"]) {
