@@ -15,7 +15,6 @@
   }
 }
 
-:root:not([lwtheme]) #navigator-toolbox,
 #browser:not(.browser-toolbox-background),
 #tabbrowser-tabpanels {
   background-color: transparent !important;
