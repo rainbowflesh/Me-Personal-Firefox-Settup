@@ -1,3 +1,8 @@
+:root:not([lwtheme]) #navigator-toolbox {
+  background-color: transparent !important;
+  color: transparent !important;
+}
+
 @media (-moz-bool-pref: "uc.tweak.hide-tabs-bar"), (-moz-bool-pref: "uc.tweak.hide-tabs-bar.no-window-controls") {
   :root:not([customizing]):has(
       #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden])
