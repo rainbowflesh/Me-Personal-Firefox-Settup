@@ -1,52 +1,52 @@
 /* Dynamic transparency for Sideberry when transparency is on */
 
-@-moz-document regexp("^moz-extension://.*?/sidebar/sidebar.html") {
-@media (-moz-platform: windows) {
-    @media (-moz-bool-pref: "uc.tweak.win11-mica") {
-		@media (-moz-bool-pref: "uc.tweak.collapse-sidebery") {
-			:root {
-				color-scheme: light dark !important;
-				background: light-dark(transparent, transparent) !important;
-				transition: background 0.25s ease-out;
-			}
-			:root:hover {
-				color-scheme: light dark !important;
-				background: light-dark(#aaa, #222) !important;
-				transition: background 0.25s ease-in;
-			}
-			#root.root {
-				--s-frame-bg: light-dark(transparent, transparent) !important;
-				transition: 0.25s ease-out;
-				.close {
-					opacity: 0 !important;
-				}
-				.audio{
-					opacity: 0 !important;
-				}
-			}
-			#root.root:hover {
-				--s-frame-bg: light-dark(#f3f3f3, #202020) !important;
-				transition: 0.25s ease-out;
-				.close {
-					opacity: 100 !important;
-					transition: opacity 0.5s cubic-bezier(1,0,1,0);
-				}
-				.audio{
-					opacity: 100 !important;
-					transition: opacity 0.5s cubic-bezier(1,0,1,0);
-				}
-			}
-		}
-		@media not (-moz-bool-pref: "uc.tweak.collapse-sidebery") {
-			:root {
-				color-scheme: light dark !important;
-				background: light-dark(transparent, transparent) !important;
-			}
-			#root.root {
-				--s-frame-bg: light-dark(transparent, transparent) !important;
-			}
-		}
-	}
+@-moz-document regexp("^moz-extension://.*?/sidebar/sidebar.html")
+{
+  @media (-moz-platform: windows) {
+    @media -moz-pref("uc.tweak.win11-mica") {
+      @media -moz-pref("uc.tweak.collapse-sidebery") {
+        :root {
+          color-scheme: light dark !important;
+          background: light-dark(transparent, transparent) !important;
+          transition: background 0.25s ease-out;
+        }
+        :root:hover {
+          color-scheme: light dark !important;
+          background: light-dark(#aaa, #222) !important;
+          transition: background 0.25s ease-in;
+        }
+        #root.root {
+          --s-frame-bg: light-dark(transparent, transparent) !important;
+          transition: 0.25s ease-out;
+          .close {
+            opacity: 0 !important;
+          }
+          .audio {
+            opacity: 0 !important;
+          }
+        }
+        #root.root:hover {
+          --s-frame-bg: light-dark(#f3f3f3, #202020) !important;
+          transition: 0.25s ease-out;
+          .close {
+            opacity: 100 !important;
+            transition: opacity 0.5s cubic-bezier(1, 0, 1, 0);
+          }
+          .audio {
+            opacity: 100 !important;
+            transition: opacity 0.5s cubic-bezier(1, 0, 1, 0);
+          }
+        }
+      }
+      @media not -moz-pref("uc.tweak.collapse-sidebery") {
+        :root {
+          color-scheme: light dark !important;
+          background: light-dark(transparent, transparent) !important;
+        }
+        #root.root {
+          --s-frame-bg: light-dark(transparent, transparent) !important;
+        }
+      }
+    }
+  }
 }
-}
-

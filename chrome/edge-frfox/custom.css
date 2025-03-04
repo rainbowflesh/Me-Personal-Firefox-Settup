@@ -2,7 +2,7 @@
   background-color: transparent !important;
 }
 
-@media (-moz-bool-pref: "uc.tweak.hide-tabs-bar"), (-moz-bool-pref: "uc.tweak.hide-tabs-bar.no-window-controls") {
+@media -moz-pref("uc.tweak.hide-tabs-bar"), -moz-pref("uc.tweak.hide-tabs-bar.no-window-controls") {
   :root:not([customizing]):has(
       #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden])
     ),
@@ -78,7 +78,7 @@ tab.tabbrowser-tab {
 }
 
 /* Temporary fix the mute icon until a proper fix is out */
-@media (-moz-bool-pref: "uc.tweak.mute-icon-fix") {
+@media -moz-pref("uc.tweak.mute-icon-fix") {
   .tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked]):not([crashed]) {
     list-style-image: unset !important;
     background-color: transparent !important;
@@ -86,14 +86,14 @@ tab.tabbrowser-tab {
 }
 
 /* Hide the dropdown menu from the old sidebar */
-@media (-moz-bool-pref: "uc.tweak.hide-sidebar-dropdown-menu") {
+@media -moz-pref("uc.tweak.hide-sidebar-dropdown-menu") {
   #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar-header {
     display: none !important;
   }
 }
 
 /* Hide the separator between the address bar and the webview */
-@media (-moz-bool-pref: "uc.tweak.hide-web-area-separator") {
+@media -moz-pref("uc.tweak.hide-web-area-separator") {
   #navigator-toolbox {
     border-bottom-color: transparent !important;
   }
@@ -108,8 +108,8 @@ tab.tabbrowser-tab {
 }
 
 /* Mitigate bugs when using the theme with the new Sidebar */
-@media (-moz-bool-pref: "uc.tweak.rounded-corners") {
-  @media (-moz-bool-pref: "sidebar.revamp") {
+@media -moz-pref("uc.tweak.rounded-corners") {
+  @media -moz-pref("sidebar.revamp") {
     #tabbrowser-tabbox {
       outline: none !important;
       box-shadow: none !important;
@@ -124,8 +124,8 @@ tab.tabbrowser-tab {
   }
 }
 
-@media (-moz-bool-pref: "uc.tweak.new-horizontaltab") {
-  @media (-moz-bool-pref: "sidebar.revamp") {
+@media -moz-pref("uc.tweak.new-horizontaltab") {
+  @media -moz-pref("sidebar.revamp") {
     #sidebar-box {
       height: 100% !important;
     }
@@ -139,7 +139,7 @@ tab.tabbrowser-tab {
         display: none;
       }
     }
-    @media (-moz-bool-pref: "sidebar.verticalTabs") {
+    @media -moz-pref("sidebar.verticalTabs") {
       .titlebar-spacer {
         @media (-moz-platform: windows) {
           :root:is([sizemode="normal"]) &[type="pre-tabs"] {
@@ -212,7 +212,7 @@ tab.tabbrowser-tab {
           --tab-icon-end-margin: 5px !important;
         }
       }
-      @media (-moz-bool-pref: "uc.tweak.floating-tabs") {
+      @media -moz-pref("uc.tweak.floating-tabs") {
         #tabbrowser-tabs {
           & .tabbrowser-tab,
           & #tabs-newtab-button {
@@ -226,7 +226,7 @@ tab.tabbrowser-tab {
           margin-bottom: 2px !important;
         }
       }
-      @media not (-moz-bool-pref: "uc.tweak.floating-tabs") {
+      @media not -moz-pref("uc.tweak.floating-tabs") {
         /* The Entire Floating Tabs Tweak minus the PersonalToolbar changes*/
         /*
 					:root:not([lwtheme]),
@@ -335,7 +335,7 @@ tab.tabbrowser-tab {
           --uc-tab-top-margin: 4px !important;
         }
 
-        @media (-moz-bool-pref: "uc.tweak.disable-drag-space") {
+        @media -moz-pref("uc.tweak.disable-drag-space") {
           :root {
             --uc-tab-top-margin: 4px !important;
           }
@@ -395,8 +395,8 @@ tab.tabbrowser-tab {
         }
       }
     }
-    @media (-moz-bool-pref: "uc.tweak.collapse-sidebery") {
-      @media (-moz-bool-pref: "uc.tweak.rounded-corners") {
+    @media -moz-pref("uc.tweak.collapse-sidebery") {
+      @media -moz-pref("uc.tweak.rounded-corners") {
         #sidebar-box {
           overflow: visible !important;
         }
@@ -407,7 +407,7 @@ tab.tabbrowser-tab {
 
 /* Mica broken on newer versions of Firefox */
 @media (-moz-platform: windows) {
-  @media (-moz-bool-pref: "uc.tweak.win11-mica") {
+  @media -moz-pref("uc.tweak.win11-mica") {
     #main-window:not([inFullscreen]):not(:root[lwtheme]),
     #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"] {
       appearance: -moz-win-borderless-glass !important;
@@ -422,7 +422,7 @@ tab.tabbrowser-tab {
       #navigator-toolbox:is(:-moz-window-inactive) {
       background-color: transparent !important;
     }
-    @media (-moz-bool-pref: "uc.tweak.floating-tabs") {
+    @media -moz-pref("uc.tweak.floating-tabs") {
       .tab-background:is([selected], [multiselected]) {
         background: var(--toolbar-bgcolor);
       }
@@ -467,7 +467,7 @@ tab.tabbrowser-tab {
   }
 
   /* Extension Transparency */
-  @media (-moz-bool-pref: "browser.tabs.allow_transparent_browser") {
+  @media -moz-pref("browser.tabs.allow_transparent_browser") {
     #sidebar {
       background: transparent !important;
       border: none !important;
@@ -487,7 +487,7 @@ tab.tabbrowser-tab {
 }
 
 /* unmerged commit */
-@media (-moz-bool-pref: "uc.tweak.collapse-sidebery") and (max-width: 50px) {
+@media -moz-pref("uc.tweak.collapse-sidebery") and (max-width: 50px) {
   #root {
     --tabs-indent: unset !important;
     --tabs-lvl-opacity: 0 !important;

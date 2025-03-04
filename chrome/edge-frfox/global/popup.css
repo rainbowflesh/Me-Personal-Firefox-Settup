@@ -18,7 +18,9 @@
 
   --uc-panel-zoom-button-padding: 8px;
   --uc-panel-zoom-button-inline-padding: 9px;
-  --uc-panel-zoom-padding-block: calc(var(--panel-separator-margin-vertical) + var(--uc-arrowpanel-menuitem-margin-block));
+  --uc-panel-zoom-padding-block: calc(
+    var(--panel-separator-margin-vertical) + var(--uc-arrowpanel-menuitem-margin-block)
+  );
 
   --uc-autocomplete-panel-menuitem-margin: 4px;
   --uc-autocomplete-panel-menuicon-padding-inline: 14px;
@@ -37,7 +39,8 @@
   --uc-contextmenu-menuicon-margin-inline: 12px;
   --uc-contextmenu-menuitem-margin-inline: calc(4px - var(--uc-contextmenu-menuitem-border-width));
   --uc-contextmenu-menuitem-margin-block: 0px;
-  --uc-contextmenu-menuitem-margin: var(--uc-contextmenu-menuitem-margin-block) var(--uc-contextmenu-menuitem-margin-inline);
+  --uc-contextmenu-menuitem-margin: var(--uc-contextmenu-menuitem-margin-block)
+    var(--uc-contextmenu-menuitem-margin-inline);
   --uc-contextmenu-separator-vertical: calc(4px - var(--uc-contextmenu-menuitem-border-width));
   --uc-contextmenu-separator-horizontal: 0;
 }
@@ -102,7 +105,8 @@
 /* zoom controls */
 #appMenu-zoom-controls {
   border-top: 1px solid var(--panel-separator-color) !important;
-  padding-inline: calc(var(--arrowpanel-menuitem-padding-inline) + var(--uc-arrowpanel-menuitem-margin-inline)) var(--uc-arrowpanel-menuitem-margin-inline) !important;
+  padding-inline: calc(var(--arrowpanel-menuitem-padding-inline) + var(--uc-arrowpanel-menuitem-margin-inline))
+    var(--uc-arrowpanel-menuitem-margin-inline) !important;
   padding-block: var(--uc-panel-zoom-padding-block) !important;
   margin: var(--panel-separator-margin-vertical) 0 calc(var(--panel-separator-margin-vertical) * -1) !important;
 }
@@ -118,7 +122,9 @@
 
 /* #appMenu-zoomReduce-button2, */
 #appMenu-zoom-controls > #appMenu-fullscreen-button2 {
-  margin-left: calc((var(--panel-separator-margin-vertical) + var(--uc-arrowpanel-menuitem-margin-block)) * 2 + 1px) !important;
+  margin-left: calc(
+    (var(--panel-separator-margin-vertical) + var(--uc-arrowpanel-menuitem-margin-block)) * 2 + 1px
+  ) !important;
 }
 
 #appMenu-zoom-controls > #appMenu-fullscreen-button2::before {
@@ -128,7 +134,12 @@
   position: relative;
   height: 32px;
   margin-block: calc(var(--uc-panel-zoom-button-padding) * -1);
-  transform: translateX(calc(var(--uc-panel-zoom-button-inline-padding) * -1 - (var(--panel-separator-margin-vertical) + var(--uc-arrowpanel-menuitem-margin-block)) - 1px));
+  transform: translateX(
+    calc(
+      var(--uc-panel-zoom-button-inline-padding) * -1 -
+        (var(--panel-separator-margin-vertical) + var(--uc-arrowpanel-menuitem-margin-block)) - 1px
+    )
+  );
 }
 
 #appMenu-zoomReset-button2 {
@@ -257,7 +268,7 @@
 
 .webextension-popup-browser,
 .webextension-popup-stack {
-  margin-block-start: calc(var(--panel-separator-margin-vertical) * -.5) !important;
+  margin-block-start: calc(var(--panel-separator-margin-vertical) * -0.5) !important;
 }
 
 #PlacesToolbar menuitem,
@@ -330,7 +341,8 @@ panelview .toolbarbutton-1,
 */
 /* #region */
 
-.toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton:not(.toolbarbutton-1)[disabled] {
+.toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"])
+  > toolbarbutton:not(.toolbarbutton-1)[disabled] {
   opacity: 1 !important;
   color: var(--panel-disabled-color) !important;
 }
@@ -344,7 +356,7 @@ panelview .toolbarbutton-1,
   --uei-icon-size: 24px !important;
 }
 
-@media (-moz-bool-pref: "uc.tweak.context-menu.compact-extensions-menu") {
+@media -moz-pref("uc.tweak.context-menu.compact-extensions-menu") {
   :root {
     --uei-icon-size: 16px !important;
   }
@@ -394,7 +406,11 @@ panelview .toolbarbutton-1,
 }
 
 /* Add grayscale filter to extensions with no access to current site. */
-.unified-extensions-list .unified-extensions-item-action-button:has(.unified-extensions-item-message[data-l10n-id="origin-controls-state-no-access"]) .unified-extensions-item-icon {
+.unified-extensions-list
+  .unified-extensions-item-action-button:has(
+    .unified-extensions-item-message[data-l10n-id="origin-controls-state-no-access"]
+  )
+  .unified-extensions-item-icon {
   filter: grayscale(1) !important;
 }
 
@@ -518,7 +534,7 @@ panel[type="autocomplete-richlistbox"] {
 */
 
 /* disable context menu when this tweak is applied */
-@media not (-moz-bool-pref: "uc.tweak.revert-context-menu") {
+@media not -moz-pref("uc.tweak.revert-context-menu") {
   /* Context Menu */
   menupopup:not(.PanelUI-subView),
   menupopup:not(.PanelUI-subView) menuitem,
@@ -557,19 +573,13 @@ panel[type="autocomplete-richlistbox"] {
   menupopup {
     --uc-margin: 0 !important;
     --uc-outline-color: #0001;
-    --uc-box-shadow:
-      0 8px 12px #0003,
-      0 4px 5px #0002,
-      0 2px 4px #0002;
+    --uc-box-shadow: 0 8px 12px #0003, 0 4px 5px #0002, 0 2px 4px #0002;
   }
 
-  @media (prefers-color-scheme:dark) {
+  @media (prefers-color-scheme: dark) {
     menupopup {
       --uc-outline-color: #0002;
-      --uc-box-shadow:
-        0 8px 12px #0003,
-        0 4px 5px #0003,
-        0 2px 4px #0002;
+      --uc-box-shadow: 0 8px 12px #0003, 0 4px 5px #0003, 0 2px 4px #0002;
     }
   }
 
@@ -582,7 +592,7 @@ panel[type="autocomplete-richlistbox"] {
 
   .menupopup-arrowscrollbox {
     box-shadow: var(--uc-box-shadow) !important;
-    outline: .5px solid var(--uc-outline-color) !important;
+    outline: 0.5px solid var(--uc-outline-color) !important;
   }
 
   .popup-internal-box {
@@ -602,16 +612,16 @@ panel[type="autocomplete-richlistbox"] {
     background: none !important;
   }
 
-  menupopup menu:hover:not([disabled=true]),
-  menupopup menuitem:hover:not([disabled=true]),
-  menupopup menu[_moz-menuactive]:not([disabled=true]),
-  menupopup menuitem[_moz-menuactive]:not([disabled=true]) {
+  menupopup menu:hover:not([disabled="true"]),
+  menupopup menuitem:hover:not([disabled="true"]),
+  menupopup menu[_moz-menuactive]:not([disabled="true"]),
+  menupopup menuitem[_moz-menuactive]:not([disabled="true"]) {
     background-color: var(--panel-item-hover-bgcolor) !important;
     color: inherit !important;
   }
 
-  menupopup menuitem:hover:active:not([disabled=true]),
-  menupopup menu:hover:active:not([disabled=true]) {
+  menupopup menuitem:hover:active:not([disabled="true"]),
+  menupopup menu:hover:active:not([disabled="true"]) {
     background-color: var(--panel-item-active-bgcolor) !important;
     color: inherit !important;
   }
@@ -641,13 +651,28 @@ panel[type="autocomplete-richlistbox"] {
     border-radius: var(--uc-contextmenu-menuitem-border-radius) !important;
     border: var(--uc-contextmenu-menuitem-border-width) solid transparent !important;
     background-clip: padding-box !important;
-    min-height: calc(16px + (var(--uc-contextmenu-menuitem-padding-block) + var(--uc-contextmenu-menuitem-border-width)) * 2) !important;
+    min-height: calc(
+      16px + (var(--uc-contextmenu-menuitem-padding-block) + var(--uc-contextmenu-menuitem-border-width)) * 2
+    ) !important;
   }
 
-  :not(:not(menubar)>menu, #ContentSelectDropdown) > menupopup > menuitem:not(.menuitem-iconic, [type="checkbox"], [type="radio"], .in-menulist, .in-menulist menuitem, .unified-nav-current),
-  :not(:not(menubar)>menu, #ContentSelectDropdown) > menupopup > menu:not(.menu-iconic, [type="checkbox"], [type="radio"], .in-menulist, .in-menulist menu, .unified-nav-current),
-  :not(:not(menubar)>menu, #ContentSelectDropdown) > menupopup > menucaption {
-    padding-inline-start: calc(var(--uc-contextmenu-menuitem-padding-inline) + 16px + var(--uc-contextmenu-menuicon-margin-inline)) !important;
+  :not(:not(menubar) > menu, #ContentSelectDropdown)
+    > menupopup
+    > menuitem:not(
+      .menuitem-iconic,
+      [type="checkbox"],
+      [type="radio"],
+      .in-menulist,
+      .in-menulist menuitem,
+      .unified-nav-current
+    ),
+  :not(:not(menubar) > menu, #ContentSelectDropdown)
+    > menupopup
+    > menu:not(.menu-iconic, [type="checkbox"], [type="radio"], .in-menulist, .in-menulist menu, .unified-nav-current),
+  :not(:not(menubar) > menu, #ContentSelectDropdown) > menupopup > menucaption {
+    padding-inline-start: calc(
+      var(--uc-contextmenu-menuitem-padding-inline) + 16px + var(--uc-contextmenu-menuicon-margin-inline)
+    ) !important;
   }
 
   .menu-iconic-icon {
@@ -682,7 +707,8 @@ panel[type="autocomplete-richlistbox"] {
     padding-block: 0 !important;
   }
 
-  menuitem:is(.menuitem-iconic:not([data-usercontextid]), [type="checkbox"], [type="radio"], [checked], [selected]) .menu-iconic-icon {
+  menuitem:is(.menuitem-iconic:not([data-usercontextid]), [type="checkbox"], [type="radio"], [checked], [selected])
+    .menu-iconic-icon {
     -moz-context-properties: fill !important;
     fill: currentColor !important;
   }
@@ -717,7 +743,7 @@ panel[type="autocomplete-richlistbox"] {
   menu > .menu-iconic-left,
   menuitem > .menu-iconic-left {
     margin: 0 !important;
-    padding: 0 !important
+    padding: 0 !important;
   }
 
   #context-navigation:not([hidden]) {
@@ -754,10 +780,13 @@ panel[type="autocomplete-richlistbox"] {
   }
 
   #context-bookmarkpage[starred] .menu-iconic-icon {
-    fill: var(--lwt-toolbarbutton-icon-fill-attention, var(--toolbarbutton-icon-fill-attention, currentColor)) !important;
+    fill: var(
+      --lwt-toolbarbutton-icon-fill-attention,
+      var(--toolbarbutton-icon-fill-attention, currentColor)
+    ) !important;
   }
 
-  @media (not (-moz-bool-pref: "uc.tweak.smaller-context-menu-text")) and (-moz-platform: windows) {
+  @media not -moz-pref("uc.tweak.smaller-context-menu-text") and (-moz-platform: windows) {
     .menu-text,
     .menu-iconic-text,
     panel .toolbarbutton-text,
@@ -790,9 +819,7 @@ panel[type="autocomplete-richlistbox"] {
 .dialogBox:not(.spotlightBox) {
   border-radius: 8px !important;
   outline: 0.5px solid var(--panel-separator-color) !important;
-  box-shadow:
-    0 20px 38px rgb(0 0 0 / 0.23),
-    0 5px 9px rgb(0 0 0 / 0.22) !important;
+  box-shadow: 0 20px 38px rgb(0 0 0 / 0.23), 0 5px 9px rgb(0 0 0 / 0.22) !important;
 }
 
 dialog {
@@ -812,7 +839,7 @@ dialog {
     /* Adjust vertical alignment of title text. */
     @media (-moz-platform: macOS) {
       &:not([noicon]) > #titleCropper {
-        translate: 0 calc(-1px - max(.55 * var(--icon-size) - .6em, 0px)) !important;
+        translate: 0 calc(-1px - max(0.55 * var(--icon-size) - 0.6em, 0px)) !important;
       }
     }
   }
