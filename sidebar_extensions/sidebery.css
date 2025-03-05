@@ -1,8 +1,11 @@
 #root.root {
+  --accent: #146fd9ff;
+}
+#root.root {
   --tabs-inner-gap: 11px;
 }
 #root.root {
-  --scroll-color: rgba(255, 255, 255, 0.5);
+  --scroll-color: light-dark(rgba(0, 0, 0, 0.32), rgba(255, 255, 255, 0.5));
 }
 #root.root {
   --ntb-btn-height: 46px;
@@ -26,7 +29,7 @@
   padding-bottom: 3px;
 }
 .Tab[data-active="true"] .body {
-  background-color: light-dark(#f7f7f780, #5f5f5fb2);
+  background-color: light-dark(#e7e7e798, #5f5f5fb2);
 }
 .Tab .fav,
 .fav-icon {
