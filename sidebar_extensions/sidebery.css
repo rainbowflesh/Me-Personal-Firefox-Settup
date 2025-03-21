@@ -1,42 +1,64 @@
 #root.root {
   --accent: #146fd9ff;
 }
+
 #root.root {
-  --tabs-inner-gap: 11px;
+  --tabs-inner-gap: 9px;
+  --tab-height: 44px;
 }
+
 #root.root {
   --scroll-color: light-dark(rgba(0, 0, 0, 0.32), rgba(255, 255, 255, 0.5));
 }
+
 #root.root {
-  --ntb-btn-height: 46px;
+  --ntb-btn-height: calc(var(--tab-height) - 2px);
 }
+
 #root.root {
   --accent: #47cfffff;
 }
+
 #root.root {
   --frame-bg: rgba(0, 0, 0, 0);
 }
+
 #root.root {
-  --tabs-height: 48px;
+  --tabs-height: var(--tab-height);
 }
+
 #root.root {
   --general-border-radius: 8px;
 }
+
 :root {
   background-color: transparent;
 }
+
 .Tab {
-  padding-bottom: 3px;
+  padding-bottom: calc(var(--tabs-margin) + 2px);
 }
+
 .Tab[data-active="true"] .body {
   background-color: light-dark(#e7e7e798, #5f5f5fb2);
 }
+
 .Tab .fav,
 .fav-icon {
   width: 20px !important;
   height: 20px !important;
 }
+
 .audio {
   width: 1rem;
   height: 1rem;
+}
+
+#main-box,
+#new-tab-btns {
+  padding-right: var(--tab-margin);
+}
+
+#new-tab-btns {
+  margin: 0 var(--tabs-margin);
 }

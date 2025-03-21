@@ -19,6 +19,10 @@
   }
 }
 
+#sidebar-box{
+  padding-right: 0px !important;  
+}
+
 #browser:not(.browser-toolbox-background),
 #tabbrowser-tabpanels {
   background-color: transparent !important;
