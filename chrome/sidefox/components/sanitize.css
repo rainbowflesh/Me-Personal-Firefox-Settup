@@ -1,0 +1,10 @@
+@-moz-document url("chrome://browser/content/sanitize.xhtml")
+{
+  #SanitizeDialog {
+    background: black !important;
+    color: white !important;
+  }
+  caption {
+    background: transparent !important;
+  }
+}

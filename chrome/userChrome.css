@@ -1,10 +1,4 @@
-/* base */
-@import url("./edge-frfox/userChrome.css");
-@import url("./edge-frfox/userContent.css");
-
-/* custom */
-@import url("./sidebar-ffox/sidebar.css");
-@import url("./sidebar-ffox/tabcenter.css");
+@import url("./sidefox/userChrome.css");
 
 /* hide context menu item */
 @import url("./simpleMenuWizard/userChrome.css");

@@ -1,0 +1,145 @@
+/* transparent tabbrowser-tabpanels */
+@media -moz-pref("browser.tabs.allow_transparent_browser") {
+  #browser:not(.browser-toolbox-background),
+  #tabbrowser-tabpanels {
+    background-color: transparent !important;
+    color: transparent !important;
+  }
+}
+
+/* Dynamic transparency for Sideberry when transparency is on */
+@-moz-document regexp("^moz-extension://.*?/sidebar/sidebar.html")
+{
+  @media (-moz-platform: windows) {
+    @media -moz-pref("uc.tweak.win11-mica"), -moz-pref("widget.windows.mica") {
+      @media -moz-pref("uc.tweak.collapse-sidebery") {
+        :root {
+          color-scheme: light dark !important;
+          background: light-dark(transparent, transparent) !important;
+          transition: background 0.25s ease-out;
+        }
+        :root:hover {
+          color-scheme: light dark !important;
+          background: light-dark(#aaa, #222) !important;
+          transition: background 0.25s ease-in;
+        }
+        #root.root {
+          --s-frame-bg: light-dark(transparent, transparent) !important;
+          transition: 0.25s ease-out;
+          .close {
+            opacity: 0 !important;
+          }
+          .audio {
+            opacity: 0 !important;
+          }
+        }
+        #root.root:hover {
+          --s-frame-bg: light-dark(#f3f3f3, #202020) !important;
+          transition: 0.25s ease-out;
+          .close {
+            opacity: 100 !important;
+            transition: opacity 0.5s cubic-bezier(1, 0, 1, 0);
+          }
+          .audio {
+            opacity: 100 !important;
+            transition: opacity 0.5s cubic-bezier(1, 0, 1, 0);
+          }
+        }
+      }
+      @media not -moz-pref("uc.tweak.collapse-sidebery") {
+        :root {
+          color-scheme: light dark !important;
+          background: light-dark(transparent, transparent) !important;
+        }
+        #root.root {
+          --s-frame-bg: light-dark(transparent, transparent) !important;
+        }
+      }
+    }
+  }
+}
+
+:root:not([lwtheme]) #navigator-toolbox {
+  background-color: transparent !important;
+}
+
+/* force transparent firefox */
+@media (-moz-platform: windows) {
+  @media -moz-pref("uc.tweak.win11-mica"), -moz-pref("widget.windows.mica") {
+    #main-window:not([inFullscreen]):not(:root[lwtheme]),
+    #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"] {
+      appearance: -moz-win-borderless-glass !important;
+      background: transparent !important;
+    }
+    #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"]
+      #navigator-toolbox:not(:-moz-window-inactive) {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+    #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"]
+      #navigator-toolbox:is(:-moz-window-inactive) {
+      background-color: transparent !important;
+    }
+    @media -moz-pref("uc.tweak.floating-tabs") {
+      .tab-background:is([selected], [multiselected]) {
+        background: var(--toolbar-bgcolor);
+      }
+    }
+    :root:not([inFullscreen]):not(:root[lwtheme]):not(:-moz-window-inactive) {
+      --lwt-accent-color: #00000020 !important;
+    }
+    :root:not([inFullscreen]):not(:root[lwtheme]):is(:-moz-window-inactive) {
+      --lwt-accent-color-inactive: transparent !important;
+    }
+  }
+  :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]) .titlebar-buttonbox-container {
+    --uc-titlebar-button-size: 30px;
+    --uc-titlebar-size: calc(var(--tab-min-height) + var(--tab-block-margin));
+    margin-bottom: none;
+  }
+  :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen], [sizemode="maximized"])
+    .titlebar-button {
+    padding-block: 7px 9px !important;
+  }
+  :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen], [sizemode="maximized"])
+    .titlebar-close {
+    padding-right: 19px !important;
+  }
+
+  /* Fix Duplicated Window Control when Firefox's window is inactive with Accent Color in Titlebar option on  */
+  @media (-moz-windows-accent-color-in-titlebar) {
+    :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):not([inFullscreen]):is(
+        :-moz-window-inactive
+      )
+      .titlebar-buttonbox {
+      opacity: 0 !important;
+    }
+    :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):not([inFullscreen]) .titlebar-buttonbox {
+      opacity: 0 !important;
+    }
+  }
+
+  /* Restore Firefox's Window Control when Fullscreen */
+  :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen]) .titlebar-buttonbox {
+    opacity: 100 !important;
+  }
+
+  /* Extension Transparency */
+  @media -moz-pref("browser.tabs.allow_transparent_browser") {
+    #sidebar {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+    #sidebar-main {
+      background: transparent !important;
+    }
+    window#webextpanels-window {
+      background-color: transparent !important;
+    }
+    #sidebar-box {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+/* import this file will make devtools background transparent */
+/* use with MicaForEveryone */
+@-moz-document regexp("chrome:\/\/(?!devtools).*") {
+  dialog,
+  window,
+  wizard {
+    padding: 0px !important;
+  }
+  @media -moz-pref("uc.tweak.win11-mica"), -moz-pref("widget.windows.mica") {
+    window:not([type="child"]) {
+      background: transparent !important;
+    }
+    wizard {
+      background: transparent !important;
+    }
+  }
+  #window-modal-dialog {
+    margin-top: auto !important;
+    background: transparent !important;
+  }
+  .wizard-header {
+    background: transparent !important;
+    border: none !important;
+  }
+  .wizard-button[dlgtype="back"] {
+    margin-inline-end: 5px !important;
+  }
+  .header-container,
+  .footer-container {
+    border: none !important;
+  }
+  .dialogBox {
+    margin-top: 0px !important;
+    background-clip: padding-box !important;
+    animation: fadeInScale 0.3s;
+  }
+  .dialog-content-box,
+  vbox[part="content-box"].box-inherit {
+    padding: 24px !important;
+    background-clip: padding-box !important;
+  }
+  .dialog-button-box {
+    padding: 0px 16px 16px 16px !important;
+  }
+  @media not -moz-pref("uc.tweak.win11-mica"), -moz-pref("widget.windows.mica") {
+    .dialog-content-box {
+      padding-bottom: 0px !important;
+    }
+  }
+  @media -moz-pref("uc.tweak.win11-mica"), -moz-pref("widget.windows.mica") {
+    .dialog-content-box,
+    vbox[part="content-box"].box-inherit {
+      margin-bottom: 24px !important;
+    }
+    .dialog-button-box {
+      padding: 0px 24px 24px 24px !important;
+    }
+  }
+  .dialog-button-box > button + button {
+    margin-left: 4px !important;
+    margin-right: 0px !important;
+  }
+  .titleIcon {
+    background-color: transparent !important;
+  }
+  .previewStack {
+    background: transparent !important;
+  }
+  #window-modal-dialog {
+    bottom: 0 !important;
+  }
+  #label-box[native] {
+    outline: none !important;
+  }
+  @media not -moz-pref("uc.tweak.win11-mica"), -moz-pref("widget.windows.mica") {
+    .dialogBox {
+      border: 1px solid AccentColor !important;
+    }
+  }
+}

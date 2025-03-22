@@ -1,99 +1,7 @@
-:root:not([lwtheme]) #navigator-toolbox {
-  background-color: transparent !important;
-}
-
-@media -moz-pref("uc.tweak.hide-tabs-bar"), -moz-pref("uc.tweak.hide-tabs-bar.no-window-controls") {
-  :root:not([customizing]):has(
-      #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden])
-    ),
-  :root:not([customizing]):has(
-      #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not([hidden])
-    ),
-  :root:not([customizing]):has(#sidebar-box[sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"]:not([hidden])) {
-    & #toolbar-menubar:not([autohide="false"]) ~ #nav-bar {
-      & .titlebar-buttonbox-container {
-        display: flex !important;
-        margin-top: 0 !important;
-      }
-    }
-  }
-}
-
-#sidebar-box{
-  padding-right: 0px !important;  
-}
-
-#browser:not(.browser-toolbox-background),
-#tabbrowser-tabpanels {
-  background-color: transparent !important;
-  color: transparent !important;
-}
-
-#tabbrowser-tabbox .browserStack {
-  margin-inline: 2px !important;
-  margin-block-end: 2px !important;
-}
-
-tab.tabbrowser-tab {
-  margin-right: 2px !important;
-}
-
-#TabsToolbar {
-  /* Padding between the edge of the toolbar and its content. */
-  padding-inline-start: 2px !important;
-  padding-top: 2px !important;
-}
-
-/* hide annoying empty button */
-#PlacesChevron.toolbarbutton-1 {
-  display: none;
-}
-
-:root:not([lwtheme]),
-:root[privatebrowsingmode="temporary"]:where(
-    [style*="--lwt-accent-color: rgb(28, 27, 34)"]:not([style*="--newtab-background-color-secondary: rgb(66, 65, 77)"])
-  ) {
-  --toolbar-bgcolor: light-dark(#f7f7f780, #3b3b3bb2) !important;
-}
-
-#main-window:not([chromehidden~="toolbar"]) {
-  --uc-tweak-rounded-corners-padding: 2px;
-}
-
-.titlebar-button:not(.titlebar-close):hover {
-  background-color: color-mix(in srgb, currentColor 11%, transparent) !important;
-
-  &:active {
-    background-color: color-mix(in srgb, currentColor 20%, transparent) !important;
-  }
-}
-
-.titlebar-button .titlebar-close:hover {
-  stroke: white !important;
-  background-color: #e81123 !important;
-
-  &:active {
-    background-color: #dc5c66 !important;
-  }
-
-  toolbar[brighttext] &:active {
-    background-color: #971821 !important;
-  }
-}
-
-/* Temporary fix the mute icon until a proper fix is out */
-@media -moz-pref("uc.tweak.mute-icon-fix") {
-  .tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked]):not([crashed]) {
-    list-style-image: unset !important;
-    background-color: transparent !important;
-  }
-}
-
-/* Hide the dropdown menu from the old sidebar */
-@media -moz-pref("uc.tweak.hide-sidebar-dropdown-menu") {
-  #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar-header {
-    display: none !important;
-  }
+/* ====== URLBAR ====== */
+/* move urlbar one pixel lower */
+#urlbar {
+  margin-top: 1px;
 }
 
 /* Hide the separator between the address bar and the webview */
@@ -111,21 +19,26 @@ tab.tabbrowser-tab {
   }
 }
 
-/* Mitigate bugs when using the theme with the new Sidebar */
-@media -moz-pref("uc.tweak.rounded-corners") {
-  @media -moz-pref("sidebar.revamp") {
-    #tabbrowser-tabbox {
-      outline: none !important;
-      box-shadow: none !important;
-    }
-  }
-  #main-window:not([inFullscreen]):not(:root[lwtheme]),
-  #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"] {
-    browser {
-      border-radius: 8px !important;
-      background: transparent !important;
-    }
-  }
+/* ====== TABBAR ====== */
+/* tweak tab */
+#tabbrowser-tabbox .browserStack {
+  margin-inline: 2px !important;
+  margin-block-end: 2px !important;
+}
+
+tab.tabbrowser-tab {
+  margin-right: 2px !important;
+}
+
+#TabsToolbar {
+  /* Padding between the edge of the toolbar and its content. */
+  padding-inline-start: 2px !important;
+  padding-top: 2px !important;
+}
+
+/* hide annoying empty arrow button when bookmark collapse */
+#PlacesChevron.toolbarbutton-1 {
+  display: none;
 }
 
 @media -moz-pref("uc.tweak.new-horizontaltab") {
@@ -409,82 +322,25 @@ tab.tabbrowser-tab {
   }
 }
 
-/* Mica broken on newer versions of Firefox */
-@media (-moz-platform: windows) {
-  @media -moz-pref("uc.tweak.win11-mica") {
-    #main-window:not([inFullscreen]):not(:root[lwtheme]),
-    #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"] {
-      appearance: -moz-win-borderless-glass !important;
-      background: transparent !important;
-    }
-    #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"]
-      #navigator-toolbox:not(:-moz-window-inactive) {
-      background: transparent !important;
-      background-color: transparent !important;
-    }
-    #main-window:not([inFullscreen])[lwt-default-theme-in-dark-mode="true"]
-      #navigator-toolbox:is(:-moz-window-inactive) {
-      background-color: transparent !important;
-    }
-    @media -moz-pref("uc.tweak.floating-tabs") {
-      .tab-background:is([selected], [multiselected]) {
-        background: var(--toolbar-bgcolor);
-      }
-    }
-    :root:not([inFullscreen]):not(:root[lwtheme]):not(:-moz-window-inactive) {
-      --lwt-accent-color: #00000020 !important;
-    }
-    :root:not([inFullscreen]):not(:root[lwtheme]):is(:-moz-window-inactive) {
-      --lwt-accent-color-inactive: transparent !important;
-    }
-  }
-  :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]) .titlebar-buttonbox-container {
-    --uc-titlebar-button-size: 30px;
-    --uc-titlebar-size: calc(var(--tab-min-height) + var(--tab-block-margin));
-    margin-bottom: none;
-  }
-  :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen], [sizemode="maximized"])
-    .titlebar-button {
-    padding-block: 7px 9px !important;
-  }
-  :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen], [sizemode="maximized"])
-    .titlebar-close {
-    padding-right: 19px !important;
-  }
+/* ====== TOOLBAR ====== */
+/* override edge-frfox toolbar background color */
+:root:not([lwtheme]),
+:root[privatebrowsingmode="temporary"]:where(
+    [style*="--lwt-accent-color: rgb(28, 27, 34)"]:not([style*="--newtab-background-color-secondary: rgb(66, 65, 77)"])
+  ) {
+  --toolbar-bgcolor: light-dark(#f7f7f780, #3b3b3bb2) !important;
+}
 
-  /* Fix Duplicated Window Control when Firefox's window is inactive with Accent Color in Titlebar option on  */
-  @media (-moz-windows-accent-color-in-titlebar) {
-    :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):not([inFullscreen]):is(
-        :-moz-window-inactive
-      )
-      .titlebar-buttonbox {
-      opacity: 0 !important;
-    }
-    :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):not([inFullscreen]) .titlebar-buttonbox {
-      opacity: 0 !important;
-    }
-  }
+/* ====== GLOBAL ====== */
+/* change rounded-corners-padding to 2px */
+#main-window:not([chromehidden~="toolbar"]) {
+  --uc-tweak-rounded-corners-padding: 2px;
+}
 
-  /* Restore Firefox's Window Control when Fullscreen */
-  :root:is(:not(:root[lwtheme]), [lwt-default-theme-in-dark-mode="true"]):is([inFullscreen]) .titlebar-buttonbox {
-    opacity: 100 !important;
-  }
-
-  /* Extension Transparency */
-  @media -moz-pref("browser.tabs.allow_transparent_browser") {
-    #sidebar {
-      background: transparent !important;
-      border: none !important;
-      box-shadow: none !important;
-    }
-    #sidebar-main {
-      background: transparent !important;
-    }
-    window#webextpanels-window {
-      background-color: transparent !important;
-    }
-    #sidebar-box {
-      background: transparent !important;
+/* remove corner shadow in browser container area that appear on windows focused  */
+@media -moz-pref("uc.tweak.rounded-corners") {
+  #tabbrowser-tabbox .browserStack {
+    &::after {
       box-shadow: none !important;
     }
   }

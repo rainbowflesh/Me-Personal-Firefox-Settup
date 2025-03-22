@@ -1,0 +1,18 @@
+/* import this file will make alert dialog background transparent */
+/* use with MicaForEveryone */
+@-moz-document url("chrome://global/content/alerts/alert.xhtml")
+{
+  #alertNotification {
+    background: transparent !important;
+    padding-top: 8px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-bottom: 12px !important;
+  }
+  #alertBox {
+    padding: 8px !important;
+    background-clip: padding-box !important;
+    background-image: none !important;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.32) !important;
+  }
+}

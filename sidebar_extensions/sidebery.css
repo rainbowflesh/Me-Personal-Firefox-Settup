@@ -40,7 +40,7 @@
 }
 
 .Tab[data-active="true"] .body {
-  background-color: light-dark(#e7e7e798, #5f5f5fb2);
+  background-color: light-dark(#ffffff8f, #5959594c);
 }
 
 .Tab .fav,

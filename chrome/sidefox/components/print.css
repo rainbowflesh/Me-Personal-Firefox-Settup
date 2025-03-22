@@ -1,0 +1,13 @@
+/* import this file will make print widget background transparent */
+@-moz-document url-prefix("chrome://global/content/print.html")
+{
+  html {
+    background: transparent !important;
+  }
+  input[type="number"].photon-number {
+    height: unset !important;
+  }
+  #more-settings {
+    border: none !important;
+  }
+}

@@ -1,0 +1,24 @@
+/* import this file will make datepicker dialog use accent color */
+/* TODO: add transparency and blur */
+@-moz-document url("chrome://global/content/datepicker.xhtml")
+{
+  body {
+    background: transparent !important;
+    --selected-fill-color: AccentColor !important;
+  }
+  .spinner {
+    scrollbar-width: thin !important;
+  }
+  .week-header > div {
+    opacity: 1 !important;
+  }
+  .month-year-view {
+    /*  */
+  }
+  .month-year-container {
+    height: auto !important;
+  }
+  .month-year {
+    width: 120px !important;
+  }
+}

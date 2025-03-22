@@ -1,36 +1,16 @@
-# My Mega FireFox tWeak
+# The SideFox
 
-The edge-frfox combine with sidebar!
+A cutting edge (yes) firefox custom theme, Feature with fancy sidebar, mica & acrylic effect, less tweak, more default.
 
-Sidebar belike:
 <img src="./asset/sidebar.gif" width="720px"/>
 
-And, New feature! Sidebarfox now have dynamic tabbar switch which allow you change tab style in runtime!
-<img src="./asset/sidebar_dynamic.gif" width="720px"/>
+## Install
 
-> To use this feat you need add `uc.tweak.hide-tabs-bar = true` to `about:config`
+### Steps
 
----
-
-Edge style be like (FF v96):
-
-![edgelike](./asset/preview.gif)
-
-Compare with real edge:
-![compare](./asset/compare.png)
-
-- Minimal Firefox version: 91.0
-- GTK and QT based DE also supported 😸 -- But you need some tweaks 😾
-
-- [Tree Style Tab](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab)(\*Optional, supporting and tested)
-
-- [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/) (\*Optional, supporting and tested)
-
-- [Tab Center Reforn](https://addons.mozilla.org/en-US/firefox/addon/tabcenter-reborn) (\*Optional)
-
-## Usage
-
-### about:config
+1. Install [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/) (\*Optional, supporting and tested)
+2. Copy everything from `sidebar_extensions/sidebery.css` to [Sidebery styles editor](moz-extension://e4229f2c-09a8-4adb-ae4c-66435999c4d7/page.setup/setup.html#styles_editor)
+3. Go [about:config](about:config) then add below:
 
 ```cfg
 gfx.webrender.all = true
@@ -46,9 +26,24 @@ svg.context-properties.content.enabled = true
 layout.css.color-mix.enabled = true
 
 uc.tweak.hide-tabs-bar = true
+
+browser.tabs.allow_transparent_browser = true
+
+sidebar.revamp = true
+
+widget.windows.mica.popups = true
+
+<!-- ====== Optional ====== -->
+
+<!-- Icon only extension menu -->
+uc.tweak.iconOnlyExtensionMenu = true
+
+<!-- mica for everyone -->
+uc.tweak.win11-mica = true
+
 ```
 
-### Install Themes
+### Another way
 
 ```bash
 git clone https://github.com/rainbowflesh/Me-Personal-Firefox-Settup.git
@@ -63,44 +58,9 @@ cp -r ./chrome $THEPROFILEPATH/chrome
 ln -S ./chrome $THEPROFILEPATH/chrome
 ```
 
-### Configure sidebar addone's CSS
-
-- **Tree Style Tab**: locate `Advanced`, Import [this](./chrome/treestyletab.css).
-- **Sidebery**: copy&paste [this](./chrome/sidebery.css) to `Styles editor`
-
-- **Tab Center Reforn** Import [this](./chrome/tabCenterReborn.css) CSS.
-
 ### Tweaking
 
-#### Edge like smooth scrolling
-
-Copy paste `user.js` to profile root folder, like
-
-```txt
-| - 01djcrd2.default/user.js
-| - 01djcrd2.default/chrome/userChrome.css
-```
-
-#### Im lossing right click context menu items, WTF?!
-
-oops, comment out first line in `userChrome.css`
-
-#### If you hate sidebar, comment out:
-
-```css
-/* l:6  */
-@import url("./SideBarFox/sidebar.css");
-```
-
-#### If youwanna auto hide side bar, uncomment last line:
-
-```css
-@import url("./SideBarFox/autohide.css");
-```
-
-#### If ya dono what canbe changed, issues me and I wll help ;-)
-
-## Themeing!
+## Themes
 
 [![赞美太阳](https://addons.mozilla.org/user-media/version-previews/full/3882/3882953.svg)](https://addons.mozilla.org/en-US/firefox/addon/prise-the-sun-dark-souls/)
 
@@ -118,5 +78,6 @@ oops, comment out first line in `userChrome.css`
 
 ## References
 
+- [Firefox-Mod-Blur](https://github.com/datguypiko/Firefox-Mod-Blur), Firefox CSS Theme - For dark theme lovers / More compact / Modular / Blur .
 - [Edge-FrFx](https://github.com/bmFtZQ/edge-frfox), Microsoft Edge style ui.
 - [simpleMenuWizard](https://github.com/stonecrusher/simpleMenuWizard), this is why you right click context menu losing things.

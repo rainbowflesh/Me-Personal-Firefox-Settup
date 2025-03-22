@@ -1,0 +1,39 @@
+/* import this file will make about dialog background transparent */
+/* use with MicaForEveryone */
+@-moz-document url("chrome://browser/content/aboutDialog.xhtml")
+{
+  #aboutDialogContainer {
+    background: transparent !important;
+  }
+  #clientBox {
+    background-clip: padding-box !important;
+  }
+  #bottomBox {
+    background-color: transparent !important;
+  }
+  #rightBox {
+    -moz-context-properties: fill !important;
+  }
+  @media (prefers-color-scheme: light) {
+    .text-link {
+      color: color-mix(in srgb, AccentColor 80%, black) !important;
+    }
+    .text-link:hover {
+      color: color-mix(in srgb, AccentColor 65%, black) !important;
+    }
+    .text-link:hover:active {
+      color: color-mix(in srgb, AccentColor 50%, black) !important;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    .text-link {
+      color: color-mix(in srgb, AccentColor 80%, white) !important;
+    }
+    .text-link:hover {
+      color: color-mix(in srgb, AccentColor 65%, white) !important;
+    }
+    .text-link:hover:active {
+      color: color-mix(in srgb, AccentColor 50%, white) !important;
+    }
+  }
+}

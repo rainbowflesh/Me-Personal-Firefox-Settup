@@ -1,0 +1,17 @@
+/* import this file will make abuse-report-frame dialog background transparent */
+/* use with MicaForEveryone */
+@-moz-document url("chrome://mozapps/content/extensions/abuse-report-frame.html")
+{
+  ul.abuse-report-reasons > li > label {
+    grid-template-columns: unset !important;
+    grid-template-rows: unset !important;
+    width: unset !important;
+    line-height: unset !important;
+  }
+  html.dialog-window {
+    background-color: var(--in-content-page-background) !important;
+  }
+  .abuse-report-buttons {
+    margin-bottom: 10px !important;
+  }
+}

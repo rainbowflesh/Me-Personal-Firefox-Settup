@@ -1,0 +1,6 @@
+@-moz-document url("chrome://browser/content/migration/migration.xhtml")
+{
+  #dataSources {
+    appearance: none !important;
+  }
+}
