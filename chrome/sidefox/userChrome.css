@@ -1,7 +1,7 @@
 /* base theme */
 @import url("./edge-frfox/userChrome.css");
 @import url("./edge-frfox/userContent.css");
-@import url("./components/sidebar.css");
+@import url("./components/sidebar.css") -moz-pref("uc.tweak.theme.sidebery");
 /* override and fixes */
 @import url("./components/overrides.css");
 /* extra theming */
@@ -14,7 +14,7 @@
 @import url("./components/devtool.css");
 @import url("./components/exceptionDialog.css");
 @import url("./components/extensionMenu.css");
-@import url("./components/mica.css");
+@import url("./components/mica.css") -moz-pref("uc.tweak.win11-mica");
 @import url("./components/migration.css");
 @import url("./components/overrides.css");
 @import url("./components/pageInfo.css");
