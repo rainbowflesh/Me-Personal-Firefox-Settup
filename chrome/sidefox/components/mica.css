@@ -170,6 +170,7 @@ menupopup:not(.PanelUI-subView) menu,
 menupopup:not(.PanelUI-subView) menuseparator,
 panel:not([type="autocomplete-richlistbox"]) {
   appearance: auto !important;
+  border-radius: var(--arrowpanel-menuitem-border-radius) !important;
 }
 menupopup:not(.PanelUI-subView),
 menulist > menupopup:not(.PanelUI-subView) > menucaption {
