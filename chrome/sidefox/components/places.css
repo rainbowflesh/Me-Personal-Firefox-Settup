@@ -7,11 +7,18 @@
   #placesToolbox,
   #placesToolbar,
   #downloadsListBox,
-  #placeContent {
+  #placeContent,
+  #places {
     background-color: transparent !important;
     border: 0px !important;
   }
   #infoBox {
-    border-top: 1px solid var(--border-color-interactive-active) !important;
+    border-top: 1px solid var(--panel-separator-color) !important;
+  }
+  #placesView > splitter {
+    border-inline-end: 1px solid var(--panel-separator-color);
+  }
+  #infoBox {
+    border-top: 1px solid var(--panel-separator-color) !important;
   }
 }

@@ -2,6 +2,7 @@
 /* use with MicaForEveryone */
 @-moz-document url("chrome://browser/content/aboutDialog.xhtml")
 {
+  #aboutDialog,
   #aboutDialogContainer {
     background: transparent !important;
   }

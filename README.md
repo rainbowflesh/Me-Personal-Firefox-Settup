@@ -78,6 +78,7 @@ ln -S ./chrome $THEPROFILEPATH/chrome
 
 ## References
 
-- [Firefox-Mod-Blur](https://github.com/datguypiko/Firefox-Mod-Blur), Firefox CSS Theme - For dark theme lovers / More compact / Modular / Blur .
+- [Firefox-Mod-Blur](https://github.com/datguypiko/Firefox-Mod-Blur), Firefox CSS Theme - For dark theme lovers / More compact / Modular / Blur.
+- [Firefox-UWP-Style](https://github.com/Guerra24/Firefox-UWP-Style), Sun Valley + MDL2 Theme for Firefox.
 - [Edge-FrFx](https://github.com/bmFtZQ/edge-frfox), Microsoft Edge style ui.
 - [simpleMenuWizard](https://github.com/stonecrusher/simpleMenuWizard), this is why you right click context menu losing things.

@@ -3,6 +3,7 @@
   /* Change Header Size */
   #topBar {
     color: lightgray !important;
+    background: transparent !important;
     border: none !important;
   }
   #permHostBox > label {
@@ -59,6 +60,7 @@
   }
   #viewGroup > radio > .radio-label-box {
     outline: none !important;
+    color: var(--arrowpanel-color);
   }
   #viewGroup > radio:hover {
     background-color: rgb(60, 60, 60) !important;

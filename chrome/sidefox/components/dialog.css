@@ -1,0 +1,6 @@
+.dialogFrame {
+  background: var(--toolbox-bgcolor) !important;
+}
+#bookmarkproperties{
+  background:var(--toolbox-bgcolor) !important;
+}

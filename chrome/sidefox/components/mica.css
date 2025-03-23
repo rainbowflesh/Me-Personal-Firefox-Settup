@@ -143,3 +143,81 @@
     }
   }
 }
+
+/* make context menu submenu transparent */
+menupopup,
+panel {
+  &::part(content) {
+    background: transparent;
+  }
+}
+
+/* disable context menu when this tweak is applied */
+@media -moz-pref("uc.tweak.win11-mica") {
+  menupopup,
+  panel {
+    @media (-moz-windows-mica-popups) {
+       {
+        appearance: auto;
+        -moz-default-appearance: menupopup;
+        --panel-background: light-dark(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+        --panel-border-color: transparent;
+        --panel-shadow-margin: 0px;
+      }
+    }
+  }
+  /* Context Menu */
+  menupopup:not(.PanelUI-subView),
+  menupopup:not(.PanelUI-subView) menuitem,
+  menupopup:not(.PanelUI-subView) menu,
+  menupopup:not(.PanelUI-subView) menuseparator,
+  panel:not([type="autocomplete-richlistbox"]) {
+    appearance: auto !important;
+  }
+  menupopup:not(.PanelUI-subView),
+  menulist > menupopup:not(.PanelUI-subView) > menucaption {
+    background: var(--panel-background) !important;
+  }
+
+  .popup-internal-box,
+  .menupopup-arrowscrollbox {
+    background: transparent !important;
+    border: 0 !important;
+  }
+  menupopup:not(.PanelUI-subView) {
+    padding: unset !important;
+    margin: unset !important;
+  }
+  menupopup menu[disabled="true"],
+  menupopup menuitem[disabled="true"] {
+    background: none !important;
+  }
+  menupopup menu:hover:not([disabled="true"]),
+  menupopup menuitem:hover:not([disabled="true"]),
+  menupopup menu[_moz-menuactive]:not([disabled="true"]),
+  menupopup menuitem[_moz-menuactive]:not([disabled="true"]) {
+    background-color: var(--button-background-color-hover) !important;
+  }
+  menupopup menuitem:hover:active:not([disabled="true"]),
+  menupopup menu:hover:active:not([disabled="true"]) {
+    background-color: var(--button-background-color-hover) !important;
+  }
+
+  menu,
+  menuitem,
+  menucaption {
+    border-radius: calc(var(--panel-border-radius));
+  }
+}
+/* remove panel separator color */
+panel toolbarseparator {
+  border-color: transparent;
+}
+
+:root:not([lwtheme]),
+:root[privatebrowsingmode="temporary"]:where(
+    [style*="--lwt-accent-color: rgb(28, 27, 34)"]:not([style*="--newtab-background-color-secondary: rgb(66, 65, 77)"])
+  ) {
+  --arrowpanel-background: light-dark(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)) !important;
+  --panel-separator-color: light-dark(#dadadabf, #6363637c) !important;
+}

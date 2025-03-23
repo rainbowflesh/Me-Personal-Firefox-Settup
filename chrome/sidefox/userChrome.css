@@ -1,6 +1,7 @@
 /* base theme */
 @import url("./edge-frfox/userChrome.css");
 @import url("./edge-frfox/userContent.css");
+@import url("./components/sidebar.css");
 /* override and fixes */
 @import url("./components/overrides.css");
 /* extra theming */
@@ -9,6 +10,7 @@
 @import url("./components/alert.css");
 @import url("./components/createProfileWizard.css");
 @import url("./components/datepicker.css");
+@import url("./components/dialog.css");
 @import url("./components/devtool.css");
 @import url("./components/exceptionDialog.css");
 @import url("./components/extensionMenu.css");
@@ -20,4 +22,3 @@
 @import url("./components/player.css");
 @import url("./components/print.css");
 @import url("./components/sanitize.css");
-@import url("./components/sidebar.css");
