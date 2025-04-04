@@ -1,3 +1,7 @@
+FF 137+ f*cked up everything... again
+So I renew, 👉https://github.com/rainbowflesh/mimicfox
+This repo no longer support.
+
 # My Mega FireFox tWeak
 
 The edge-frfox combine with sidebar!
